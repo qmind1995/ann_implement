@@ -1,9 +1,10 @@
 //
 // Created by tri on 16/06/2017.
 //
-
-#include "neuralNetwork.h"
-#include "neuralNetworkTrainer.h"
+#include<iostream>
+#include <ctime>
+#include "NeuralNetwork.h"
+#include "Trainer.h"
 
 using namespace std;
 
@@ -13,12 +14,12 @@ void main()
     srand( (unsigned int) time(0) );
 
     //create data set reader and load data file
-    dataReader d;
+    DataReader d;
     d.loadDataFile("letter-recognition-2.csv",16,3);
     d.setCreationApproach( STATIC, 10 );
 
     //create neural network
-    neuralNetwork nn(16,10,3);
+    NeuralNetwork nn(16,10,3);
 
     //create neural network trainer
     neuralNetworkTrainer nT( &nn );

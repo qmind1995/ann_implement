@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/fake_code.dir/main.cpp.o  -o fake_code 

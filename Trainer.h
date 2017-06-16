@@ -9,7 +9,7 @@
 #include <vector>
 
 //neural network header
-#include "neuralNetwork.h"
+#include "NeuralNetwork.h"
 
 //Constant Defaults!
 #define LEARNING_RATE 0.001
@@ -64,7 +64,7 @@ private:
 
 public:
 
-    neuralNetworkTrainer( neuralNetwork* untrainedNetwork );
+    neuralNetworkTrainer( NeuralNetwork* untrainedNetwork );
     void setTrainingParameters( double lR, double m, bool batch );
     void setStoppingConditions( int mEpochs, double dAccuracy);
     void useBatchLearning( bool flag ){ useBatch = flag; }

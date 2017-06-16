@@ -5,6 +5,8 @@
 #ifndef ANN_IMPLEMENT_NEURALNETWORK_H
 #define ANN_IMPLEMENT_NEURALNETWORK_H
 
+#include "DataReader.h"
+
 class NeuralNetwork{
 private:
 
@@ -25,8 +27,8 @@ private:
 public:
 
     //constructor & destructor
-    neuralNetwork(int numInput, int numHidden, int numOutput);
-    ~neuralNetwork();
+    NeuralNetwork(int numInput, int numHidden, int numOutput);
+    ~NeuralNetwork();
 
     //weight operations
     bool loadWeights(char* inputFilename);

@@ -1,0 +1,3 @@
+/home/tri/Desktop/fake code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tri/Desktop/fake code/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tri/Desktop/fake code/cmake-build-debug/CMakeFiles/fake_code.dir
