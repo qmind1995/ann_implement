@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1f3a8b4-ba4a-4ee9-8ebd-f8b72bd77cc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataReader.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -34,11 +34,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataReader.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataReader.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataReader.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="80">
+              <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataReader.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DataReader.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4240">
+              <caret line="212" column="9" lean-forward="false" selection-start-line="212" selection-start-column="9" selection-end-line="212" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -96,6 +106,7 @@
         <option value="$PROJECT_DIR$/NeuralNetwork.cpp" />
         <option value="$PROJECT_DIR$/Trainer.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/DataReader.cpp" />
       </list>
     </option>
   </component>
@@ -370,18 +381,18 @@
       <updated>1497546705588</updated>
       <workItem from="1497546710621" duration="273000" />
       <workItem from="1497551408403" duration="11994000" />
-      <workItem from="1497631133163" duration="84000" />
+      <workItem from="1497631133163" duration="1404000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12351000" />
+    <option name="totallyTimeSpent" value="13671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18008785" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18008785" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3735726" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -574,8 +585,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataReader.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="80">
+          <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataReader.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4240">
+          <caret line="212" column="9" lean-forward="false" selection-start-line="212" selection-start-column="9" selection-end-line="212" selection-end-column="9" />
           <folding />
         </state>
       </provider>
