@@ -18,9 +18,6 @@
 #define DESIRED_ACCURACY 90
 #define DESIRED_MSE 0.001
 
-/*******************************************************************
-* Basic Gradient Descent Trainer with Momentum and Batch Learning
-********************************************************************/
 class neuralNetworkTrainer
 {
 
@@ -65,8 +62,6 @@ private:
     int logResolution;
     int lastEpochLogged;
 
-    //public methods
-    //--------------------------------------------------------------------------------------------
 public:
 
     neuralNetworkTrainer( neuralNetwork* untrainedNetwork );
@@ -77,8 +72,6 @@ public:
 
     void trainNetwork( trainingDataSet* tSet );
 
-    //private methods
-    //--------------------------------------------------------------------------------------------
 private:
     inline double getOutputErrorGradient( double desiredValue, double outputValue );
     double getHiddenErrorGradient( int j );

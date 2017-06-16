@@ -10,9 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1f3a8b4-ba4a-4ee9-8ebd-f8b72bd77cc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NeuralNetwork.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeuralNetwork.h" afterPath="$PROJECT_DIR$/NeuralNetwork.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trainer.h" afterPath="$PROJECT_DIR$/Trainer.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -69,8 +66,8 @@
       <file leaf-file-name="Trainer.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Trainer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="1662">
+              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -346,12 +343,12 @@
       <option name="presentableId" value="Default" />
       <updated>1497546705588</updated>
       <workItem from="1497546710621" duration="273000" />
-      <workItem from="1497551408403" duration="9433000" />
+      <workItem from="1497551408403" duration="10131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9706000" />
+    <option name="totallyTimeSpent" value="10404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
@@ -494,8 +491,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Trainer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state relative-caret-position="1662">
+          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding />
         </state>
       </provider>
