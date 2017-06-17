@@ -48,10 +48,10 @@ RM = /home/tri/Downloads/clion-2017.1/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/tri/Desktop/fake code"
+CMAKE_SOURCE_DIR = /home/tri/Desktop/ann_implement
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/tri/Desktop/fake code/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/tri/Desktop/ann_implement/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/tri/Desktop/fake code/cmake-build-debug/CMakeFiles" "/home/tri/Desktop/fake code/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles /home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/tri/Desktop/fake code/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ fake_code/fast:
 	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/build
 .PHONY : fake_code/fast
 
-main.o: main.cpp.o
+DataReader.o: DataReader.cpp.o
 
-.PHONY : main.o
+.PHONY : DataReader.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/main.cpp.o
-.PHONY : main.cpp.o
+DataReader.cpp.o:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/DataReader.cpp.o
+.PHONY : DataReader.cpp.o
 
-main.i: main.cpp.i
+DataReader.i: DataReader.cpp.i
 
-.PHONY : main.i
+.PHONY : DataReader.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/main.cpp.i
-.PHONY : main.cpp.i
+DataReader.cpp.i:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/DataReader.cpp.i
+.PHONY : DataReader.cpp.i
 
-main.s: main.cpp.s
+DataReader.s: DataReader.cpp.s
 
-.PHONY : main.s
+.PHONY : DataReader.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/main.cpp.s
-.PHONY : main.cpp.s
+DataReader.cpp.s:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/DataReader.cpp.s
+.PHONY : DataReader.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fake_code"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... DataReader.o"
+	@echo "... DataReader.i"
+	@echo "... DataReader.s"
 .PHONY : help
 
 

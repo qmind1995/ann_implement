@@ -4,12 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/tri/Desktop/fake code/main.cpp" "/home/tri/Desktop/fake code/cmake-build-debug/CMakeFiles/fake_code.dir/main.cpp.o"
+  "/home/tri/Desktop/ann_implement/DataReader.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/fake_code.dir/DataReader.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/local/include"
+  "/usr/local/include/opencv"
   )
 
 # Targets to which this target links.

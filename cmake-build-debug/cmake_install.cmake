@@ -1,4 +1,4 @@
-# Install script for directory: /home/tri/Desktop/fake code
+# Install script for directory: /home/tri/Desktop/ann_implement
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/tri/Desktop/fake code/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/tri/Desktop/ann_implement/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
