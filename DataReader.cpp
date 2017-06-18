@@ -13,11 +13,10 @@
 using namespace cv;
 using namespace std;
 
-DataReader::~DataReader()
-{
+DataReader::~DataReader() {
     //clear data
-    for (int i=0; i < (int) data.size(); i++ ) delete data[i];
-    data.clear();
+//    for (int i=0; i < (int) data.size(); i++ ) delete data[i];
+//    data.clear();
 }
 
 int DataReader::ReverseInt (int i) {
@@ -82,27 +81,25 @@ void DataReader::read_Mnist_Label(string filename, vector<double> &vec) {
     }
 }
 
+void DataReader::read_Input(string imgFileName, string labelFileName){
+    int number_of_images = 10000;
+    vector<cv::Mat> vecData;
+    read_Mnist(imgFileName, vecData);
+    vector<double> vecLabel(number_of_images);
+    read_Mnist_Label(labelFileName, vecLabel);
+    for(int i= 0 ; i< number_of_images; i++){
+        DataEntry *d = new DataEntry(vecData[i],vecLabel[i]);
+        data.push_back(d);
+    }
+}
+
 int main() {
-    string filename = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
+    string imgFileName = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
+    String labelFileName = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
     int number_of_images = 10000;
     int image_size = 28 * 28;
-    
-
-    //read MNIST iamge into OpenCV Mat vector
-    vector<cv::Mat> vec;
-//    read_Mnist(filename, vec);
-//    cout<<vec.size()<<endl;
-//    imshow("1st", vec[0]);
-//    waitKey();
-
-
-//    string filename = "data/t10k-labels-idx1-ubyte";
-//    int number_of_images = 10000;
-//
-//    //read MNIST label into double vector
-//    vector<double> vec(number_of_images);
-//    read_Mnist_Label(filename, vec);
-//    cout<<vec.size()<<endl;
-
+    DataReader *dR = new DataReader();
+    dR->read_Input(imgFileName, labelFileName);
+    cout<<dR;
 return 0;
 }

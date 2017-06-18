@@ -14,13 +14,13 @@ private:
     int nInput, nHidden, nOutput;
 
     //neurons
-    double* inputNeurons;
-    double* hiddenNeurons;
-    double* outputNeurons;
+    Mat inputNeurons;
+    Mat hiddenNeurons;
+    Mat outputNeurons;
 
     //weights
-    Mat* wInputHidden;
-    Mat* wHiddenOutput;
+    Mat wInputHidden;
+    Mat wHiddenOutput;
 
     friend neuralNetworkTrainer;
 
@@ -34,8 +34,8 @@ public:
 //    bool loadWeights(char* inputFilename);
 //    bool saveWeights(char* outputFilename);
     int* feedForwardPattern( double* pattern );
-    double getSetAccuracy( std::vector<dataEntry*>& set );
-    double getSetMSE( std::vector<dataEntry*>& set );
+//    double getSetAccuracy( std::vector<dataEntry*>& set );
+//    double getSetMSE( std::vector<dataEntry*>& set );
 
 private:
 
@@ -43,6 +43,5 @@ private:
     inline double activationFunction( double x );
     inline int clampOutput( double x );
     void feedForward( double* pattern );
-
 };
 #endif //ANN_IMPLEMENT_NEURALNETWORK_H

@@ -18,19 +18,17 @@ class DataEntry
 public:
 
     //public members
-    Mat* pattern;	//all the patterns
-    double* target;		//all the targets
+    Mat pattern;	//all the patterns
+    double target;		//all the targets
 
 public:
 
     //constructor
 
-    DataEntry(Mat* p, double* t): pattern(p), target(t) {}
+    DataEntry(Mat p, double t): pattern(p), target(t) {}
 
-    ~DataEntry()
-    {
-        delete[] pattern;
-        delete[] target;
+    ~DataEntry() {
+
     }
 
 };

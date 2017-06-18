@@ -30,7 +30,7 @@ public:
     ~DataReader();
     void read_Mnist(string filename, vector<cv::Mat> &vec);
     void read_Mnist_Label(string filename, vector<double> &vec);
-
+    void read_Input(string imgFileName,string labelFileName);
 //private methods
 private:
     int ReverseInt (int i);

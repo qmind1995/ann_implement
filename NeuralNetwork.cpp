@@ -10,7 +10,7 @@
 #include "neuralNetwork.h"
 NeuralNetwork::neuralNetwork(int nI, int nH, int nO) : nInput(nI), nHidden(nH), nOutput(nO){
 
-    inputNeurons = new( double[nInput + 1] );
+    inputNeurons = new Mat();
     for ( int i=0; i < nInput; i++ ){
         inputNeurons[i] = 0;
     }
@@ -67,4 +67,10 @@ NeuralNetwork::initializeWeights(){
             wHiddenOutput[i][j] = ( ( (double)(rand()%100)+1)/100 * 2 * rO ) - rO;
         }
     }
+}
+
+inline double neuralNetwork::activationFunction( double x )
+{
+    //sigmoid function
+    return 1/(1+exp(-x));
 }
