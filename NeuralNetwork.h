@@ -19,8 +19,8 @@ private:
     double* outputNeurons;
 
     //weights
-    double** wInputHidden;
-    double** wHiddenOutput;
+    Mat* wInputHidden;
+    Mat* wHiddenOutput;
 
     friend neuralNetworkTrainer;
 
@@ -31,8 +31,8 @@ public:
     ~NeuralNetwork();
 
     //weight operations
-    bool loadWeights(char* inputFilename);
-    bool saveWeights(char* outputFilename);
+//    bool loadWeights(char* inputFilename);
+//    bool saveWeights(char* outputFilename);
     int* feedForwardPattern( double* pattern );
     double getSetAccuracy( std::vector<dataEntry*>& set );
     double getSetMSE( std::vector<dataEntry*>& set );

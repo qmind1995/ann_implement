@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/tri/Desktop/ann_implement/DataEntry.h
+iostream
+-
+vector
+-
+opencv2/core/core.hpp
+/home/tri/Desktop/ann_implement/opencv2/core/core.hpp
+opencv2/imgproc/imgproc.hpp
+/home/tri/Desktop/ann_implement/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/tri/Desktop/ann_implement/opencv2/highgui/highgui.hpp
+
 /home/tri/Desktop/ann_implement/DataReader.cpp
 opencv2/core/core.hpp
 /home/tri/Desktop/ann_implement/opencv2/core/core.hpp
@@ -19,8 +31,12 @@ iostream
 -
 fstream
 -
-sstream
--
+DataReader.h
+/home/tri/Desktop/ann_implement/DataReader.h
+
+/home/tri/Desktop/ann_implement/DataReader.h
+DataEntry.h
+/home/tri/Desktop/ann_implement/DataEntry.h
 
 /usr/local/include/opencv/cxcore.h
 opencv2/core/core_c.h
