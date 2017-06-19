@@ -119,6 +119,7 @@ fake_code: /usr/lib/x86_64-linux-gnu/libGL.so
 fake_code: /usr/lib/x86_64-linux-gnu/libglut.so
 fake_code: /usr/lib/x86_64-linux-gnu/libXmu.so
 fake_code: /usr/lib/x86_64-linux-gnu/libXi.so
+fake_code: /usr/lib/libarmadillo.so
 fake_code: /usr/local/lib/libopencv_shape.so.3.2.0
 fake_code: /usr/local/lib/libopencv_photo.so.3.2.0
 fake_code: /usr/local/lib/libopencv_calib3d.so.3.2.0

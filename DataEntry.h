@@ -6,11 +6,11 @@
 #define FAKE_CODE_DATAENTRY_H
 #include <iostream>
 #include <vector>
-#include "opencv2/core/core.hpp"
-#include "opencv2/imgproc/imgproc.hpp"
-#include "opencv2/highgui/highgui.hpp"
-
-using namespace cv;
+//#include "opencv2/core/core.hpp"
+//#include "opencv2/imgproc/imgproc.hpp"
+//#include "opencv2/highgui/highgui.hpp"
+#include <armadillo>
+//using namespace cv;
 using namespace std;
 
 class DataEntry
@@ -18,14 +18,14 @@ class DataEntry
 public:
 
     //public members
-    Mat pattern;	//all the patterns
+    arma::mat pattern;	//all the patterns
     double target;		//all the targets
 
 public:
 
     //constructor
 
-    DataEntry(Mat p, double t): pattern(p), target(t) {}
+    DataEntry(arma::mat p, double t): pattern(p), target(t) {}
 
     ~DataEntry() {
 

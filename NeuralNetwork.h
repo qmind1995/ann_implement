@@ -6,7 +6,8 @@
 #define ANN_IMPLEMENT_NEURALNETWORK_H
 
 #include "DataReader.h"
-
+class NeuralNetworkTrainer;
+//class DataReader;
 class NeuralNetwork{
 private:
 
@@ -22,7 +23,7 @@ private:
     Mat wInputHidden;
     Mat wHiddenOutput;
 
-    friend neuralNetworkTrainer;
+    friend NeuralNetworkTrainer;
 
 public:
 
@@ -33,7 +34,7 @@ public:
     //weight operations
 //    bool loadWeights(char* inputFilename);
 //    bool saveWeights(char* outputFilename);
-    int* feedForwardPattern( double* pattern );
+    Mat feedForwardPattern(Mat input);
 //    double getSetAccuracy( std::vector<dataEntry*>& set );
 //    double getSetMSE( std::vector<dataEntry*>& set );
 
@@ -41,7 +42,7 @@ private:
 
     void initializeWeights();
     inline double activationFunction( double x );
-    inline int clampOutput( double x );
-    void feedForward( double* pattern );
+    inline Mat clampOutput();
+    void feedForward( Mat input );
 };
 #endif //ANN_IMPLEMENT_NEURALNETWORK_H

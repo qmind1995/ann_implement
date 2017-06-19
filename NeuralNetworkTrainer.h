@@ -1,10 +1,11 @@
 //
-// Created by tri on 16/06/2017.
+// Created by tri on 18/06/2017.
 //
 
-#ifndef ANN_IMPLEMENT_TRAINER_H
-#define ANN_IMPLEMENT_TRAINER_H
+#ifndef FAKE_CODE_NEURALNETWORKTRAINER_H
+#define FAKE_CODE_NEURALNETWORKTRAINER_H
 
+//standard includes
 #include <fstream>
 #include <vector>
 
@@ -18,13 +19,18 @@
 #define DESIRED_ACCURACY 90
 #define DESIRED_MSE 0.001
 
+/*******************************************************************
+* Basic Gradient Descent Trainer with Momentum and Batch Learning
+********************************************************************/
 class NeuralNetworkTrainer
 {
+    //class members
+    //--------------------------------------------------------------------------------------------
 
 private:
 
     //network to be trained
-    NeuralNetwork* NN;
+    neuralNetwork* NN;
 
     //learning parameters
     double learningRate;					// adjusts the step size of the weight update
@@ -62,9 +68,11 @@ private:
     int logResolution;
     int lastEpochLogged;
 
+    //public methods
+    //--------------------------------------------------------------------------------------------
 public:
 
-    neuralNetworkTrainer( NeuralNetwork* untrainedNetwork );
+    neuralNetworkTrainer( neuralNetwork* untrainedNetwork );
     void setTrainingParameters( double lR, double m, bool batch );
     void setStoppingConditions( int mEpochs, double dAccuracy);
     void useBatchLearning( bool flag ){ useBatch = flag; }
@@ -72,6 +80,8 @@ public:
 
     void trainNetwork( trainingDataSet* tSet );
 
+    //private methods
+    //--------------------------------------------------------------------------------------------
 private:
     inline double getOutputErrorGradient( double desiredValue, double outputValue );
     double getHiddenErrorGradient( int j );
@@ -80,5 +90,4 @@ private:
     void updateWeights();
 };
 
-
-#endif //ANN_IMPLEMENT_TRAINER_H
+#endif //FAKE_CODE_NEURALNETWORKTRAINER_H
