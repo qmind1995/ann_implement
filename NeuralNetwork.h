@@ -15,13 +15,13 @@ private:
     int nInput, nHidden, nOutput;
 
     //neurons
-    Mat inputNeurons;
-    Mat hiddenNeurons;
-    Mat outputNeurons;
+    arma::mat inputNeurons;
+    arma::mat hiddenNeurons;
+    arma::mat outputNeurons;
 
     //weights
-    Mat wInputHidden;
-    Mat wHiddenOutput;
+    arma::mat wInputHidden;
+    arma::mat wHiddenOutput;
 
     friend NeuralNetworkTrainer;
 
@@ -34,7 +34,7 @@ public:
     //weight operations
 //    bool loadWeights(char* inputFilename);
 //    bool saveWeights(char* outputFilename);
-    Mat feedForwardPattern(Mat input);
+    arma::mat feedForwardPattern(arma::mat input);
 //    double getSetAccuracy( std::vector<dataEntry*>& set );
 //    double getSetMSE( std::vector<dataEntry*>& set );
 
@@ -42,7 +42,7 @@ private:
 
     void initializeWeights();
     inline double activationFunction( double x );
-    inline Mat clampOutput();
-    void feedForward( Mat input );
+    inline arma::mat clampOutput();
+    void feedForward( arma::mat input );
 };
 #endif //ANN_IMPLEMENT_NEURALNETWORK_H

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tri/Desktop/ann_implement/DataReader.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/fake_code.dir/DataReader.cpp.o"
+  "/home/tri/Desktop/ann_implement/NeuralNetwork.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

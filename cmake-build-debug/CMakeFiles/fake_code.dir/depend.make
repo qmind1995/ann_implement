@@ -5,3 +5,8 @@ CMakeFiles/fake_code.dir/DataReader.cpp.o: ../DataEntry.h
 CMakeFiles/fake_code.dir/DataReader.cpp.o: ../DataReader.cpp
 CMakeFiles/fake_code.dir/DataReader.cpp.o: ../DataReader.h
 
+CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o: ../DataEntry.h
+CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o: ../DataReader.h
+CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o: ../NeuralNetwork.cpp
+CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o: ../NeuralNetwork.h
+

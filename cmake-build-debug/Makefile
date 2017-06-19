@@ -150,6 +150,33 @@ DataReader.cpp.s:
 	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/DataReader.cpp.s
 .PHONY : DataReader.cpp.s
 
+NeuralNetwork.o: NeuralNetwork.cpp.o
+
+.PHONY : NeuralNetwork.o
+
+# target to build an object file
+NeuralNetwork.cpp.o:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o
+.PHONY : NeuralNetwork.cpp.o
+
+NeuralNetwork.i: NeuralNetwork.cpp.i
+
+.PHONY : NeuralNetwork.i
+
+# target to preprocess a source file
+NeuralNetwork.cpp.i:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/NeuralNetwork.cpp.i
+.PHONY : NeuralNetwork.cpp.i
+
+NeuralNetwork.s: NeuralNetwork.cpp.s
+
+.PHONY : NeuralNetwork.s
+
+# target to generate assembly for a file
+NeuralNetwork.cpp.s:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/NeuralNetwork.cpp.s
+.PHONY : NeuralNetwork.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... DataReader.o"
 	@echo "... DataReader.i"
 	@echo "... DataReader.s"
+	@echo "... NeuralNetwork.o"
+	@echo "... NeuralNetwork.i"
+	@echo "... NeuralNetwork.s"
 .PHONY : help
 
 

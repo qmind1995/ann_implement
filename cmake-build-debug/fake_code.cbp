@@ -92,6 +92,12 @@
 		<Unit filename="/home/tri/Desktop/ann_implement/DataReader.h">
 			<Option target="fake_code"/>
 		</Unit>
+		<Unit filename="/home/tri/Desktop/ann_implement/NeuralNetwork.cpp">
+			<Option target="fake_code"/>
+		</Unit>
+		<Unit filename="/home/tri/Desktop/ann_implement/NeuralNetwork.h">
+			<Option target="fake_code"/>
+		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

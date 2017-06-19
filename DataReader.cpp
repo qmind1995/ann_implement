@@ -124,12 +124,12 @@ void DataReader::read_Input(string imgFileName, string labelFileName){
         data.push_back(d);
     }
 }
-int main() {
-    string imgFileName = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
-    string labelFileName = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
-
-    DataReader *dR = new DataReader();
-    dR->read_Input(imgFileName, labelFileName);
-    cout <<dR->data[0]->pattern;
-return 0;
-}
+//int main() {
+//    string imgFileName = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
+//    string labelFileName = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
+//
+//    DataReader *dR = new DataReader();
+//    dR->read_Input(imgFileName, labelFileName);
+//    cout <<dR->data[0]->pattern;
+//return 0;
+//}

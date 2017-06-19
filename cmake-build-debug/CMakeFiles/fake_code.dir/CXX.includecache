@@ -30,3 +30,19 @@ DataEntry.h
 armadillo
 -
 
+/home/tri/Desktop/ann_implement/NeuralNetwork.cpp
+iostream
+-
+vector
+-
+fstream
+-
+math.h
+-
+NeuralNetwork.h
+/home/tri/Desktop/ann_implement/NeuralNetwork.h
+
+/home/tri/Desktop/ann_implement/NeuralNetwork.h
+DataReader.h
+/home/tri/Desktop/ann_implement/DataReader.h
+
