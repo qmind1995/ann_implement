@@ -122,15 +122,15 @@ mat NeuralNetwork::feedForwardPattern(mat input){
     feedForward(input);
     return outputNeurons;
 }
-
-int main(){
-    NeuralNetwork *nn = new NeuralNetwork(784,10,10);
-    string imgFileName = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
-    string labelFileName = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
-    DataReader *dR = new DataReader();
-    dR->read_Input(imgFileName, labelFileName);
-    mat out = nn->feedForwardPattern(dR->data[0]->pattern);
-    cout<<out;
-
-    return 0;
-}
+//
+//int main(){
+//    NeuralNetwork *nn = new NeuralNetwork(784,10,10);
+//    string imgFileName = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
+//    string labelFileName = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
+//    DataReader *dR = new DataReader();
+//    dR->read_Input(imgFileName, labelFileName);
+//    mat out = nn->feedForwardPattern(dR->data[0]->pattern);
+//    cout<<out;
+//
+//    return 0;
+//}

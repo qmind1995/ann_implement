@@ -177,6 +177,60 @@ NeuralNetwork.cpp.s:
 	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/NeuralNetwork.cpp.s
 .PHONY : NeuralNetwork.cpp.s
 
+Trainer.o: Trainer.cpp.o
+
+.PHONY : Trainer.o
+
+# target to build an object file
+Trainer.cpp.o:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Trainer.cpp.o
+.PHONY : Trainer.cpp.o
+
+Trainer.i: Trainer.cpp.i
+
+.PHONY : Trainer.i
+
+# target to preprocess a source file
+Trainer.cpp.i:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Trainer.cpp.i
+.PHONY : Trainer.cpp.i
+
+Trainer.s: Trainer.cpp.s
+
+.PHONY : Trainer.s
+
+# target to generate assembly for a file
+Trainer.cpp.s:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Trainer.cpp.s
+.PHONY : Trainer.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +246,12 @@ help:
 	@echo "... NeuralNetwork.o"
 	@echo "... NeuralNetwork.i"
 	@echo "... NeuralNetwork.s"
+	@echo "... Trainer.o"
+	@echo "... Trainer.i"
+	@echo "... Trainer.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

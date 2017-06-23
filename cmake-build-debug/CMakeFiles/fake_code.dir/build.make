@@ -57,9 +57,33 @@ include CMakeFiles/fake_code.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/fake_code.dir/flags.make
 
+CMakeFiles/fake_code.dir/main.cpp.o: CMakeFiles/fake_code.dir/flags.make
+CMakeFiles/fake_code.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fake_code.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fake_code.dir/main.cpp.o -c /home/tri/Desktop/ann_implement/main.cpp
+
+CMakeFiles/fake_code.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fake_code.dir/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/main.cpp > CMakeFiles/fake_code.dir/main.cpp.i
+
+CMakeFiles/fake_code.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fake_code.dir/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/main.cpp -o CMakeFiles/fake_code.dir/main.cpp.s
+
+CMakeFiles/fake_code.dir/main.cpp.o.requires:
+
+.PHONY : CMakeFiles/fake_code.dir/main.cpp.o.requires
+
+CMakeFiles/fake_code.dir/main.cpp.o.provides: CMakeFiles/fake_code.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/fake_code.dir/main.cpp.o.provides
+
+CMakeFiles/fake_code.dir/main.cpp.o.provides.build: CMakeFiles/fake_code.dir/main.cpp.o
+
+
 CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o: CMakeFiles/fake_code.dir/flags.make
 CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o: ../NeuralNetwork.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o -c /home/tri/Desktop/ann_implement/NeuralNetwork.cpp
 
 CMakeFiles/fake_code.dir/NeuralNetwork.cpp.i: cmake_force
@@ -83,7 +107,7 @@ CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o.provides.build: CMakeFiles/fake_cod
 
 CMakeFiles/fake_code.dir/DataReader.cpp.o: CMakeFiles/fake_code.dir/flags.make
 CMakeFiles/fake_code.dir/DataReader.cpp.o: ../DataReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fake_code.dir/DataReader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fake_code.dir/DataReader.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fake_code.dir/DataReader.cpp.o -c /home/tri/Desktop/ann_implement/DataReader.cpp
 
 CMakeFiles/fake_code.dir/DataReader.cpp.i: cmake_force
@@ -105,16 +129,44 @@ CMakeFiles/fake_code.dir/DataReader.cpp.o.provides: CMakeFiles/fake_code.dir/Dat
 CMakeFiles/fake_code.dir/DataReader.cpp.o.provides.build: CMakeFiles/fake_code.dir/DataReader.cpp.o
 
 
+CMakeFiles/fake_code.dir/Trainer.cpp.o: CMakeFiles/fake_code.dir/flags.make
+CMakeFiles/fake_code.dir/Trainer.cpp.o: ../Trainer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fake_code.dir/Trainer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fake_code.dir/Trainer.cpp.o -c /home/tri/Desktop/ann_implement/Trainer.cpp
+
+CMakeFiles/fake_code.dir/Trainer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fake_code.dir/Trainer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/Trainer.cpp > CMakeFiles/fake_code.dir/Trainer.cpp.i
+
+CMakeFiles/fake_code.dir/Trainer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fake_code.dir/Trainer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/Trainer.cpp -o CMakeFiles/fake_code.dir/Trainer.cpp.s
+
+CMakeFiles/fake_code.dir/Trainer.cpp.o.requires:
+
+.PHONY : CMakeFiles/fake_code.dir/Trainer.cpp.o.requires
+
+CMakeFiles/fake_code.dir/Trainer.cpp.o.provides: CMakeFiles/fake_code.dir/Trainer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Trainer.cpp.o.provides.build
+.PHONY : CMakeFiles/fake_code.dir/Trainer.cpp.o.provides
+
+CMakeFiles/fake_code.dir/Trainer.cpp.o.provides.build: CMakeFiles/fake_code.dir/Trainer.cpp.o
+
+
 # Object files for target fake_code
 fake_code_OBJECTS = \
+"CMakeFiles/fake_code.dir/main.cpp.o" \
 "CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o" \
-"CMakeFiles/fake_code.dir/DataReader.cpp.o"
+"CMakeFiles/fake_code.dir/DataReader.cpp.o" \
+"CMakeFiles/fake_code.dir/Trainer.cpp.o"
 
 # External object files for target fake_code
 fake_code_EXTERNAL_OBJECTS =
 
+fake_code: CMakeFiles/fake_code.dir/main.cpp.o
 fake_code: CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o
 fake_code: CMakeFiles/fake_code.dir/DataReader.cpp.o
+fake_code: CMakeFiles/fake_code.dir/Trainer.cpp.o
 fake_code: CMakeFiles/fake_code.dir/build.make
 fake_code: /usr/local/lib/libopencv_stitching.so.3.2.0
 fake_code: /usr/local/lib/libopencv_superres.so.3.2.0
@@ -165,7 +217,7 @@ fake_code: /usr/local/lib/libopencv_objdetect.so.3.2.0
 fake_code: /usr/local/lib/libopencv_imgproc.so.3.2.0
 fake_code: /usr/local/lib/libopencv_core.so.3.2.0
 fake_code: CMakeFiles/fake_code.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable fake_code"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable fake_code"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fake_code.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -173,8 +225,10 @@ CMakeFiles/fake_code.dir/build: fake_code
 
 .PHONY : CMakeFiles/fake_code.dir/build
 
+CMakeFiles/fake_code.dir/requires: CMakeFiles/fake_code.dir/main.cpp.o.requires
 CMakeFiles/fake_code.dir/requires: CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o.requires
 CMakeFiles/fake_code.dir/requires: CMakeFiles/fake_code.dir/DataReader.cpp.o.requires
+CMakeFiles/fake_code.dir/requires: CMakeFiles/fake_code.dir/Trainer.cpp.o.requires
 
 .PHONY : CMakeFiles/fake_code.dir/requires
 

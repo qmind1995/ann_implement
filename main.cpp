@@ -22,7 +22,7 @@ void main()
     NeuralNetwork nn(16,10,3);
 
     //create neural network trainer
-    neuralNetworkTrainer nT( &nn );
+    Trainer nT( &nn );
     nT.setTrainingParameters(0.001, 0.9, false);
     nT.setStoppingConditions(150, 90);
     nT.enableLogging("log.csv", 5);

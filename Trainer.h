@@ -18,7 +18,7 @@
 #define DESIRED_ACCURACY 90
 #define DESIRED_MSE 0.001
 
-class NeuralNetworkTrainer
+class Trainer
 {
 
 private:
@@ -64,7 +64,7 @@ private:
 
 public:
 
-    neuralNetworkTrainer( NeuralNetwork* untrainedNetwork );
+    Trainer( NeuralNetwork* untrainedNetwork );
     void setTrainingParameters( double lR, double m, bool batch );
     void setStoppingConditions( int mEpochs, double dAccuracy);
     void useBatchLearning( bool flag ){ useBatch = flag; }
