@@ -14,7 +14,7 @@
 //Constant Defaults!
 #define LEARNING_RATE 0.001
 #define MOMENTUM 0.9
-#define MAX_EPOCHS 1500
+#define MAX_EPOCHS 10000
 #define DESIRED_ACCURACY 90
 #define DESIRED_MSE 0.001
 

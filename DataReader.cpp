@@ -52,7 +52,7 @@ void DataReader::read_Mnist(string filename, vector<arma::mat> &vec){
                 for(int c = 0; c < n_cols; ++c) {
                     unsigned char temp = 0;
                     file.read((char*) &temp, sizeof(temp));
-                    tp((r+1)*c, 0) = (double) temp;
+                    tp((r+1)*c, 0) = (double) temp /255;
                 }
             }
             vec.push_back(tp);
@@ -123,7 +123,7 @@ void DataReader::read_Input(string imgFileName, string labelFileName){
 
         arma::mat target = mat(10,1);
         target.zeros();
-        for(int idx= 0; idx<10; idx++){
+        for(int idx= 0; idx < 10; idx++){
             if(abs(vecLabel[i] - idx) <0.0001){
                 target[idx] =1;
                 break;

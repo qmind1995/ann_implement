@@ -112,10 +112,10 @@ void NeuralNetwork::feedForward(mat input) {
 mat NeuralNetwork::clampOutput(){
     mat res =mat(nOutput,1);
     for(int i=0 ;i< nOutput; i++){
-        if(outputNeurons(i,0) < 0.3){
+        if(outputNeurons(i,0) < 0.4){
             res(i,0) =0;
         }
-        else if(outputNeurons(i,0) >0.7){
+        else if(outputNeurons(i,0) >=0.6){
             res(i,0) =1;
         }
         else{
@@ -129,6 +129,41 @@ mat NeuralNetwork::feedForwardPattern(mat input){
     feedForward(input);
     return outputNeurons;
 }
+bool NeuralNetwork::checkOutput(mat output, mat target){
+    int size = nOutput;
+    for(int i =0; i<size; i++){
+        if(abs(output(i,0) - target(i,0) ) > 0.001){
+            return false;
+        }
+    }
+    return true;
+}
+double NeuralNetwork::getSetAccuracy( std::vector<DataEntry*>& set )
+{
+    double incorrectResults = 0;
+
+    //for every training input array
+    for ( int tp = 0; tp < (int) set.size(); tp++)
+    {
+        //feed inputs through network and backpropagate errors
+        feedForward( set[tp]->pattern );
+
+        //correct pattern flag
+        bool correctResult = true;
+
+        //check all outputs against desired output values
+        correctResult = checkOutput(clampOutput(), set[tp]->target);
+
+        //inc training error for a incorrect result
+        if ( !correctResult ) incorrectResults++;
+
+    }//end for
+
+    //calculate error and return as percentage
+    return 100 - (incorrectResults/set.size() * 100);
+}
+
+
 //
 //int main(){
 //    NeuralNetwork *nn = new NeuralNetwork(784,10,10);

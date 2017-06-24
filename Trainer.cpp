@@ -91,7 +91,7 @@ void Trainer::updateWeights() {
 bool Trainer::checkOutput(mat output, mat target){
     int size = NN->nOutput;
     for(int i =0; i<size; i++){
-        if(abs(output(i,0) - target(i,0) ) > 0.001){
+        if(abs(output(i,0) - target(i,0) ) > 0.1){
             return false;
         }
     }
@@ -124,10 +124,10 @@ void Trainer::runTrainingEpoch( vector<DataEntry*> trainingSet ) {
 
     //update training accuracy and MSE
     trainingSetAccuracy = 100 - (incorrectPatterns/trainingSet.size() * 100);
+//    cout<<trainingSetAccuracy<<endl;
 }
 
-void Trainer::trainNetwork( trainingDataSet* tSet )
-{
+void Trainer::trainNetwork( trainingDataSet* tSet ) {
     cout	<< endl << " Neural Network Training Starting: " << endl
             << "==========================================================================" << endl
             << " LR: " << learningRate << ", Max Epochs: " << maxEpochs << endl
@@ -137,53 +137,50 @@ void Trainer::trainNetwork( trainingDataSet* tSet )
     //reset epoch and log counters
     epoch = 0;
     lastEpochLogged = -logResolution;
-    runTrainingEpoch( tSet->trainingSet );
-
-
+    //runTrainingEpoch( tSet->trainingSet );
 
     //train network using training dataset for training and generalization dataset for testing
-//    while (	( trainingSetAccuracy < desiredAccuracy || validationSetAccuracy < desiredAccuracy ) && epoch < maxEpochs ) {
-//        //store previous accuracy
-//        double previousTAccuracy = trainingSetAccuracy;
-//        double previousGAccuracy = generalizationSetAccuracy;
-//
-//        //use training set to train network
-//        runTrainingEpoch( tSet->trainingSet );
-//
-//        //get generalization set accuracy and MSE
+
+    while (	( trainingSetAccuracy < desiredAccuracy) && epoch < maxEpochs ) {
+        //store previous accuracy
+        double previousTAccuracy = trainingSetAccuracy;
+        double previousGAccuracy = generalizationSetAccuracy;
+
+        //use training set to train network
+        runTrainingEpoch( tSet->trainingSet );
+
+        //get generalization set accuracy and MSE
 //        generalizationSetAccuracy = NN->getSetAccuracy( tSet->generalizationSet );
-////        generalizationSetMSE = NN->getSetMSE( tSet->generalizationSet );
-//
-//        //Log Training results
-//        if ( loggingEnabled && logFile.is_open() && ( epoch - lastEpochLogged == logResolution ) )
-//        {
+        //generalizationSetMSE = NN->getSetMSE( tSet->generalizationSet );
+
+        //Log Training results
+//        if ( loggingEnabled && logFile.is_open() && ( epoch - lastEpochLogged == logResolution ) ) {
 //            logFile << epoch << "," << trainingSetAccuracy << "," << generalizationSetAccuracy << "," << trainingSetMSE << "," << generalizationSetMSE << endl;
 //            lastEpochLogged = epoch;
 //        }
-//
-//        //print out change in training /generalization accuracy (only if a change is greater than a percent)
-//        if ( ceil(previousTAccuracy) != ceil(trainingSetAccuracy) || ceil(previousGAccuracy) != ceil(generalizationSetAccuracy) )
-//        {
-//            cout << "Epoch :" << epoch;
-//            cout << " TSet Acc:" << trainingSetAccuracy << "%, MSE: " << trainingSetMSE ;
-//            cout << " GSet Acc:" << generalizationSetAccuracy << "%, MSE: " << generalizationSetMSE << endl;
-//        }
-//
-//        //once training set is complete increment epoch
-//        epoch++;
-//
-//    }//end while
-//
-//    //get validation set accuracy and MSE
-//    validationSetAccuracy = NN->getSetAccuracy(tSet->validationSet);
-//    validationSetMSE = NN->getSetMSE(tSet->validationSet);
-//
-//    //log end
-//    logFile << epoch << "," << trainingSetAccuracy << "," << generalizationSetAccuracy << "," << trainingSetMSE << "," << generalizationSetMSE << endl << endl;
-//    logFile << "Training Complete!!! - > Elapsed Epochs: " << epoch << " Validation Set Accuracy: " << validationSetAccuracy << " Validation Set MSE: " << validationSetMSE << endl;
-//
-//    //out validation accuracy and MSE
-//    cout << endl << "Training Complete!!! - > Elapsed Epochs: " << epoch << endl;
-//    cout << " Validation Set Accuracy: " << validationSetAccuracy << endl;
+
+        //print out change in training /generalization accuracy (only if a change is greater than a percent)
+        if ( ceil(previousTAccuracy) < ceil(trainingSetAccuracy)  || (epoch%10 ==0)) {
+            cout << "Epoch : " << epoch <<" trainingSetAccuracy: "<<trainingSetAccuracy<<endl;
+            //cout << " TSet Acc:" << trainingSetAccuracy << "%, MSE: " << trainingSetMSE ;
+            //cout << " GSet Acc:" << generalizationSetAccuracy << "%, MSE: " << generalizationSetMSE << endl;
+        }
+
+        //once training set is complete increment epoch
+        epoch++;
+
+    }//end while
+
+    //get validation set accuracy and MSE
+    validationSetAccuracy = NN->getSetAccuracy(tSet->validationSet);
+    //validationSetMSE = NN->getSetMSE(tSet->validationSet);
+
+    //log end
+    logFile << epoch << "," << trainingSetAccuracy << "," << generalizationSetAccuracy << "," << trainingSetMSE << "," << generalizationSetMSE << endl << endl;
+    logFile << "Training Complete!!! - > Elapsed Epochs: " << epoch << " Validation Set Accuracy: " << validationSetAccuracy << " Validation Set MSE: " << validationSetMSE << endl;
+
+    //out validation accuracy and MSE
+    cout << endl << "Training Complete!!! - > Elapsed Epochs: " << epoch << endl;
+    cout << " Validation Set Accuracy: " << validationSetAccuracy << endl;
 //    cout << " Validation Set MSE: " << validationSetMSE << endl << endl;
 }
