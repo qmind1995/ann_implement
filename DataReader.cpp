@@ -120,10 +120,21 @@ void DataReader::read_Input(string imgFileName, string labelFileName){
     read_Mnist_Label(labelFileName, vecLabel);
     //preprocess data:
     for(int i = 0; i < number_of_images; ++i) {
-        DataEntry *d = new DataEntry(vecData[i],vecLabel[i]);
+
+        arma::mat target = mat(10,1);
+        target.zeros();
+        for(int idx= 0; idx<10; idx++){
+            if(abs(vecLabel[i] - idx) <0.0001){
+                target[idx] =1;
+                break;
+            }
+        }
+
+        DataEntry *d = new DataEntry(vecData[i],target);
         data.push_back(d);
     }
 }
+
 //int main() {
 //    string imgFileName = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
 //    string labelFileName = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";

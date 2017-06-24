@@ -109,13 +109,20 @@ void NeuralNetwork::feedForward(mat input) {
 
 }
 
-inline mat NeuralNetwork::clampOutput(){
-    mat output(nOutput, 1);
-//    for(int i =0 ; i<nOutput; i++){
-//        outputNeurons.at<double>(i, 0);
-//    }
-
-    //no need this function now.
+mat NeuralNetwork::clampOutput(){
+    mat res =mat(nOutput,1);
+    for(int i=0 ;i< nOutput; i++){
+        if(outputNeurons(i,0) < 0.3){
+            res(i,0) =0;
+        }
+        else if(outputNeurons(i,0) >0.7){
+            res(i,0) =1;
+        }
+        else{
+            res(i,0) = outputNeurons(i,0);
+        }
+    }
+    return res;
 }
 
 mat NeuralNetwork::feedForwardPattern(mat input){

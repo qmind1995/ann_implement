@@ -6,7 +6,7 @@
 #define ANN_IMPLEMENT_NEURALNETWORK_H
 
 #include "DataReader.h"
-class NeuralNetworkTrainer;
+class Trainer;
 //class DataReader;
 class NeuralNetwork{
 private:
@@ -23,7 +23,7 @@ private:
     arma::mat wInputHidden;
     arma::mat wHiddenOutput;
 
-    friend NeuralNetworkTrainer;
+    friend Trainer;
 
 public:
 
@@ -37,12 +37,13 @@ public:
     arma::mat feedForwardPattern(arma::mat input);
 //    double getSetAccuracy( std::vector<dataEntry*>& set );
 //    double getSetMSE( std::vector<dataEntry*>& set );
+    arma::mat clampOutput();
 
 private:
 
     void initializeWeights();
     inline double activationFunction( double x );
-    inline arma::mat clampOutput();
+//    inline arma::mat clampOutput();
     void feedForward( arma::mat input );
 };
 #endif //ANN_IMPLEMENT_NEURALNETWORK_H

@@ -10,3 +10,15 @@ CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o: ../DataReader.h
 CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o: ../NeuralNetwork.cpp
 CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o: ../NeuralNetwork.h
 
+CMakeFiles/fake_code.dir/Trainer.cpp.o: ../DataEntry.h
+CMakeFiles/fake_code.dir/Trainer.cpp.o: ../DataReader.h
+CMakeFiles/fake_code.dir/Trainer.cpp.o: ../NeuralNetwork.h
+CMakeFiles/fake_code.dir/Trainer.cpp.o: ../Trainer.cpp
+CMakeFiles/fake_code.dir/Trainer.cpp.o: ../Trainer.h
+
+CMakeFiles/fake_code.dir/main.cpp.o: ../DataEntry.h
+CMakeFiles/fake_code.dir/main.cpp.o: ../DataReader.h
+CMakeFiles/fake_code.dir/main.cpp.o: ../NeuralNetwork.h
+CMakeFiles/fake_code.dir/main.cpp.o: ../Trainer.h
+CMakeFiles/fake_code.dir/main.cpp.o: ../main.cpp
+

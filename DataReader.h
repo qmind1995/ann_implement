@@ -9,6 +9,23 @@
 #include <armadillo>
 
 
+class trainingDataSet {
+public:
+
+    std::vector<DataEntry*> trainingSet;
+    std::vector<DataEntry*> generalizationSet;
+    std::vector<DataEntry*> validationSet;
+
+    trainingDataSet(){}
+
+    void clear() {
+        trainingSet.clear();
+        generalizationSet.clear();
+        validationSet.clear();
+    }
+};
+
+
 enum { NONE, STATIC, GROWING, WINDOWING };
 
 class DataReader {

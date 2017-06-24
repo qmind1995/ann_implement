@@ -18,8 +18,9 @@
 #define DESIRED_ACCURACY 90
 #define DESIRED_MSE 0.001
 
-class Trainer
-{
+using namespace arma;
+
+class Trainer {
 
 private:
 
@@ -28,7 +29,6 @@ private:
 
     //learning parameters
     double learningRate;					// adjusts the step size of the weight update
-    double momentum;						// improves performance of stochastic learning (don't use for batch)
 
     //epoch counter
     long epoch;
@@ -38,12 +38,12 @@ private:
     double desiredAccuracy;
 
     //change to weights
-    double** deltaInputHidden;
-    double** deltaHiddenOutput;
+    mat deltaInputHidden;
+    mat deltaHiddenOutput;
 
     //error gradients
-    double* hiddenErrorGradients;
-    double* outputErrorGradients;
+    mat hiddenErrorGradients;
+    mat outputErrorGradients;
 
     //accuracy stats per epoch
     double trainingSetAccuracy;
@@ -54,7 +54,6 @@ private:
     double generalizationSetMSE;
 
     //batch learning flag
-    bool useBatch;
 
     //log file handle
     bool loggingEnabled;
@@ -65,19 +64,21 @@ private:
 public:
 
     Trainer( NeuralNetwork* untrainedNetwork );
-    void setTrainingParameters( double lR, double m, bool batch );
-    void setStoppingConditions( int mEpochs, double dAccuracy);
-    void useBatchLearning( bool flag ){ useBatch = flag; }
-    void enableLogging( const char* filename, int resolution );
+//    void setTrainingParameters( double lR, double m, bool batch );
+//    void setStoppingConditions( int mEpochs, double dAccuracy);
+//    void useBatchLearning( bool flag ){ useBatch = flag; }
+//    void enableLogging( const char* filename, int resolution );
 
     void trainNetwork( trainingDataSet* tSet );
 
 private:
-    inline double getOutputErrorGradient( double desiredValue, double outputValue );
-    double getHiddenErrorGradient( int j );
-    void runTrainingEpoch( std::vector<dataEntry*> trainingSet );
-    void backpropagate(double* desiredOutputs);
+    inline mat getOutputErrorGradient( mat desiredValue, mat outputValue );
+    mat getHiddenErrorGradient();
+    mat dotProduct(mat A, mat B);
+    void runTrainingEpoch( std::vector<DataEntry*> trainingSet );
+    void backpropagate(mat desiredOutputs);
     void updateWeights();
+    bool checkOutput(mat output, mat target);
 };
 
 

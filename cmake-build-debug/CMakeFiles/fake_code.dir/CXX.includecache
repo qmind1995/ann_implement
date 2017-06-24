@@ -46,3 +46,25 @@ NeuralNetwork.h
 DataReader.h
 /home/tri/Desktop/ann_implement/DataReader.h
 
+/home/tri/Desktop/ann_implement/Trainer.cpp
+Trainer.h
+/home/tri/Desktop/ann_implement/Trainer.h
+
+/home/tri/Desktop/ann_implement/Trainer.h
+fstream
+-
+vector
+-
+NeuralNetwork.h
+/home/tri/Desktop/ann_implement/NeuralNetwork.h
+
+/home/tri/Desktop/ann_implement/main.cpp
+iostream
+-
+ctime
+-
+NeuralNetwork.h
+/home/tri/Desktop/ann_implement/NeuralNetwork.h
+Trainer.h
+/home/tri/Desktop/ann_implement/Trainer.h
+
