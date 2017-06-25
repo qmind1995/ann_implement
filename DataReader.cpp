@@ -2,9 +2,6 @@
 // Created by tri on 17/06/2017.
 //
 
-//#include "opencv2/core/core.hpp"
-//#include "opencv2/imgproc/imgproc.hpp"
-//#include "opencv2/highgui/highgui.hpp"
 
 #include <iostream>
 #include <fstream>
@@ -12,14 +9,9 @@
 #include "DataReader.h"
 
 using namespace arma;
-//using namespace cv;
 using namespace std;
 
-DataReader::~DataReader() {
-    //clear data
-//    for (int i=0; i < (int) data.size(); i++ ) delete data[i];
-//    data.clear();
-}
+DataReader::~DataReader() {}
 
 int DataReader::ReverseInt (int i) {
     unsigned char ch1, ch2, ch3, ch4;
@@ -60,38 +52,7 @@ void DataReader::read_Mnist(string filename, vector<arma::mat> &vec){
 
     }
 }
-//void DataReader::read_Mnist(string filename, vector<cv::Mat> &vec){
-//    ifstream file(filename,ios::in | ios::binary);
-//
-//    if (file.is_open()) {
-//        int magic_number = 0;
-//        int number_of_images = 0;
-//        int n_rows = 0;
-//        int n_cols = 0;
-//        file.read((char*) &magic_number, sizeof(magic_number));
-//        magic_number = ReverseInt(magic_number);
-//        file.read((char*) &number_of_images,sizeof(number_of_images));
-//        number_of_images = ReverseInt(number_of_images);
-//        file.read((char*) &n_rows, sizeof(n_rows));
-//        n_rows = ReverseInt(n_rows);
-//        file.read((char*) &n_cols, sizeof(n_cols));
-//        n_cols = ReverseInt(n_cols);
-//        for(int i = 0; i < number_of_images; ++i) {
-//            cv::Mat tp = Mat::zeros(n_rows, n_cols, CV_8UC1);
-//            for(int r = 0; r < n_rows; ++r) {
-//                for(int c = 0; c < n_cols; ++c) {
-//                    unsigned char temp = 0;
-//                    file.read((char*) &temp, sizeof(temp));
-//                    tp.at<uchar>(r, c) = (int) temp;
-//                }
-//            }
-//            vec.push_back(tp);
-//        }
-//    }
-//    else{
-//        cout<<"cannot open file!!!"<<endl;
-//    }
-//}
+
 
 void DataReader::read_Mnist_Label(string filename, vector<double> &vec) {
     ifstream file (filename, ios::binary);

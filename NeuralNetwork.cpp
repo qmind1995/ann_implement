@@ -138,8 +138,7 @@ bool NeuralNetwork::checkOutput(mat output, mat target){
     }
     return true;
 }
-double NeuralNetwork::getSetAccuracy( std::vector<DataEntry*>& set )
-{
+double NeuralNetwork::getSetAccuracy( std::vector<DataEntry*>& set ) {
     double incorrectResults = 0;
 
     //for every training input array
@@ -163,7 +162,46 @@ double NeuralNetwork::getSetAccuracy( std::vector<DataEntry*>& set )
     return 100 - (incorrectResults/set.size() * 100);
 }
 
+bool NeuralNetwork::saveWeights(char* filename) {
 
+    fstream outputFile;
+    outputFile.open(filename, ios::out);
+
+    if ( outputFile.is_open() ) {
+
+        outputFile<<nInput<<"\n";
+        outputFile<<nHidden<<"\n";
+        outputFile<<nOutput<<"\n";
+
+        // save Input-> Hidden weights:
+        for(int i=0; i< nHidden; i++){
+            for(int j=0; j< nInput+1; j++){
+                outputFile<<wInputHidden(i,j) <<"\t";
+            }
+            outputFile<<"\n";
+        }
+
+        // save Hidden -> Output weights:
+        for(int i=0; i< nOutput; i++){
+            for(int j=0; j< nHidden+1; j++){
+                outputFile<<wHiddenOutput(i,j)<<"\t";
+            }
+            outputFile<<"\n";
+        }
+
+        //print success
+        cout << endl << "Neuron weights saved to '" << filename << "'" << endl;
+
+        //close file
+        outputFile.close();
+
+        return true;
+    }
+    else {
+        cout << endl << "Error - Weight output file '" << filename << "' could not be created: " << endl;
+        return false;
+    }
+}
 //
 //int main(){
 //    NeuralNetwork *nn = new NeuralNetwork(784,10,10);

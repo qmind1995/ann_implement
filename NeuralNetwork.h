@@ -33,7 +33,7 @@ public:
 
     //weight operations
 //    bool loadWeights(char* inputFilename);
-//    bool saveWeights(char* outputFilename);
+    bool saveWeights(char* outputFilename);
     arma::mat feedForwardPattern(arma::mat input);
     double getSetAccuracy( std::vector<DataEntry*>& set );
 //    double getSetMSE( std::vector<dataEntry*>& set );
