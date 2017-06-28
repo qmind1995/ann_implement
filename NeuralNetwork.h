@@ -33,7 +33,8 @@ public:
 
     //weight operations
 //    bool loadWeights(char* inputFilename);
-    bool saveWeights(char* outputFilename);
+    NeuralNetwork(string weightFileName);
+    bool saveWeights(string outputFilename);
     arma::mat feedForwardPattern(arma::mat input);
     double getSetAccuracy( std::vector<DataEntry*>& set );
     arma::mat clampOutput();

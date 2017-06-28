@@ -53,6 +53,47 @@ NeuralNetwork::NeuralNetwork(int nI, int nH, int nO) : nInput(nI), nHidden(nH), 
     initializeWeights();
 }
 
+NeuralNetwork::NeuralNetwork(string weightFileName) {
+    ifstream weightFileStream(weightFileName);
+    if(!weightFileStream.is_open()){
+        cout<<"Khong the mo file.\n";
+    }
+    else{
+        //load param
+        weightFileStream>>nInput;
+        weightFileStream>>nHidden;
+        weightFileStream>>nOutput;
+
+        //init neurals
+        inputNeurons = mat(nInput + 1, 1);
+        inputNeurons.zeros();
+        inputNeurons(nInput,0) = -1;
+
+        hiddenNeurons = mat(nHidden + 1, 1);
+        hiddenNeurons.zeros();
+        hiddenNeurons(nHidden,0) = -1;
+
+        outputNeurons = mat(nOutput, 1);
+        outputNeurons.zeros();
+
+        //load weights:
+        wInputHidden = mat(nHidden, nInput + 1);
+        for ( int i=0; i < nHidden; i++ ) {
+            for ( int j=0; j <= nInput; j++ ){
+                weightFileStream>>wInputHidden(i,j);
+            }
+        }
+
+        wHiddenOutput = mat(nOutput, nHidden + 1);
+        for ( int i=0; i < nOutput; i++ ) {
+            for ( int j=0; j <= nHidden; j++ ){
+                weightFileStream>>wHiddenOutput(i,j);
+            }
+        }
+        cout<<wHiddenOutput;
+    }
+}
+
 void NeuralNetwork::initializeWeights(){
     //set range
     double rH = 1/sqrt( (double) nInput);
@@ -129,6 +170,7 @@ mat NeuralNetwork::feedForwardPattern(mat input){
     feedForward(input);
     return outputNeurons;
 }
+
 bool NeuralNetwork::checkOutput(mat output, mat target){
     int size = nOutput;
     for(int i =0; i<size; i++){
@@ -138,6 +180,7 @@ bool NeuralNetwork::checkOutput(mat output, mat target){
     }
     return true;
 }
+
 double NeuralNetwork::getSetAccuracy( std::vector<DataEntry*>& set ) {
     double incorrectResults = 0;
 
@@ -162,7 +205,7 @@ double NeuralNetwork::getSetAccuracy( std::vector<DataEntry*>& set ) {
     return 100 - (incorrectResults/set.size() * 100);
 }
 
-bool NeuralNetwork::saveWeights(char* filename) {
+bool NeuralNetwork::saveWeights(string filename) {
 
     fstream outputFile;
     outputFile.open(filename, ios::out);
