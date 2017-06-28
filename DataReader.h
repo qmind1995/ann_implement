@@ -44,7 +44,6 @@ private:
     //data set creation approach and total number of dataSets
     int creationApproach;
     int numTrainingSets;
-    int trainingDataEndIndex;
 
 //public methods
 public:

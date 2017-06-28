@@ -64,10 +64,6 @@ private:
 public:
 
     Trainer( NeuralNetwork* untrainedNetwork );
-//    void setTrainingParameters( double lR, double m, bool batch );
-//    void setStoppingConditions( int mEpochs, double dAccuracy);
-//    void useBatchLearning( bool flag ){ useBatch = flag; }
-//    void enableLogging( const char* filename, int resolution );
 
     void trainNetwork( trainingDataSet* tSet );
 

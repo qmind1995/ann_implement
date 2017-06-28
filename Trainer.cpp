@@ -158,7 +158,7 @@ void Trainer::trainNetwork( trainingDataSet* tSet ) {
         epoch++;
 
     }//end while
-    
+
     NN->saveWeights("weights.txt");
     validationSetAccuracy = NN->getSetAccuracy(tSet->validationSet);
 
