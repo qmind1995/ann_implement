@@ -12,15 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1f3a8b4-ba4a-4ee9-8ebd-f8b72bd77cc6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fake_code.dir/DataReader.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fake_code.dir/DataReader.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fake_code.dir/Trainer.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fake_code.dir/Trainer.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fake_code.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fake_code.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/fake_code" afterPath="$PROJECT_DIR$/cmake-build-debug/fake_code" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataReader.cpp" afterPath="$PROJECT_DIR$/DataReader.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeuralNetwork.cpp" afterPath="$PROJECT_DIR$/NeuralNetwork.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeuralNetwork.h" afterPath="$PROJECT_DIR$/NeuralNetwork.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trainer.cpp" afterPath="$PROJECT_DIR$/Trainer.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -47,10 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NeuralNetwork.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NeuralNetwork.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NeuralNetwork.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="-1506">
               <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="e#39#58#0" expanded="true" />
@@ -91,8 +83,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+            <state relative-caret-position="314">
+              <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="37" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
               </folding>
@@ -112,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Trainer.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Trainer.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Trainer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2900">
-              <caret line="145" column="54" lean-forward="false" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="54" />
+            <state relative-caret-position="414">
+              <caret line="160" column="4" lean-forward="false" selection-start-line="160" selection-start-column="4" selection-end-line="160" selection-end-column="4" />
               <folding>
                 <element signature="e#61#1313#0" expanded="false" />
               </folding>
@@ -162,12 +154,12 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/DataEntry.h" />
         <option value="$PROJECT_DIR$/DataReader.h" />
-        <option value="$PROJECT_DIR$/Trainer.cpp" />
         <option value="$PROJECT_DIR$/Trainer.h" />
         <option value="$PROJECT_DIR$/DataReader.cpp" />
         <option value="$PROJECT_DIR$/NeuralNetwork.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/NeuralNetwork.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Trainer.cpp" />
       </list>
     </option>
   </component>
@@ -470,11 +462,12 @@
       <workItem from="1498294414025" duration="4263000" />
       <workItem from="1498299588832" duration="1369000" />
       <workItem from="1498380035887" duration="188000" />
+      <workItem from="1498660284846" duration="1046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113583000" />
+    <option name="totallyTimeSpent" value="114629000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -486,7 +479,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-3" width="1366" height="771" extended-state="6" />
+    <frame x="0" y="-3" width="1366" height="771" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1566618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -884,16 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trainer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2900">
-          <caret line="145" column="54" lean-forward="false" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="54" />
-          <folding>
-            <element signature="e#61#1313#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Trainer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -909,16 +892,6 @@
         <state relative-caret-position="240">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding>
-            <element signature="e#39#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -944,13 +917,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NeuralNetwork.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="-1506">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#39#58#0" expanded="true" />
             <element signature="e#190#1310#0" expanded="false" />
             <element signature="e#1312#1992#0" expanded="false" />
             <element signature="e#4167#5219#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="e#39#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trainer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="160" column="4" lean-forward="false" selection-start-line="160" selection-start-column="4" selection-end-line="160" selection-end-column="4" />
+          <folding>
+            <element signature="e#61#1313#0" expanded="false" />
           </folding>
         </state>
       </provider>

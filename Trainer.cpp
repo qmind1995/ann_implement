@@ -149,38 +149,23 @@ void Trainer::trainNetwork( trainingDataSet* tSet ) {
         //use training set to train network
         runTrainingEpoch( tSet->trainingSet );
 
-        //get generalization set accuracy and MSE
-//        generalizationSetAccuracy = NN->getSetAccuracy( tSet->generalizationSet );
-        //generalizationSetMSE = NN->getSetMSE( tSet->generalizationSet );
-
-        //Log Training results
-//        if ( loggingEnabled && logFile.is_open() && ( epoch - lastEpochLogged == logResolution ) ) {
-//            logFile << epoch << "," << trainingSetAccuracy << "," << generalizationSetAccuracy << "," << trainingSetMSE << "," << generalizationSetMSE << endl;
-//            lastEpochLogged = epoch;
-//        }
-
         //print out change in training /generalization accuracy (only if a change is greater than a percent)
         if ( ceil(previousTAccuracy) < ceil(trainingSetAccuracy)  || (epoch%10 ==0)) {
             cout << "Epoch : " << epoch <<" trainingSetAccuracy: "<<trainingSetAccuracy<<endl;
-            //cout << " TSet Acc:" << trainingSetAccuracy << "%, MSE: " << trainingSetMSE ;
-            //cout << " GSet Acc:" << generalizationSetAccuracy << "%, MSE: " << generalizationSetMSE << endl;
         }
 
         //once training set is complete increment epoch
         epoch++;
 
     }//end while
-
-    //get validation set accuracy and MSE
+    
+    NN->saveWeights("weights.txt");
     validationSetAccuracy = NN->getSetAccuracy(tSet->validationSet);
-    //validationSetMSE = NN->getSetMSE(tSet->validationSet);
 
     //log end
     logFile << epoch << "," << trainingSetAccuracy << "," << generalizationSetAccuracy << "," << trainingSetMSE << "," << generalizationSetMSE << endl << endl;
     logFile << "Training Complete!!! - > Elapsed Epochs: " << epoch << " Validation Set Accuracy: " << validationSetAccuracy << " Validation Set MSE: " << validationSetMSE << endl;
 
-    //out validation accuracy and MSE
     cout << endl << "Training Complete!!! - > Elapsed Epochs: " << epoch << endl;
     cout << " Validation Set Accuracy: " << validationSetAccuracy << endl;
-//    cout << " Validation Set MSE: " << validationSetMSE << endl << endl;
 }

@@ -15,14 +15,14 @@ int main() {
     DataReader *dR = new DataReader();
     dR->read_Input(imgFileName, labelFileName);
     srand( (unsigned int) time(0) );
-    nn->saveWeights("weights.txt");
+//    nn->saveWeights("weights.txt");
 
     //create neural network trainer
-//    Trainer nT( nn );
-//    trainingDataSet* tSet = new trainingDataSet();
-//    tSet->trainingSet = dR->data;
-//    nT.trainNetwork(tSet);
-    cout<<"debuger node";
+    Trainer nT( nn );
+    trainingDataSet* tSet = new trainingDataSet();
+    tSet->trainingSet = dR->data;
+    nT.trainNetwork(tSet);
+//    cout<<"debuger node";
 
     return 0;
 }
