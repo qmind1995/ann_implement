@@ -9,8 +9,8 @@
 using namespace std;
 using namespace arma;
 int main() {
-//    NeuralNetwork *nn = new NeuralNetwork(784,10,10);
-    NeuralNetwork *nn = new NeuralNetwork("weights.txt");
+    NeuralNetwork *nn = new NeuralNetwork(784,300,10);
+//    NeuralNetwork *nn = new NeuralNetwork("weights.txt");
     string imgFileName = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
     string labelFileName = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
     DataReader *dR = new DataReader();
