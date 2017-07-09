@@ -49,16 +49,30 @@ mat Trainer::dotProduct(mat A, mat B) {
 
 inline mat Trainer::getOutputErrorGradient( mat desiredValue, mat outputValue) {
     //return error gradient
-    mat tmp =  1 - outputValue ;
-    mat first = dotProduct(outputValue, tmp);
+    mat tmp, first;
+    if(NN->activationFuncName == "SIGMOID"){
+        tmp =  1 - outputValue ;
+        first = dotProduct(outputValue, tmp);
+    }
+    else if(NN->activationFuncName == "TANH"){
+        first = 1 - dotProduct(outputValue, outputValue);
+    }
+
     mat err = desiredValue - outputValue;
 
     return dotProduct(first, err);
 }
 
 mat Trainer::getHiddenErrorGradient() {
-    mat tmp = 1 - NN->hiddenNeurons;
-    mat first = dotProduct(NN->hiddenNeurons, tmp);
+    mat tmp, first;
+    if(NN->activationFuncName == "SIGMOID"){
+        mat tmp = 1 - NN->hiddenNeurons;
+        first = dotProduct(NN->hiddenNeurons, tmp);
+    }
+    else if(NN->activationFuncName == "TANH"){
+        first = 1 - dotProduct(NN->hiddenNeurons, NN->hiddenNeurons);
+    }
+
     mat err = NN->wHiddenOutput.t() * outputErrorGradients;
     mat preOutput = dotProduct(first,err);
     mat output = mat(NN->nHidden,1);
@@ -124,7 +138,6 @@ void Trainer::runTrainingEpoch( vector<DataEntry*> trainingSet ) {
 
     //update training accuracy and MSE
     trainingSetAccuracy = 100 - (incorrectPatterns/trainingSet.size() * 100);
-//    cout<<trainingSetAccuracy<<endl;
 }
 
 void Trainer::trainNetwork( trainingDataSet* tSet ) {

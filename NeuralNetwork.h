@@ -23,16 +23,17 @@ private:
     arma::mat wInputHidden;
     arma::mat wHiddenOutput;
 
+    string activationFuncName;
+
     friend Trainer;
 
 public:
 
     //constructor & destructor
-    NeuralNetwork(int numInput, int numHidden, int numOutput);
+    NeuralNetwork(int numInput, int numHidden, int numOutput, string activationFuncName);
     ~NeuralNetwork();
 
     //weight operations
-//    bool loadWeights(char* inputFilename);
     NeuralNetwork(string weightFileName);
     bool saveWeights(string outputFilename);
     arma::mat feedForwardPattern(arma::mat input);

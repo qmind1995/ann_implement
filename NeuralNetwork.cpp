@@ -9,7 +9,10 @@
 //include definition file
 #include "NeuralNetwork.h"
 using namespace arma;
-NeuralNetwork::NeuralNetwork(int nI, int nH, int nO) : nInput(nI), nHidden(nH), nOutput(nO){
+NeuralNetwork::NeuralNetwork(int nI, int nH, int nO, string af) : nInput(nI),
+                                                                  nHidden(nH),
+                                                                  nOutput(nO),
+                                                                  activationFuncName(af){
 
     inputNeurons = mat(nInput + 1, 1);
     for ( int i=0; i < nInput; i++ ){
@@ -118,7 +121,19 @@ void NeuralNetwork::initializeWeights(){
 
 inline double NeuralNetwork::activationFunction( double x ) {
     //sigmoid function
-    return 1/(1+exp(-x));
+    if(activationFuncName == "SIGMOID"){
+        return 1/(1+exp(-x));
+    }
+    else if(activationFuncName == "TANH"){
+        return (exp(x) - exp(-x)) / (exp(x) + exp(-x));
+    }
+    else if(activationFuncName == "RELU"){
+        cout<<"this activation function is not defined"<<endl<<endl;
+    }
+    else{
+        cout<<"this activation function is not defined"<<endl<<endl;
+    }
+
 }
 
 void NeuralNetwork::feedForward(mat input) {

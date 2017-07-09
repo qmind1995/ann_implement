@@ -12,7 +12,7 @@
 #include "NeuralNetwork.h"
 
 //Constant Defaults!
-#define LEARNING_RATE 0.001
+#define LEARNING_RATE 0.01
 #define MOMENTUM 0.9
 #define MAX_EPOCHS 10000
 #define DESIRED_ACCURACY 99.5
