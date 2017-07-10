@@ -1,6 +1,2 @@
-
-B
-
-C
-
+This is my tutorial project :D 
 
