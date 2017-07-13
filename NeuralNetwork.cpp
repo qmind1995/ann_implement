@@ -59,7 +59,7 @@ NeuralNetwork::NeuralNetwork(int nI, int nH, int nO, string af) : nInput(nI),
 NeuralNetwork::NeuralNetwork(string weightFileName) {
     ifstream weightFileStream(weightFileName);
     if(!weightFileStream.is_open()){
-        cout<<"Khong the mo file.\n";
+        cout<<"cannot open this file ! idiot !.\n";
     }
     else{
         //load param
