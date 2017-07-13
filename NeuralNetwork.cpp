@@ -200,8 +200,8 @@ double NeuralNetwork::getSetAccuracy( std::vector<DataEntry*>& set ) {
     double incorrectResults = 0;
 
     //for every training input array
-    for ( int tp = 0; tp < (int) set.size(); tp++)
-    {
+    int x = set.size();
+    for ( int tp = 0; tp < (int) set.size(); tp++) {
         //feed inputs through network and backpropagate errors
         feedForward( set[tp]->pattern );
 

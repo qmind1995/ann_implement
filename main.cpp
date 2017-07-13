@@ -9,18 +9,25 @@
 using namespace std;
 using namespace arma;
 int main() {
-    NeuralNetwork *nn = new NeuralNetwork(784,20,10, "TANH");
-    string imgFileName = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
-    string labelFileName = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
+    NeuralNetwork *nn = new NeuralNetwork(784,10,10, "TANH");
+    string imgFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
+    string labelFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
+    string imgFileName = "/home/tri/Desktop/ann_implement/data/train-images.idx3-ubyte";
+    string labelFileName = "/home/tri/Desktop/ann_implement/data/train-labels.idx1-ubyte";
     DataReader *dR = new DataReader();
-    dR->read_Input(imgFileName, labelFileName);
+    dR->read_Input(imgFileName, labelFileName, 30000);
     srand( (unsigned int) time(0) );
 
     //create neural network trainer
     Trainer nT( nn );
-    trainingDataSet* tSet = new trainingDataSet();
-    tSet->trainingSet = dR->data;
-    nT.trainNetwork(tSet);
+    trainingDataSet* trSet = new trainingDataSet();
+    trSet->trainingSet = dR->data;
 
+
+    DataReader *dR_test = new DataReader();
+    dR_test->read_Input(imgFileName_test, labelFileName_test, 10000);
+    trSet->validationSet = dR_test->data;
+
+    nT.trainNetwork(trSet);
     return 0;
 }

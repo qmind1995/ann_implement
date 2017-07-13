@@ -13,9 +13,11 @@
 
 //Constant Defaults!
 #define LEARNING_RATE 0.01
+#define LAMDA 0.01
 #define MOMENTUM 0.9
-#define MAX_EPOCHS 10000
+#define MAX_EPOCHS 1000
 #define DESIRED_ACCURACY 99.5
+#define BATCH_SIZE 100
 #define DESIRED_MSE 0.001
 
 using namespace arma;
@@ -72,7 +74,9 @@ private:
     mat getHiddenErrorGradient();
     mat dotProduct(mat A, mat B);
     void runTrainingEpoch( std::vector<DataEntry*> trainingSet );
+    void runTrainingBatch( std::vector<DataEntry*> trainingSet );
     void backpropagate(mat desiredOutputs);
+    void backpropagateBatch(mat deriredOutputs, int index);
     void updateWeights();
     bool checkOutput(mat output, mat target);
 };

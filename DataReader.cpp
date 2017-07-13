@@ -22,7 +22,7 @@ int DataReader::ReverseInt (int i) {
 
     return((int) ch1 << 24) + ((int)ch2 << 16) + ((int)ch3 << 8) + ch4;
 }
-void DataReader::read_Mnist(string filename, vector<arma::mat> &vec){
+void DataReader::read_Mnist(string filename, vector<arma::mat> &vec, int max_number_of_images){
     ifstream file(filename,ios::in | ios::binary);
     if (file.is_open()) {
         int magic_number = 0;
@@ -37,7 +37,7 @@ void DataReader::read_Mnist(string filename, vector<arma::mat> &vec){
         n_rows = ReverseInt(n_rows);
         file.read((char*) &n_cols, sizeof(n_cols));
         n_cols = ReverseInt(n_cols);
-        for(int i = 0; i < number_of_images; ++i) {
+        for(int i = 0; i < max_number_of_images; ++i) {
             arma::mat tp(n_rows*n_cols,1);
 
             for(int r = 0; r < n_rows; ++r) {
@@ -54,18 +54,18 @@ void DataReader::read_Mnist(string filename, vector<arma::mat> &vec){
 }
 
 
-void DataReader::read_Mnist_Label(string filename, vector<double> &vec) {
+void DataReader::read_Mnist_Label(string filename, vector<double> &vec, int max_number_of_images) {
     ifstream file (filename, ios::binary);
     if (file.is_open()) {
         int magic_number = 0;
-        int number_of_images = 0;
+        int number_of_images =0;
         int n_rows = 0;
         int n_cols = 0;
         file.read((char*) &magic_number, sizeof(magic_number));
         magic_number = ReverseInt(magic_number);
         file.read((char*) &number_of_images,sizeof(number_of_images));
         number_of_images = ReverseInt(number_of_images);
-        for(int i = 0; i < number_of_images; ++i) {
+        for(int i = 0; i < max_number_of_images; ++i) {
             unsigned char temp = 0;
             file.read((char*) &temp, sizeof(temp));
             vec[i]= (double)temp;
@@ -73,12 +73,11 @@ void DataReader::read_Mnist_Label(string filename, vector<double> &vec) {
     }
 }
 
-void DataReader::read_Input(string imgFileName, string labelFileName){
-    int number_of_images = 10000;
+void DataReader::read_Input(string imgFileName, string labelFileName, int number_of_images){
     vector<arma::mat> vecData;
-    read_Mnist(imgFileName, vecData);
+    read_Mnist(imgFileName, vecData, number_of_images);
     vector<double> vecLabel(number_of_images);
-    read_Mnist_Label(labelFileName, vecLabel);
+    read_Mnist_Label(labelFileName, vecLabel, number_of_images);
     //preprocess data:
     for(int i = 0; i < number_of_images; ++i) {
 

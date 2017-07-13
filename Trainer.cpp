@@ -97,6 +97,22 @@ void Trainer::backpropagate( mat desiredOutputs ){
     updateWeights();
 }
 
+void Trainer::backpropagateBatch(mat desiredOutputs, int index){
+
+    outputErrorGradients = getOutputErrorGradient(desiredOutputs, NN->outputNeurons);
+    deltaHiddenOutput += outputErrorGradients * NN->hiddenNeurons.t(); //sum of gradients
+
+    hiddenErrorGradients = getHiddenErrorGradient();
+    deltaInputHidden += hiddenErrorGradients * NN->inputNeurons.t(); //sum of gradients
+
+    if((index + 1) % BATCH_SIZE == 0){
+        deltaHiddenOutput = 1/BATCH_SIZE * deltaHiddenOutput +  LAMDA * NN->wHiddenOutput;
+        deltaInputHidden = 1/BATCH_SIZE * deltaInputHidden + LAMDA * NN->wInputHidden;
+        updateWeights();
+    }
+
+}
+
 void Trainer::updateWeights() {
     NN->wHiddenOutput += deltaHiddenOutput;
     NN->wInputHidden += deltaInputHidden;
@@ -140,6 +156,24 @@ void Trainer::runTrainingEpoch( vector<DataEntry*> trainingSet ) {
     trainingSetAccuracy = 100 - (incorrectPatterns/trainingSet.size() * 100);
 }
 
+void Trainer::runTrainingBatch(vector<DataEntry*> trainingSet){
+    double incorrectPatterns = 0;
+    double mse = 0;
+
+    //for every training pattern
+    for ( int tp = 0; tp < (int) trainingSet.size(); tp++) {
+
+        //feed inputs through network and backpropagate errors:
+        NN->feedForwardPattern( trainingSet[tp]->pattern );
+        backpropagateBatch( trainingSet[tp]->target, tp );
+        bool patternCorrect = true;
+        patternCorrect = checkOutput(NN->clampOutput(), trainingSet[tp]->target);
+        if ( !patternCorrect ) incorrectPatterns++;
+    }
+    trainingSetAccuracy = 100 - (incorrectPatterns/trainingSet.size() * 100);
+
+}
+
 void Trainer::trainNetwork( trainingDataSet* tSet ) {
     cout	<< endl << " Neural Network Training Starting: " << endl
             << "==========================================================================" << endl
@@ -160,7 +194,12 @@ void Trainer::trainNetwork( trainingDataSet* tSet ) {
         double previousGAccuracy = generalizationSetAccuracy;
 
         //use training set to train network
-        runTrainingEpoch( tSet->trainingSet );
+        if(BATCH_SIZE > 0){
+            runTrainingBatch( tSet->trainingSet );
+        }
+        else{
+            runTrainingEpoch( tSet->trainingSet );
+        }
 
         //print out change in training /generalization accuracy (only if a change is greater than a percent)
         if ( ceil(previousTAccuracy) < ceil(trainingSetAccuracy)  || (epoch%10 ==0)) {
