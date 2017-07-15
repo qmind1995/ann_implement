@@ -13,11 +13,10 @@
 
 //Constant Defaults!
 #define LEARNING_RATE 0.01
-#define LAMDA 0.01
+
 #define MOMENTUM 0.9
-#define MAX_EPOCHS 1000
-#define DESIRED_ACCURACY 99.5
-#define BATCH_SIZE 100
+#define MAX_EPOCHS 100
+#define DESIRED_ACCURACY 95
 #define DESIRED_MSE 0.001
 
 using namespace arma;
@@ -58,27 +57,23 @@ private:
     //batch learning flag
 
     //log file handle
-    bool loggingEnabled;
-    std::fstream logFile;
-    int logResolution;
-    int lastEpochLogged;
 
 public:
-
+    Trainer();
     Trainer( NeuralNetwork* untrainedNetwork );
-
     void trainNetwork( trainingDataSet* tSet );
 
-private:
+
     inline mat getOutputErrorGradient( mat desiredValue, mat outputValue );
-    mat getHiddenErrorGradient();
+    inline mat getHiddenErrorGradient(mat outErrGradients);
+    bool checkOutput(mat output, mat target);
+private:
+
     mat dotProduct(mat A, mat B);
     void runTrainingEpoch( std::vector<DataEntry*> trainingSet );
-    void runTrainingBatch( std::vector<DataEntry*> trainingSet );
     void backpropagate(mat desiredOutputs);
-    void backpropagateBatch(mat deriredOutputs, int index);
     void updateWeights();
-    bool checkOutput(mat output, mat target);
+
 };
 
 

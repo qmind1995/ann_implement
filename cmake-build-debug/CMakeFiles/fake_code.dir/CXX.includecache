@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/tri/Desktop/ann_implement/BatchTrainer.cpp
+BatchTrainer.h
+/home/tri/Desktop/ann_implement/BatchTrainer.h
+
+/home/tri/Desktop/ann_implement/BatchTrainer.h
+NeuralNetwork.h
+/home/tri/Desktop/ann_implement/NeuralNetwork.h
+Trainer.h
+/home/tri/Desktop/ann_implement/Trainer.h
+
 /home/tri/Desktop/ann_implement/DataEntry.h
 iostream
 -
@@ -67,4 +77,6 @@ NeuralNetwork.h
 /home/tri/Desktop/ann_implement/NeuralNetwork.h
 Trainer.h
 /home/tri/Desktop/ann_implement/Trainer.h
+BatchTrainer.h
+/home/tri/Desktop/ann_implement/BatchTrainer.h
 

@@ -7,6 +7,7 @@
 
 #include "DataReader.h"
 class Trainer;
+class BatchTrainer;
 //class DataReader;
 class NeuralNetwork{
 private:
@@ -26,7 +27,7 @@ private:
     string activationFuncName;
 
     friend Trainer;
-
+    friend BatchTrainer;
 public:
 
     //constructor & destructor
@@ -34,7 +35,7 @@ public:
     ~NeuralNetwork();
 
     //weight operations
-    NeuralNetwork(string weightFileName);
+    NeuralNetwork(string weightFileName, string af);
     bool saveWeights(string outputFilename);
     arma::mat feedForwardPattern(arma::mat input);
     double getSetAccuracy( std::vector<DataEntry*>& set );

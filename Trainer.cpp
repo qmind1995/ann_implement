@@ -63,25 +63,32 @@ inline mat Trainer::getOutputErrorGradient( mat desiredValue, mat outputValue) {
     return dotProduct(first, err);
 }
 
-mat Trainer::getHiddenErrorGradient() {
-    mat tmp, first;
+mat Trainer::getHiddenErrorGradient(mat outErGradients) {
+    mat hiddenNoBias(NN->nHidden,1);
+    for(int i=0; i<NN->nHidden; i++){
+        hiddenNoBias(i,0) = NN->hiddenNeurons(i,0);
+    }
+
+    mat first;
+
     if(NN->activationFuncName == "SIGMOID"){
-        mat tmp = 1 - NN->hiddenNeurons;
-        first = dotProduct(NN->hiddenNeurons, tmp);
+        mat tmp = 1 - hiddenNoBias;
+        first = dotProduct(hiddenNoBias, tmp);
     }
     else if(NN->activationFuncName == "TANH"){
-        first = 1 - dotProduct(NN->hiddenNeurons, NN->hiddenNeurons);
+        first = 1 - dotProduct(hiddenNoBias, hiddenNoBias);
     }
 
-    mat err = NN->wHiddenOutput.t() * outputErrorGradients;
-    mat preOutput = dotProduct(first,err);
-    mat output = mat(NN->nHidden,1);
-    output.zeros();
+    mat wHO_NoBias(NN->nOutput, NN->nHidden);
 
-    for(int i=0; i<NN->nHidden; i++){
-        output(i,0) = preOutput(i,0);
-
+    for(int i=0; i<NN->nOutput; i++){
+        for(int j=0; j< NN->nHidden; j++){
+            wHO_NoBias(i,j) = NN->wHiddenOutput(i,j);
+        }
     }
+
+    mat err = wHO_NoBias.t() * outErGradients;
+    mat output = dotProduct(first,err);
     return output;
 }
 
@@ -91,26 +98,10 @@ void Trainer::backpropagate( mat desiredOutputs ){
     outputErrorGradients = getOutputErrorGradient(desiredOutputs, NN->outputNeurons);
     deltaHiddenOutput = learningRate * outputErrorGradients * NN->hiddenNeurons.t();
 
-    hiddenErrorGradients = getHiddenErrorGradient();
+    hiddenErrorGradients = getHiddenErrorGradient(outputErrorGradients);
     deltaInputHidden = learningRate * hiddenErrorGradients * NN->inputNeurons.t();
 
     updateWeights();
-}
-
-void Trainer::backpropagateBatch(mat desiredOutputs, int index){
-
-    outputErrorGradients = getOutputErrorGradient(desiredOutputs, NN->outputNeurons);
-    deltaHiddenOutput += outputErrorGradients * NN->hiddenNeurons.t(); //sum of gradients
-
-    hiddenErrorGradients = getHiddenErrorGradient();
-    deltaInputHidden += hiddenErrorGradients * NN->inputNeurons.t(); //sum of gradients
-
-    if((index + 1) % BATCH_SIZE == 0){
-        deltaHiddenOutput = 1/BATCH_SIZE * deltaHiddenOutput +  LAMDA * NN->wHiddenOutput;
-        deltaInputHidden = 1/BATCH_SIZE * deltaInputHidden + LAMDA * NN->wInputHidden;
-        updateWeights();
-    }
-
 }
 
 void Trainer::updateWeights() {
@@ -156,24 +147,6 @@ void Trainer::runTrainingEpoch( vector<DataEntry*> trainingSet ) {
     trainingSetAccuracy = 100 - (incorrectPatterns/trainingSet.size() * 100);
 }
 
-void Trainer::runTrainingBatch(vector<DataEntry*> trainingSet){
-    double incorrectPatterns = 0;
-    double mse = 0;
-
-    //for every training pattern
-    for ( int tp = 0; tp < (int) trainingSet.size(); tp++) {
-
-        //feed inputs through network and backpropagate errors:
-        NN->feedForwardPattern( trainingSet[tp]->pattern );
-        backpropagateBatch( trainingSet[tp]->target, tp );
-        bool patternCorrect = true;
-        patternCorrect = checkOutput(NN->clampOutput(), trainingSet[tp]->target);
-        if ( !patternCorrect ) incorrectPatterns++;
-    }
-    trainingSetAccuracy = 100 - (incorrectPatterns/trainingSet.size() * 100);
-
-}
-
 void Trainer::trainNetwork( trainingDataSet* tSet ) {
     cout	<< endl << " Neural Network Training Starting: " << endl
             << "==========================================================================" << endl
@@ -183,8 +156,6 @@ void Trainer::trainNetwork( trainingDataSet* tSet ) {
 
     //reset epoch and log counters
     epoch = 0;
-    lastEpochLogged = -logResolution;
-    //runTrainingEpoch( tSet->trainingSet );
 
     //train network using training dataset for training and generalization dataset for testing
 
@@ -194,13 +165,8 @@ void Trainer::trainNetwork( trainingDataSet* tSet ) {
         double previousGAccuracy = generalizationSetAccuracy;
 
         //use training set to train network
-        if(BATCH_SIZE > 0){
-            runTrainingBatch( tSet->trainingSet );
-        }
-        else{
-            runTrainingEpoch( tSet->trainingSet );
-        }
 
+        runTrainingEpoch( tSet->trainingSet );
         //print out change in training /generalization accuracy (only if a change is greater than a percent)
         if ( ceil(previousTAccuracy) < ceil(trainingSetAccuracy)  || (epoch%10 ==0)) {
             cout << "Epoch : " << epoch <<" trainingSetAccuracy: "<<trainingSetAccuracy<<endl;
@@ -215,8 +181,6 @@ void Trainer::trainNetwork( trainingDataSet* tSet ) {
     validationSetAccuracy = NN->getSetAccuracy(tSet->validationSet);
 
     //log end
-    logFile << epoch << "," << trainingSetAccuracy << "," << generalizationSetAccuracy << "," << trainingSetMSE << "," << generalizationSetMSE << endl << endl;
-    logFile << "Training Complete!!! - > Elapsed Epochs: " << epoch << " Validation Set Accuracy: " << validationSetAccuracy << " Validation Set MSE: " << validationSetMSE << endl;
 
     cout << endl << "Training Complete!!! - > Elapsed Epochs: " << epoch << endl;
     cout << " Validation Set Accuracy: " << validationSetAccuracy << endl;

@@ -56,7 +56,7 @@ NeuralNetwork::NeuralNetwork(int nI, int nH, int nO, string af) : nInput(nI),
     initializeWeights();
 }
 
-NeuralNetwork::NeuralNetwork(string weightFileName) {
+NeuralNetwork::NeuralNetwork(string weightFileName, string af):activationFuncName(af) {
     ifstream weightFileStream(weightFileName);
     if(!weightFileStream.is_open()){
         cout<<"cannot open this file ! idiot !.\n";
@@ -162,7 +162,6 @@ void NeuralNetwork::feedForward(mat input) {
     for(int i=0; i < nOutput; i++){
         outputNeurons(i,0) = activationFunction(preOutput(i,0));
     }
-
 }
 
 mat NeuralNetwork::clampOutput(){

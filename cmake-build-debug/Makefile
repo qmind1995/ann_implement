@@ -123,6 +123,33 @@ fake_code/fast:
 	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/build
 .PHONY : fake_code/fast
 
+BatchTrainer.o: BatchTrainer.cpp.o
+
+.PHONY : BatchTrainer.o
+
+# target to build an object file
+BatchTrainer.cpp.o:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/BatchTrainer.cpp.o
+.PHONY : BatchTrainer.cpp.o
+
+BatchTrainer.i: BatchTrainer.cpp.i
+
+.PHONY : BatchTrainer.i
+
+# target to preprocess a source file
+BatchTrainer.cpp.i:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/BatchTrainer.cpp.i
+.PHONY : BatchTrainer.cpp.i
+
+BatchTrainer.s: BatchTrainer.cpp.s
+
+.PHONY : BatchTrainer.s
+
+# target to generate assembly for a file
+BatchTrainer.cpp.s:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/BatchTrainer.cpp.s
+.PHONY : BatchTrainer.cpp.s
+
 DataReader.o: DataReader.cpp.o
 
 .PHONY : DataReader.o
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fake_code"
+	@echo "... BatchTrainer.o"
+	@echo "... BatchTrainer.i"
+	@echo "... BatchTrainer.s"
 	@echo "... DataReader.o"
 	@echo "... DataReader.i"
 	@echo "... DataReader.s"
