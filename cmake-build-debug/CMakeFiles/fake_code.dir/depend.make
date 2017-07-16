@@ -8,6 +8,10 @@ CMakeFiles/fake_code.dir/BatchTrainer.cpp.o: ../DataReader.h
 CMakeFiles/fake_code.dir/BatchTrainer.cpp.o: ../NeuralNetwork.h
 CMakeFiles/fake_code.dir/BatchTrainer.cpp.o: ../Trainer.h
 
+CMakeFiles/fake_code.dir/DataGenerator.cpp.o: ../DataEntry.h
+CMakeFiles/fake_code.dir/DataGenerator.cpp.o: ../DataGenerator.cpp
+CMakeFiles/fake_code.dir/DataGenerator.cpp.o: ../DataGenerator.h
+
 CMakeFiles/fake_code.dir/DataReader.cpp.o: ../DataEntry.h
 CMakeFiles/fake_code.dir/DataReader.cpp.o: ../DataReader.cpp
 CMakeFiles/fake_code.dir/DataReader.cpp.o: ../DataReader.h
@@ -25,6 +29,7 @@ CMakeFiles/fake_code.dir/Trainer.cpp.o: ../Trainer.h
 
 CMakeFiles/fake_code.dir/main.cpp.o: ../BatchTrainer.h
 CMakeFiles/fake_code.dir/main.cpp.o: ../DataEntry.h
+CMakeFiles/fake_code.dir/main.cpp.o: ../DataGenerator.h
 CMakeFiles/fake_code.dir/main.cpp.o: ../DataReader.h
 CMakeFiles/fake_code.dir/main.cpp.o: ../NeuralNetwork.h
 CMakeFiles/fake_code.dir/main.cpp.o: ../Trainer.h

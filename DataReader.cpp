@@ -22,6 +22,7 @@ int DataReader::ReverseInt (int i) {
 
     return((int) ch1 << 24) + ((int)ch2 << 16) + ((int)ch3 << 8) + ch4;
 }
+
 void DataReader::read_Mnist(string filename, vector<arma::mat> &vec, int max_number_of_images){
     ifstream file(filename,ios::in | ios::binary);
     if (file.is_open()) {
@@ -52,7 +53,6 @@ void DataReader::read_Mnist(string filename, vector<arma::mat> &vec, int max_num
 
     }
 }
-
 
 void DataReader::read_Mnist_Label(string filename, vector<double> &vec, int max_number_of_images) {
     ifstream file (filename, ios::binary);

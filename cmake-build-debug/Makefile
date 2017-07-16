@@ -150,6 +150,33 @@ BatchTrainer.cpp.s:
 	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/BatchTrainer.cpp.s
 .PHONY : BatchTrainer.cpp.s
 
+DataGenerator.o: DataGenerator.cpp.o
+
+.PHONY : DataGenerator.o
+
+# target to build an object file
+DataGenerator.cpp.o:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/DataGenerator.cpp.o
+.PHONY : DataGenerator.cpp.o
+
+DataGenerator.i: DataGenerator.cpp.i
+
+.PHONY : DataGenerator.i
+
+# target to preprocess a source file
+DataGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/DataGenerator.cpp.i
+.PHONY : DataGenerator.cpp.i
+
+DataGenerator.s: DataGenerator.cpp.s
+
+.PHONY : DataGenerator.s
+
+# target to generate assembly for a file
+DataGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/DataGenerator.cpp.s
+.PHONY : DataGenerator.cpp.s
+
 DataReader.o: DataReader.cpp.o
 
 .PHONY : DataReader.o
@@ -270,6 +297,9 @@ help:
 	@echo "... BatchTrainer.o"
 	@echo "... BatchTrainer.i"
 	@echo "... BatchTrainer.s"
+	@echo "... DataGenerator.o"
+	@echo "... DataGenerator.i"
+	@echo "... DataGenerator.s"
 	@echo "... DataReader.o"
 	@echo "... DataReader.i"
 	@echo "... DataReader.s"

@@ -24,6 +24,16 @@ vector
 armadillo
 -
 
+/home/tri/Desktop/ann_implement/DataGenerator.cpp
+DataGenerator.h
+/home/tri/Desktop/ann_implement/DataGenerator.h
+
+/home/tri/Desktop/ann_implement/DataGenerator.h
+DataEntry.h
+/home/tri/Desktop/ann_implement/DataEntry.h
+math.h
+-
+
 /home/tri/Desktop/ann_implement/DataReader.cpp
 iostream
 -
@@ -71,12 +81,12 @@ NeuralNetwork.h
 /home/tri/Desktop/ann_implement/main.cpp
 iostream
 -
-ctime
--
 NeuralNetwork.h
 /home/tri/Desktop/ann_implement/NeuralNetwork.h
 Trainer.h
 /home/tri/Desktop/ann_implement/Trainer.h
 BatchTrainer.h
 /home/tri/Desktop/ann_implement/BatchTrainer.h
+DataGenerator.h
+/home/tri/Desktop/ann_implement/DataGenerator.h
 

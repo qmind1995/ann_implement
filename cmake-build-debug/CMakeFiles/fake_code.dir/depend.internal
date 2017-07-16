@@ -8,6 +8,10 @@ CMakeFiles/fake_code.dir/BatchTrainer.cpp.o
  /home/tri/Desktop/ann_implement/DataReader.h
  /home/tri/Desktop/ann_implement/NeuralNetwork.h
  /home/tri/Desktop/ann_implement/Trainer.h
+CMakeFiles/fake_code.dir/DataGenerator.cpp.o
+ /home/tri/Desktop/ann_implement/DataEntry.h
+ /home/tri/Desktop/ann_implement/DataGenerator.cpp
+ /home/tri/Desktop/ann_implement/DataGenerator.h
 CMakeFiles/fake_code.dir/DataReader.cpp.o
  /home/tri/Desktop/ann_implement/DataEntry.h
  /home/tri/Desktop/ann_implement/DataReader.cpp
@@ -26,6 +30,7 @@ CMakeFiles/fake_code.dir/Trainer.cpp.o
 CMakeFiles/fake_code.dir/main.cpp.o
  /home/tri/Desktop/ann_implement/BatchTrainer.h
  /home/tri/Desktop/ann_implement/DataEntry.h
+ /home/tri/Desktop/ann_implement/DataGenerator.h
  /home/tri/Desktop/ann_implement/DataReader.h
  /home/tri/Desktop/ann_implement/NeuralNetwork.h
  /home/tri/Desktop/ann_implement/Trainer.h

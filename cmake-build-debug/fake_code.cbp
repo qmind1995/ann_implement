@@ -89,6 +89,15 @@
 		<Unit filename="/home/tri/Desktop/ann_implement/BatchTrainer.cpp">
 			<Option target="fake_code"/>
 		</Unit>
+		<Unit filename="/home/tri/Desktop/ann_implement/BatchTrainer.h">
+			<Option target="fake_code"/>
+		</Unit>
+		<Unit filename="/home/tri/Desktop/ann_implement/DataGenerator.cpp">
+			<Option target="fake_code"/>
+		</Unit>
+		<Unit filename="/home/tri/Desktop/ann_implement/DataGenerator.h">
+			<Option target="fake_code"/>
+		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/DataReader.cpp">
 			<Option target="fake_code"/>
 		</Unit>
