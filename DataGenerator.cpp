@@ -5,11 +5,11 @@
 #include "DataGenerator.h"
 
 
-void DataGenerator::genDataForSinFunction(int numData) {
+void DataGenerator::genDataForSinFunction(string inputDataFileName, string outputDataFileName, int numData) {
     fstream outputDataFile, inputDataFile;
 //    /home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte
-    string outputDataFileName = "/home/tri/Desktop/ann_implement/data/sinData_test.txt";
-    string inputDataFileName = "/home/tri/Desktop/ann_implement/data/sinInput_test.txt";
+//    string outputDataFileName = "/home/tri/Desktop/ann_implement/data/sinData.txt";
+//    string inputDataFileName = "/home/tri/Desktop/ann_implement/data/sinInput.txt";
     outputDataFile.open(outputDataFileName, ios::out);
     inputDataFile.open(inputDataFileName, ios::out);
     for(int i=0; i <numData; i++){

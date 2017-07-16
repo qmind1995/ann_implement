@@ -141,10 +141,14 @@ void Trainer::runTrainingEpoch( vector<DataEntry*> trainingSet ) {
         //if pattern is incorrect add to incorrect count
         if ( !patternCorrect ) incorrectPatterns++;
 
+//        cout<<(trainingSet[tp]->pattern(0,0) - trainingSet[tp]->target(0,0))<<endl;
+        mse += (NN->outputNeurons(0,0) - trainingSet[tp]->target(0,0)) * (NN->outputNeurons(0,0) - trainingSet[tp]->target(0,0));
+
     }//end for
 
     //update training accuracy and MSE
     trainingSetAccuracy = 100 - (incorrectPatterns/trainingSet.size() * 100);
+    trainingSetMSE = mse/trainingSet.size();
 }
 
 void Trainer::trainNetwork( trainingDataSet* tSet ) {
@@ -168,10 +172,10 @@ void Trainer::trainNetwork( trainingDataSet* tSet ) {
 
         runTrainingEpoch( tSet->trainingSet );
         //print out change in training /generalization accuracy (only if a change is greater than a percent)
-        if ( ceil(previousTAccuracy) < ceil(trainingSetAccuracy)  || (epoch%10 ==0)) {
-            cout << "Epoch : " << epoch <<" trainingSetAccuracy: "<<trainingSetAccuracy<<endl;
-        }
-
+//        if ( ceil(previousTAccuracy) < ceil(trainingSetAccuracy)  || (epoch%10 ==0)) {
+//            cout << "Epoch : " << epoch <<" trainingSetAccuracy: "<<trainingSetAccuracy<<endl;
+//        }
+        cout << "Epoch : " << epoch <<" trainingSetMSE: "<<trainingSetMSE<<endl;
         //once training set is complete increment epoch
         epoch++;
 

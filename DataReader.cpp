@@ -95,6 +95,26 @@ void DataReader::read_Input(string imgFileName, string labelFileName, int number
     }
 }
 
+void DataReader::read_RegressionData(string inputFileName, string outputFileName, int numdata) {
+    fstream inputFile, outputFile;
+    inputFile.open(inputFileName, ios::in);
+    outputFile.open(outputFileName, ios::in);
+    string inputLine, outputLine;
+    for(int i=0; i<numdata; i++){
+        getline(inputFile, inputLine);
+        getline(outputFile, outputLine);
+        double input = std::stod(inputLine);
+        double output = std::stod(outputLine);
+        mat iD = mat(1,1);
+        iD(0,0) = input;
+        mat oD = mat(1,1);
+        oD(0,0) = output;
+        DataEntry *d = new DataEntry(iD,oD);
+        data.push_back(d);
+    }
+
+}
+
 //int main() {
 //    string imgFileName = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
 //    string labelFileName = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";

@@ -13,8 +13,7 @@
 
 class DataGenerator{
 public:
-    vector<DataEntry*> getDataForReg();
-    void genDataForSinFunction(int numData);
+    void genDataForSinFunction(string inputDataFileName, string outputDataFileName, int numData);
 private:
     double uniformRandom(double floor, double ceil);
     double gaussianRamdom(double floor, double ceil);

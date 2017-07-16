@@ -50,10 +50,11 @@ public:
 
     DataReader(): creationApproach(NONE), numTrainingSets(-1) {}
     ~DataReader();
-//    void read_Mnist(string filename, vector<cv::Mat> &vec);
     void read_Mnist(string filename, vector<arma::mat> &vec, int max_number_of_images);
     void read_Mnist_Label(string filename, vector<double> &vec, int max_number_of_images);
     void read_Input(string imgFileName, string labelFileName, int number_of_images);
+    void read_RegressionData(string inputFileName, string outputFileName, int numdata);
+
 //private methods
 private:
     int ReverseInt (int i);

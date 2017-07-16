@@ -9,6 +9,7 @@
 
 using namespace std;
 using namespace arma;
+//
 //int main() {
 //    NeuralNetwork *nn = new NeuralNetwork(784,100,10, "SIGMOID");
 ////    NeuralNetwork *nn = new NeuralNetwork("weights.txt","TANH");
@@ -37,7 +38,38 @@ using namespace arma;
 //}
 
 int main(){
-//    DataGenerator *dataGen = new DataGenerator();
-//    dataGen->genDataForSinFunction(3000);
+    int shouldGenFile = false;
+    string outputDataFileName = "/home/tri/Desktop/ann_implement/data/sinData.txt";
+    string outputTestFileName = "/home/tri/Desktop/ann_implement/data/sinData_test.txt";
+    string inputDataFileName = "/home/tri/Desktop/ann_implement/data/sinInput.txt";
+    string inputtestFileName = "/home/tri/Desktop/ann_implement/data/sinInput_test.txt";
+    cout<<"If you want to gen data files for sin method, press 1! else press 0."<<endl;
+    cin>>shouldGenFile;
+    if(shouldGenFile == 1){
+        DataGenerator *dataGen = new DataGenerator();
+        dataGen->genDataForSinFunction(inputDataFileName, outputDataFileName, 60000);
+        dataGen->genDataForSinFunction(inputtestFileName, outputTestFileName, 10000);
+        cout<<"gen data done!"<<endl;
+    }
+
+    DataReader *dR = new DataReader();
+    dR->read_RegressionData(inputDataFileName, outputDataFileName, 10000);
+
+    NeuralNetwork *nn = new NeuralNetwork(1,20,1, "TANH");
+
+    Trainer nT( nn );
+//    BatchTrainer nT(nn, 100);
+
+    trainingDataSet* trSet = new trainingDataSet();
+    trSet->trainingSet = dR->data;
+
+    DataReader *dR_test = new DataReader();
+    dR_test->read_RegressionData(inputtestFileName, outputTestFileName, 3000);
+    trSet->validationSet = dR_test->data;
+
+    cout<<"============================= START TRAINING ============================="<<endl;
+
+    nT.trainNetwork(trSet);
+
     return 0;
 }
