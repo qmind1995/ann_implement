@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/fake_code.dir/Trainer.cpp.o"
   "CMakeFiles/fake_code.dir/BatchTrainer.cpp.o"
   "CMakeFiles/fake_code.dir/DataGenerator.cpp.o"
+  "CMakeFiles/fake_code.dir/HOGFeature.cpp.o"
   "fake_code.pdb"
   "fake_code"
 )

@@ -15,6 +15,11 @@ CMakeFiles/fake_code.dir/DataGenerator.cpp.o: ../DataGenerator.h
 CMakeFiles/fake_code.dir/DataReader.cpp.o: ../DataEntry.h
 CMakeFiles/fake_code.dir/DataReader.cpp.o: ../DataReader.cpp
 CMakeFiles/fake_code.dir/DataReader.cpp.o: ../DataReader.h
+CMakeFiles/fake_code.dir/DataReader.cpp.o: ../HOGFeature.h
+
+CMakeFiles/fake_code.dir/HOGFeature.cpp.o: ../DataEntry.h
+CMakeFiles/fake_code.dir/HOGFeature.cpp.o: ../HOGFeature.cpp
+CMakeFiles/fake_code.dir/HOGFeature.cpp.o: ../HOGFeature.h
 
 CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o: ../DataEntry.h
 CMakeFiles/fake_code.dir/NeuralNetwork.cpp.o: ../DataReader.h

@@ -43,8 +43,22 @@ math.h
 -
 DataReader.h
 /home/tri/Desktop/ann_implement/DataReader.h
+HOGFeature.h
+/home/tri/Desktop/ann_implement/HOGFeature.h
 
 /home/tri/Desktop/ann_implement/DataReader.h
+DataEntry.h
+/home/tri/Desktop/ann_implement/DataEntry.h
+armadillo
+-
+
+/home/tri/Desktop/ann_implement/HOGFeature.cpp
+HOGFeature.h
+/home/tri/Desktop/ann_implement/HOGFeature.h
+math.h
+-
+
+/home/tri/Desktop/ann_implement/HOGFeature.h
 DataEntry.h
 /home/tri/Desktop/ann_implement/DataEntry.h
 armadillo

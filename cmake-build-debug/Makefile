@@ -204,6 +204,33 @@ DataReader.cpp.s:
 	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/DataReader.cpp.s
 .PHONY : DataReader.cpp.s
 
+HOGFeature.o: HOGFeature.cpp.o
+
+.PHONY : HOGFeature.o
+
+# target to build an object file
+HOGFeature.cpp.o:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/HOGFeature.cpp.o
+.PHONY : HOGFeature.cpp.o
+
+HOGFeature.i: HOGFeature.cpp.i
+
+.PHONY : HOGFeature.i
+
+# target to preprocess a source file
+HOGFeature.cpp.i:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/HOGFeature.cpp.i
+.PHONY : HOGFeature.cpp.i
+
+HOGFeature.s: HOGFeature.cpp.s
+
+.PHONY : HOGFeature.s
+
+# target to generate assembly for a file
+HOGFeature.cpp.s:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/HOGFeature.cpp.s
+.PHONY : HOGFeature.cpp.s
+
 NeuralNetwork.o: NeuralNetwork.cpp.o
 
 .PHONY : NeuralNetwork.o
@@ -303,6 +330,9 @@ help:
 	@echo "... DataReader.o"
 	@echo "... DataReader.i"
 	@echo "... DataReader.s"
+	@echo "... HOGFeature.o"
+	@echo "... HOGFeature.i"
+	@echo "... HOGFeature.s"
 	@echo "... NeuralNetwork.o"
 	@echo "... NeuralNetwork.i"
 	@echo "... NeuralNetwork.s"
