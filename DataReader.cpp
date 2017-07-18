@@ -77,6 +77,7 @@ void DataReader::read_Mnist_Label(string filename, vector<double> &vec, int max_
 void DataReader::read_Input(string imgFileName, string labelFileName, int number_of_images){
     vector<arma::mat> vecData;
     read_Mnist(imgFileName, vecData, number_of_images);
+//    read_Mnist_HOG(imgFileName, vecData, number_of_images);
     vector<double> vecLabel(number_of_images);
     read_Mnist_Label(labelFileName, vecLabel, number_of_images);
     //preprocess data:
@@ -134,7 +135,7 @@ void DataReader::read_Mnist_HOG(string filename, vector<arma::mat> &vec, int max
         file.read((char*) &n_cols, sizeof(n_cols));
         n_cols = ReverseInt(n_cols);
 
-        HOGFeature *hf = new HOGFeature(9, 4, 4);
+        HOGFeature *hf = new HOGFeature(9, 4, 2);
 
         for(int i = 0; i < max_number_of_images; ++i) {
             arma::mat tp(n_rows,n_cols);
@@ -146,7 +147,9 @@ void DataReader::read_Mnist_HOG(string filename, vector<arma::mat> &vec, int max
                     tp(r,c) = (double) temp ;
                 }
             }
-            hf->featureDetect(tp);
+
+            mat hogFeature =  hf->featureDetect(tp);
+            vec.push_back(hogFeature);
         }
     }
 

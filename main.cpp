@@ -10,16 +10,17 @@
 using namespace std;
 using namespace arma;
 
-int main(){
-    // test hog
-    string imgFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
-    string labelFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
-    DataReader *dR = new DataReader();
-    vector<arma::mat> vec;
-    dR->read_Mnist_HOG(imgFileName_test, vec, 1);
-}
+//int main(){
+//    // test hog
+//    string imgFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
+//    string labelFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
+//    DataReader *dR = new DataReader();
+//    vector<arma::mat> vec;
+//    dR->read_Mnist_HOG(imgFileName_test, vec, 1);
+//    cout<<vec[0].size();
+//}
 
-/*
+
 int main(){
 
     int isMnist = 0;
@@ -29,7 +30,9 @@ int main(){
     cin>>isMnist;
 
     if(isMnist == 1){
+
         NeuralNetwork *nn = new NeuralNetwork(784,100,10, "SIGMOID");
+//        NeuralNetwork *nn = new NeuralNetwork(1296,100,10, "SIGMOID");
         //NeuralNetwork *nn = new NeuralNetwork("weights.txt","SIGMOID");
         string imgFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
         string labelFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
@@ -95,4 +98,3 @@ int main(){
     return 0;
 }
 
- */
