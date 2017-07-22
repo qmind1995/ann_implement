@@ -9,184 +9,85 @@
 //include definition file
 #include "NeuralNetwork.h"
 using namespace arma;
-NeuralNetwork::NeuralNetwork(int nI, int nH, int nO, string af) : nInput(nI),
-                                                                  nHidden(nH),
-                                                                  nOutput(nO),
-                                                                  activationFuncName(af){
 
-    inputNeurons = mat(nInput + 1, 1);
-    for ( int i=0; i < nInput; i++ ){
-        inputNeurons(i,0) =0;
-    }
+NeuralNetwork::NeuralNetwork(vector<Layer *> nlayers):layers(nlayers) {
 
-    //bias
-    inputNeurons(nInput,0) = -1;
+    nLayer = (int)layers.size();
+    for(int i =0; i < nLayer -1 ; i++){ // there are n-1 W between n layers
+        int layerSize = layers[i]->nNeurals;
+        int nextLayerSize = layers[i+1]->nNeurals;
 
-    hiddenNeurons = mat(nHidden + 1, 1);
-    for ( int i=0; i < nHidden; i++ ){
-        hiddenNeurons(i,0) =0;
-    }
+        mat weight = initializeWeights(nextLayerSize, layerSize);
+        weights.push_back(weight);
 
-    //create hidden bias neuron
-    hiddenNeurons(nHidden,0) = -1;
-
-    outputNeurons = mat(nOutput, 1);
-    for ( int i=0; i < nOutput; i++ ){
-        outputNeurons(i,0) =0;
-    }
-
-    //create weight lists (include bias neuron weights)
-//    wInputHidden = mat(nInput + 1, nHidden);
-    wInputHidden = mat(nHidden, nInput + 1);
-    for ( int i=0; i < nHidden; i++ ) {
-        for ( int j=0; j <= nInput; j++ ){
-            wInputHidden(i,j) = 0;
+        mat bias;
+        if(layers[i]->isBias){
+            bias = initializeWeights(nextLayerSize, 1);
         }
+
+        // if this layer has no bias => push empty(size = [0x0]); and Output layer has no bias.
+        biass.push_back(bias);
     }
 
-//    wHiddenOutput = mat(nHidden + 1, nOutput);
-    wHiddenOutput = mat(nOutput, nHidden + 1);
-    for ( int i=0; i < nOutput; i++ ) {
-        for ( int j=0; j <= nHidden; j++ ){
-            wHiddenOutput(i,j) = 0;
-        }
-    }
-
-    //initialize weights
-    initializeWeights();
 }
 
-NeuralNetwork::NeuralNetwork(string weightFileName, string af):activationFuncName(af) {
+NeuralNetwork::NeuralNetwork(string weightFileName){
     ifstream weightFileStream(weightFileName);
     if(!weightFileStream.is_open()){
         cout<<"cannot open this file ! idiot !.\n";
     }
-    else{
-        //load param
-        weightFileStream>>nInput;
-        weightFileStream>>nHidden;
-        weightFileStream>>nOutput;
-
-        //init neurals
-        inputNeurons = mat(nInput + 1, 1);
-        inputNeurons.zeros();
-        inputNeurons(nInput,0) = -1;
-
-        hiddenNeurons = mat(nHidden + 1, 1);
-        hiddenNeurons.zeros();
-        hiddenNeurons(nHidden,0) = -1;
-
-        outputNeurons = mat(nOutput, 1);
-        outputNeurons.zeros();
-
-        //load weights:
-        wInputHidden = mat(nHidden, nInput + 1);
-        for ( int i=0; i < nHidden; i++ ) {
-            for ( int j=0; j <= nInput; j++ ){
-                weightFileStream>>wInputHidden(i,j);
-            }
-        }
-
-        wHiddenOutput = mat(nOutput, nHidden + 1);
-        for ( int i=0; i < nOutput; i++ ) {
-            for ( int j=0; j <= nHidden; j++ ){
-                weightFileStream>>wHiddenOutput(i,j);
-            }
-        }
-        cout<<wHiddenOutput;
-    }
-}
-
-void NeuralNetwork::initializeWeights(){
-    //set range
-    double rH = 1/sqrt( (double) nInput);
-    double rO = 1/sqrt( (double) nHidden);
-
-    //set weights between input and hidden
-    for ( int i=0; i < nHidden; i++ ) {
-        for ( int j=0; j <= nInput; j++ ){
-            //set weights to random values
-            wInputHidden(i,j) = ( ( (double)(rand()%100)+1)/100  * 2 * rH ) - rH;
-        }
-    }
-
-    //set weights between input and hidden
-    for ( int i=0; i < nOutput; i++ ) {
-        for ( int j=0; j <= nHidden; j++ ){
-            //set weights to random values
-            wHiddenOutput(i,j) = ( ( (double)(rand()%100)+1)/100 * 2 * rO ) - rO;
-        }
-    }
-}
-
-inline double NeuralNetwork::activationFunction( double x ) {
-    //sigmoid function
-    if(activationFuncName == "SIGMOID"){
-        return 1/(1+exp(-x));
-    }
-    else if(activationFuncName == "TANH"){
-        return (exp(x) - exp(-x)) / (exp(x) + exp(-x));
-    }
-    else if(activationFuncName == "RELU"){
-        cout<<"this activation function is not defined"<<endl<<endl;
-    }
-    else{
-        cout<<"this activation function is not defined"<<endl<<endl;
-    }
 
 }
 
-void NeuralNetwork::feedForward(mat input) {
+mat NeuralNetwork::initializeWeights(int nRows, int nCols){
+    mat weight;
+    weight = mat(nRows, nCols);
+    weight.zeros();
 
-    //clone input to input neurals.
-    for(int i=0; i< nInput ; i++){
-        inputNeurons(i,0) = input(i,0);
+    for(int i=0; i< nRows; i++){
+        for(int j=0; j< nCols; j++){
+            weight(i, j) = gaussianRamdom(0, 0.5);
+        }
     }
 
-    //Calculate Hidden Layer values - include bias neuron
-
-    mat preHidden = wInputHidden * inputNeurons; //not bias yet.!
-
-    // use activation function:
-
-    for(int i =0; i< nHidden; i++){
-        hiddenNeurons(i,0) = activationFunction(preHidden(i,0));
-    }
-
-    //Calculate output
-
-    mat preOutput = wHiddenOutput * hiddenNeurons; // not bias yet!
-
-    //use activation function:
-
-    for(int i=0; i < nOutput; i++){
-        outputNeurons(i,0) = activationFunction(preOutput(i,0));
-    }
+    return weight;
 }
 
-mat NeuralNetwork::clampOutput(){
-    mat res =mat(nOutput,1);
-    for(int i=0 ;i< nOutput; i++){
-        if(outputNeurons(i,0) < 0.4){
+mat NeuralNetwork::feedForwardPattern(mat input){
+
+    layers[0]->setNeuralsValue(input);
+    layers[0]->activation();
+
+    for(int i=1; i < nLayer; i++){
+
+        mat tmp = weights[i-1] * layers[i-1]->neurals;
+        if(biass[i - 1].n_cols != 0){
+            tmp = tmp+ biass[i -1];
+        }
+
+        layers[i]->setNeuralsValue(tmp);
+        layers[i]->activation();
+    }
+    return layers[nLayer - 1]->neurals;
+}
+
+mat NeuralNetwork::clampOutput(){ // this function is applied to classification
+
+    mat res = layers[nLayer - 1]->neurals; // output layer
+
+    for(int i=0 ;i< res.n_rows; i++){
+        if(res(i,0) < 0.5){
             res(i,0) =0;
         }
-        else if(outputNeurons(i,0) >=0.6){
+        else if(res(i,0) >=0.5){
             res(i,0) =1;
-        }
-        else{
-            res(i,0) = outputNeurons(i,0);
         }
     }
     return res;
 }
 
-mat NeuralNetwork::feedForwardPattern(mat input){
-    feedForward(input);
-    return outputNeurons;
-}
-
-bool NeuralNetwork::checkOutput(mat output, mat target){
-    int size = nOutput;
+bool NeuralNetwork::checkOutput(mat output , mat target){
+    int size = output.n_rows;
     for(int i =0; i<size; i++){
         if(abs(output(i,0) - target(i,0) ) > 0.001){
             return false;
@@ -199,10 +100,10 @@ double NeuralNetwork::getSetAccuracy( std::vector<DataEntry*>& set ) {
     double incorrectResults = 0;
 
     //for every training input array
-    int x = set.size();
-    for ( int tp = 0; tp < (int) set.size(); tp++) {
+    int size = (int)set.size();
+    for ( int tp = 0; tp < size; tp++) {
         //feed inputs through network and backpropagate errors
-        feedForward( set[tp]->pattern );
+        feedForwardPattern( set[tp]->pattern );
 
         //correct pattern flag
         bool correctResult = true;
@@ -218,6 +119,19 @@ double NeuralNetwork::getSetAccuracy( std::vector<DataEntry*>& set ) {
     //calculate error and return as percentage
     return 100 - (incorrectResults/set.size() * 100);
 }
+
+void NeuralNetwork::updateWeights(vector<mat> deltaWeights, vector<mat> deltaBiass) {
+
+    for(int i= 0; i < nLayer -1; i++){
+        weights[i]  = weights[i] + deltaWeights[i];
+
+        if(deltaBiass[i].n_rows != 0){
+            biass[i] = biass[i] + deltaBiass[i];
+        }
+    }
+}
+
+/*
 
 bool NeuralNetwork::saveWeights(string filename) {
 
@@ -258,16 +172,6 @@ bool NeuralNetwork::saveWeights(string filename) {
         cout << endl << "Error - Weight output file '" << filename << "' could not be created: " << endl;
         return false;
     }
-}
-//
-//int main(){
-//    NeuralNetwork *nn = new NeuralNetwork(784,10,10);
-//    string imgFileName = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
-//    string labelFileName = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
-//    DataReader *dR = new DataReader();
-//    dR->read_Input(imgFileName, labelFileName);
-//    mat out = nn->feedForwardPattern(dR->data[0]->pattern);
-//    cout<<out;
-//
-//    return 0;
-//}
+}*/
+
+//implement new version:

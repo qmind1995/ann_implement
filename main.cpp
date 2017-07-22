@@ -6,11 +6,12 @@
 #include "Trainer.h"
 #include "BatchTrainer.h"
 #include "DataGenerator.h"
-
+#include "Layer.h"
 #include <GL/glut.h>
 
 using namespace std;
 using namespace arma;
+using namespace constant;
 
 /*
 // test openGL
@@ -51,7 +52,7 @@ int main(int argc, char **argv) {
 
 */
 
-
+/*
 int main(){
 
     int isMnist = 0;
@@ -130,3 +131,21 @@ int main(){
     return 0;
 }
 
+*/
+
+int main(int argc, char **argv) {
+
+    Layer* inputLayer = new Layer(1, true, constant::NONE);
+    Layer* hiddenLayer = new Layer(10, true, constant::TANH);
+    Layer* outputLayer = new Layer(1, false, constant::TANH);
+    vector<Layer*> layers;
+    layers.push_back(inputLayer);
+    layers.push_back(hiddenLayer);
+    layers.push_back(outputLayer);
+
+    NeuralNetwork * nNet = new NeuralNetwork(layers);
+
+
+
+    return 0;
+}

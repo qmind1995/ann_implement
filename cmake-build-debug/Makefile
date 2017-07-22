@@ -123,33 +123,6 @@ fake_code/fast:
 	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/build
 .PHONY : fake_code/fast
 
-BatchTrainer.o: BatchTrainer.cpp.o
-
-.PHONY : BatchTrainer.o
-
-# target to build an object file
-BatchTrainer.cpp.o:
-	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/BatchTrainer.cpp.o
-.PHONY : BatchTrainer.cpp.o
-
-BatchTrainer.i: BatchTrainer.cpp.i
-
-.PHONY : BatchTrainer.i
-
-# target to preprocess a source file
-BatchTrainer.cpp.i:
-	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/BatchTrainer.cpp.i
-.PHONY : BatchTrainer.cpp.i
-
-BatchTrainer.s: BatchTrainer.cpp.s
-
-.PHONY : BatchTrainer.s
-
-# target to generate assembly for a file
-BatchTrainer.cpp.s:
-	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/BatchTrainer.cpp.s
-.PHONY : BatchTrainer.cpp.s
-
 DataGenerator.o: DataGenerator.cpp.o
 
 .PHONY : DataGenerator.o
@@ -231,6 +204,33 @@ HOGFeature.cpp.s:
 	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/HOGFeature.cpp.s
 .PHONY : HOGFeature.cpp.s
 
+Layer.o: Layer.cpp.o
+
+.PHONY : Layer.o
+
+# target to build an object file
+Layer.cpp.o:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Layer.cpp.o
+.PHONY : Layer.cpp.o
+
+Layer.i: Layer.cpp.i
+
+.PHONY : Layer.i
+
+# target to preprocess a source file
+Layer.cpp.i:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Layer.cpp.i
+.PHONY : Layer.cpp.i
+
+Layer.s: Layer.cpp.s
+
+.PHONY : Layer.s
+
+# target to generate assembly for a file
+Layer.cpp.s:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Layer.cpp.s
+.PHONY : Layer.cpp.s
+
 NeuralNetwork.o: NeuralNetwork.cpp.o
 
 .PHONY : NeuralNetwork.o
@@ -285,32 +285,32 @@ Trainer.cpp.s:
 	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Trainer.cpp.s
 .PHONY : Trainer.cpp.s
 
-main.o: main.cpp.o
+Utils.o: Utils.cpp.o
 
-.PHONY : main.o
+.PHONY : Utils.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/main.cpp.o
-.PHONY : main.cpp.o
+Utils.cpp.o:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Utils.cpp.o
+.PHONY : Utils.cpp.o
 
-main.i: main.cpp.i
+Utils.i: Utils.cpp.i
 
-.PHONY : main.i
+.PHONY : Utils.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/main.cpp.i
-.PHONY : main.cpp.i
+Utils.cpp.i:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Utils.cpp.i
+.PHONY : Utils.cpp.i
 
-main.s: main.cpp.s
+Utils.s: Utils.cpp.s
 
-.PHONY : main.s
+.PHONY : Utils.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/main.cpp.s
-.PHONY : main.cpp.s
+Utils.cpp.s:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Utils.cpp.s
+.PHONY : Utils.cpp.s
 
 # Help Target
 help:
@@ -321,9 +321,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fake_code"
-	@echo "... BatchTrainer.o"
-	@echo "... BatchTrainer.i"
-	@echo "... BatchTrainer.s"
 	@echo "... DataGenerator.o"
 	@echo "... DataGenerator.i"
 	@echo "... DataGenerator.s"
@@ -333,15 +330,18 @@ help:
 	@echo "... HOGFeature.o"
 	@echo "... HOGFeature.i"
 	@echo "... HOGFeature.s"
+	@echo "... Layer.o"
+	@echo "... Layer.i"
+	@echo "... Layer.s"
 	@echo "... NeuralNetwork.o"
 	@echo "... NeuralNetwork.i"
 	@echo "... NeuralNetwork.s"
 	@echo "... Trainer.o"
 	@echo "... Trainer.i"
 	@echo "... Trainer.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Utils.o"
+	@echo "... Utils.i"
+	@echo "... Utils.s"
 .PHONY : help
 
 

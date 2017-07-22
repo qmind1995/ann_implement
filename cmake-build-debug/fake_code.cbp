@@ -86,12 +86,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/tri/Desktop/ann_implement/BatchTrainer.cpp">
-			<Option target="fake_code"/>
-		</Unit>
-		<Unit filename="/home/tri/Desktop/ann_implement/BatchTrainer.h">
-			<Option target="fake_code"/>
-		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/DataGenerator.cpp">
 			<Option target="fake_code"/>
 		</Unit>
@@ -110,6 +104,12 @@
 		<Unit filename="/home/tri/Desktop/ann_implement/HOGFeature.h">
 			<Option target="fake_code"/>
 		</Unit>
+		<Unit filename="/home/tri/Desktop/ann_implement/Layer.cpp">
+			<Option target="fake_code"/>
+		</Unit>
+		<Unit filename="/home/tri/Desktop/ann_implement/Layer.h">
+			<Option target="fake_code"/>
+		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/NeuralNetwork.cpp">
 			<Option target="fake_code"/>
 		</Unit>
@@ -122,7 +122,7 @@
 		<Unit filename="/home/tri/Desktop/ann_implement/Trainer.h">
 			<Option target="fake_code"/>
 		</Unit>
-		<Unit filename="/home/tri/Desktop/ann_implement/main.cpp">
+		<Unit filename="/home/tri/Desktop/ann_implement/Utils.cpp">
 			<Option target="fake_code"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/CMakeLists.txt">

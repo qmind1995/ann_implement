@@ -6,45 +6,46 @@
 #define ANN_IMPLEMENT_NEURALNETWORK_H
 
 #include "DataReader.h"
+#include "Layer.h"
+
+using namespace arma;
+
 class Trainer;
 class BatchTrainer;
-//class DataReader;
+
 class NeuralNetwork{
 private:
 
-    //number of neurons
-    int nInput, nHidden, nOutput;
+    int nLayer;
 
     //neurons
-    arma::mat inputNeurons;
-    arma::mat hiddenNeurons;
-    arma::mat outputNeurons;
+    vector<Layer*> layers;
 
     //weights
-    arma::mat wInputHidden;
-    arma::mat wHiddenOutput;
+    vector<mat> weights;
 
-    string activationFuncName;
+    //bias
+    vector<mat> biass;
 
     friend Trainer;
     friend BatchTrainer;
 public:
 
     //constructor & destructor
-    NeuralNetwork(int numInput, int numHidden, int numOutput, string activationFuncName);
+    NeuralNetwork(vector<Layer*> nlayers);
     ~NeuralNetwork();
 
     //weight operations
-    NeuralNetwork(string weightFileName, string af);
+    NeuralNetwork(string weightFileName);
     bool saveWeights(string outputFilename);
-    arma::mat feedForwardPattern(arma::mat input);
+    mat feedForwardPattern(arma::mat input);
     double getSetAccuracy( std::vector<DataEntry*>& set );
     arma::mat clampOutput();
+    void updateWeights(vector<mat> deltaWeights, vector<mat> deltaBiass);
 
 private:
-    bool checkOutput(arma::mat output, arma::mat target);
-    void initializeWeights();
-    inline double activationFunction( double x );
+    bool checkOutput(mat output, mat target);
+    mat initializeWeights(int nRows, int nCols);
     void feedForward( arma::mat input );
 };
 #endif //ANN_IMPLEMENT_NEURALNETWORK_H

@@ -1,0 +1,61 @@
+//
+// Created by tri on 22/07/2017.
+//
+
+#include "Layer.h"
+
+Layer::Layer(int nNeurals, bool isBias, int activeFunc):nNeurals(nNeurals), isBias(isBias), activeFunc(activeFunc) {
+    if(nNeurals >0){
+        neurals = mat(nNeurals, 1); // default constructor: mat(,) === Mat<double>(,)
+        neurals.zeros(); // first assign for safe
+    }
+}
+
+void Layer::activation() {
+
+    for(int i=0 ;i< nNeurals; i++) {
+
+        double x = neurals(i, 0);
+
+        switch (activeFunc){
+            case SIGMOID:
+                neurals(i, 0) = 1/(1+exp(-x));
+                break;
+            case TANH:
+                neurals(i, 0) = (exp(x) - exp(-x)) / (exp(x) + exp(-x));
+                break;
+            case RELU:
+
+                break;
+            default:
+                break;
+        }
+    }
+
+}
+
+mat Layer::getGradient(mat error) {
+
+    mat tmp, first;
+
+    switch(activeFunc){
+        case SIGMOID:
+            tmp =  1 - neurals ;
+            first = dotProduct(neurals, tmp);
+            break;
+        case TANH:
+            first = 1 - dotProduct(neurals, neurals);
+            break;
+        case RELU:
+
+            break;
+        default:
+            break;
+    }
+
+    return dotProduct(first, error);
+}
+
+void Layer::setNeuralsValue(mat values) {
+    neurals = values;
+}

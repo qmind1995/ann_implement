@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/tri/Desktop/ann_implement/BatchTrainer.cpp
-BatchTrainer.h
-/home/tri/Desktop/ann_implement/BatchTrainer.h
-
-/home/tri/Desktop/ann_implement/BatchTrainer.h
-NeuralNetwork.h
-/home/tri/Desktop/ann_implement/NeuralNetwork.h
-Trainer.h
-/home/tri/Desktop/ann_implement/Trainer.h
-
 /home/tri/Desktop/ann_implement/DataEntry.h
 iostream
 -
@@ -62,6 +52,14 @@ DataEntry.h
 armadillo
 -
 
+/home/tri/Desktop/ann_implement/Layer.cpp
+Layer.h
+/home/tri/Desktop/ann_implement/Layer.h
+
+/home/tri/Desktop/ann_implement/Layer.h
+Utils.cpp
+/home/tri/Desktop/ann_implement/Utils.cpp
+
 /home/tri/Desktop/ann_implement/NeuralNetwork.cpp
 iostream
 -
@@ -77,6 +75,8 @@ NeuralNetwork.h
 /home/tri/Desktop/ann_implement/NeuralNetwork.h
 DataReader.h
 /home/tri/Desktop/ann_implement/DataReader.h
+Layer.h
+/home/tri/Desktop/ann_implement/Layer.h
 
 /home/tri/Desktop/ann_implement/Trainer.cpp
 Trainer.h
@@ -90,17 +90,7 @@ vector
 NeuralNetwork.h
 /home/tri/Desktop/ann_implement/NeuralNetwork.h
 
-/home/tri/Desktop/ann_implement/main.cpp
-iostream
--
-NeuralNetwork.h
-/home/tri/Desktop/ann_implement/NeuralNetwork.h
-Trainer.h
-/home/tri/Desktop/ann_implement/Trainer.h
-BatchTrainer.h
-/home/tri/Desktop/ann_implement/BatchTrainer.h
-DataGenerator.h
-/home/tri/Desktop/ann_implement/DataGenerator.h
-GL/glut.h
--
+/home/tri/Desktop/ann_implement/Utils.cpp
+armadillo
+/home/tri/Desktop/ann_implement/armadillo
 
