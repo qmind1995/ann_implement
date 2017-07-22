@@ -7,18 +7,49 @@
 #include "BatchTrainer.h"
 #include "DataGenerator.h"
 
+#include <GL/glut.h>
+
 using namespace std;
 using namespace arma;
 
-//int main(){
-//    // test hog
-//    string imgFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
-//    string labelFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
-//    DataReader *dR = new DataReader();
-//    vector<arma::mat> vec;
-//    dR->read_Mnist_HOG(imgFileName_test, vec, 1);
-//    cout<<vec[0].size();
-//}
+/*
+// test openGL
+void draw(void) {
+
+    // Black background
+    glClearColor(0.0f,0.0f,0.0f,1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    //Draw i
+    glFlush();
+    //https://cmake.org/pipermail/cmake/2009-February/027234.html
+
+
+}
+
+int main(int argc, char **argv) {
+    // test hog
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_RGBA|GLUT_SINGLE);
+    glutInitWindowPosition(50, 25);
+
+    //Configure Window Size
+    glutInitWindowSize(480,480);
+
+    //Create Window
+    glutCreateWindow("Hello OpenGL");
+
+
+    //Call to the drawing function
+    glutDisplayFunc(draw);
+
+    // Loop require by OpenGL
+    glutMainLoop();
+    return 0;
+
+
+}
+
+*/
 
 
 int main(){
@@ -32,7 +63,7 @@ int main(){
     if(isMnist == 1){
 
         NeuralNetwork *nn = new NeuralNetwork(784,100,10, "SIGMOID");
-//        NeuralNetwork *nn = new NeuralNetwork(1296,100,10, "SIGMOID");
+        //NeuralNetwork *nn = new NeuralNetwork(1296,100,10, "SIGMOID");
         //NeuralNetwork *nn = new NeuralNetwork("weights.txt","SIGMOID");
         string imgFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-images.idx3-ubyte";
         string labelFileName_test = "/home/tri/Desktop/ann_implement/data/t10k-labels.idx1-ubyte";
@@ -71,6 +102,7 @@ int main(){
 
         cout<<"If you want to gen data files for sin method, press 1! else press 0."<<endl;
         cin>>shouldGenFile;
+
         if(shouldGenFile == 1){
             DataGenerator *dataGen = new DataGenerator();
             dataGen->genDataForSinFunction(inputDataFileName, outputDataFileName, 60000);

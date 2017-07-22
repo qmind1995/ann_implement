@@ -3,7 +3,6 @@
 //
 
 #include "HOGFeature.h"
-#include <math.h>
 
 // in this time, i just implement hog apply some simple kernel. I'll update later.
 HOGFeature::HOGFeature(int bin_, int cellSize_, int blockSize_):bin(bin_), cellSize(cellSize_), blockSize(blockSize_) {

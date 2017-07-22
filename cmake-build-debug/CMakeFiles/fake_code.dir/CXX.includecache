@@ -55,8 +55,6 @@ armadillo
 /home/tri/Desktop/ann_implement/HOGFeature.cpp
 HOGFeature.h
 /home/tri/Desktop/ann_implement/HOGFeature.h
-math.h
--
 
 /home/tri/Desktop/ann_implement/HOGFeature.h
 DataEntry.h
@@ -103,4 +101,6 @@ BatchTrainer.h
 /home/tri/Desktop/ann_implement/BatchTrainer.h
 DataGenerator.h
 /home/tri/Desktop/ann_implement/DataGenerator.h
+GL/glut.h
+-
 
