@@ -15,6 +15,9 @@ namespace constant{
     static const int SIGMOID = 1;
     static const int TANH = 2;
     static const int RELU = 3;
+    static const int CLASSIFICATION = 10;
+    static const int REGRESSTION = 11;
+
 }
 
 using namespace arma;
@@ -24,7 +27,7 @@ class Layer{
 
 public:
     Layer(int nNeurals, bool isBias, int activeFunc = constant::NONE);
-    mat getGradient(mat error);
+    mat getErrGradient(mat error);
     int nNeurals;
     bool isBias;
     void setNeuralsValue(mat values);

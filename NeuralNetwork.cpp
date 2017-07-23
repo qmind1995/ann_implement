@@ -8,9 +8,8 @@
 
 //include definition file
 #include "NeuralNetwork.h"
-using namespace arma;
 
-NeuralNetwork::NeuralNetwork(vector<Layer *> nlayers):layers(nlayers) {
+NeuralNetwork::NeuralNetwork(vector<Layer *> nlayers, int type):layers(nlayers), netType(type) {
 
     nLayer = (int)layers.size();
     for(int i =0; i < nLayer -1 ; i++){ // there are n-1 W between n layers
@@ -120,15 +119,45 @@ double NeuralNetwork::getSetAccuracy( std::vector<DataEntry*>& set ) {
     return 100 - (incorrectResults/set.size() * 100);
 }
 
-void NeuralNetwork::updateWeights(vector<mat> deltaWeights, vector<mat> deltaBiass) {
+void NeuralNetwork::updateWeights(vector<mat> deltaWeights, vector<mat> deltaBiass, double learningRate) {
 
     for(int i= 0; i < nLayer -1; i++){
-        weights[i]  = weights[i] + deltaWeights[i];
+        weights[i]  = weights[i] + learningRate * deltaWeights[i];
 
         if(deltaBiass[i].n_rows != 0){
-            biass[i] = biass[i] + deltaBiass[i];
+            biass[i] = biass[i] + learningRate * deltaBiass[i];
         }
     }
+}
+
+mat NeuralNetwork::getOutput() {
+    return layers[nLayer -1]->neurals;
+}
+
+void NeuralNetwork::printNetwokInfo() {
+    cout <<"Network infomation: "<<endl;
+    for(int i =0; i < nLayer; i++){
+        cout<<"Layer "<<i +1 << " has "<<layers[i]->nNeurals <<" neurals;  "<<"activation function: ";
+        switch(layers[i]->activeFunc){
+            case TANH: {
+                cout << "Tanh" << endl;
+                break;
+            }
+            case SIGMOID: {
+                cout << "Sigmoid" << endl;
+                break;
+            }
+            case RELU: {
+                cout << "Relu" << endl;
+                break;
+            }
+            case constant::NONE: {
+                cout << "None" << endl;
+                break;
+            }
+        }
+    }
+    cout<<"=========================================================================="<<endl<<endl;
 }
 
 /*

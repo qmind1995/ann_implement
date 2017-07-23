@@ -20,6 +20,7 @@
 #define DESIRED_MSE 0.001
 
 using namespace arma;
+using namespace constant;
 
 class Trainer {
 
@@ -72,7 +73,6 @@ public:
     bool checkOutput(mat output, mat target);
 private:
 
-    mat dotProduct(mat A, mat B);
     void runTrainingEpoch( std::vector<DataEntry*> trainingSet );
     void backpropagate(mat desiredOutputs);
     void updateWeights();

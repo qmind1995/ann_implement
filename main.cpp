@@ -136,16 +136,33 @@ int main(){
 int main(int argc, char **argv) {
 
     Layer* inputLayer = new Layer(1, true, constant::NONE);
-    Layer* hiddenLayer = new Layer(10, true, constant::TANH);
+    Layer* hiddenLayer = new Layer(20, true, constant::TANH);
     Layer* outputLayer = new Layer(1, false, constant::TANH);
     vector<Layer*> layers;
     layers.push_back(inputLayer);
     layers.push_back(hiddenLayer);
     layers.push_back(outputLayer);
 
-    NeuralNetwork * nNet = new NeuralNetwork(layers);
+    NeuralNetwork * nNet = new NeuralNetwork(layers, REGRESSTION);
 
+    string outputDataFileName = "/home/tri/Desktop/ann_implement/data/sinData.txt";
+    string outputTestFileName = "/home/tri/Desktop/ann_implement/data/sinData_test.txt";
+    string inputDataFileName = "/home/tri/Desktop/ann_implement/data/sinInput.txt";
+    string inputtestFileName = "/home/tri/Desktop/ann_implement/data/sinInput_test.txt";
 
+    DataReader *dR = new DataReader();
+    dR->read_RegressionData(inputDataFileName, outputDataFileName, 1000);
+
+    Trainer nT( nNet );
+
+    trainingDataSet* trSet = new trainingDataSet();
+    trSet->trainingSet = dR->data;
+
+    DataReader *dR_test = new DataReader();
+    dR_test->read_RegressionData(inputtestFileName, outputTestFileName, 3000);
+    trSet->validationSet = dR_test->data;
+
+    nT.trainNetwork(trSet);
 
     return 0;
 }

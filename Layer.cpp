@@ -18,15 +18,18 @@ void Layer::activation() {
         double x = neurals(i, 0);
 
         switch (activeFunc){
-            case SIGMOID:
-                neurals(i, 0) = 1/(1+exp(-x));
+            case SIGMOID: {
+                neurals(i, 0) = 1 / (1 + exp(-x));
                 break;
-            case TANH:
+            }
+            case TANH: {
                 neurals(i, 0) = (exp(x) - exp(-x)) / (exp(x) + exp(-x));
                 break;
-            case RELU:
+            }
+            case RELU: {
 
                 break;
+            }
             default:
                 break;
         }
@@ -34,26 +37,29 @@ void Layer::activation() {
 
 }
 
-mat Layer::getGradient(mat error) {
+mat Layer::getErrGradient(mat error) {
 
-    mat tmp, first;
+    mat tmp, gradient;
 
     switch(activeFunc){
-        case SIGMOID:
-            tmp =  1 - neurals ;
-            first = dotProduct(neurals, tmp);
+        case SIGMOID: {
+            tmp = 1 - neurals;
+            gradient = dotProduct(neurals, tmp);
             break;
-        case TANH:
-            first = 1 - dotProduct(neurals, neurals);
+        }
+        case TANH:{
+            gradient = 1 - dotProduct(neurals, neurals);
             break;
-        case RELU:
+        }
+        case RELU: {
 
             break;
+        }
         default:
             break;
     }
 
-    return dotProduct(first, error);
+    return dotProduct(gradient, error);
 }
 
 void Layer::setNeuralsValue(mat values) {

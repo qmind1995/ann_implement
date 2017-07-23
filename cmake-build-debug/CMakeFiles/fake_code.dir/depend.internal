@@ -35,3 +35,13 @@ CMakeFiles/fake_code.dir/Trainer.cpp.o
  /home/tri/Desktop/ann_implement/Utils.cpp
 CMakeFiles/fake_code.dir/Utils.cpp.o
  /home/tri/Desktop/ann_implement/Utils.cpp
+CMakeFiles/fake_code.dir/main.cpp.o
+ /home/tri/Desktop/ann_implement/BatchTrainer.h
+ /home/tri/Desktop/ann_implement/DataEntry.h
+ /home/tri/Desktop/ann_implement/DataGenerator.h
+ /home/tri/Desktop/ann_implement/DataReader.h
+ /home/tri/Desktop/ann_implement/Layer.h
+ /home/tri/Desktop/ann_implement/NeuralNetwork.h
+ /home/tri/Desktop/ann_implement/Trainer.h
+ /home/tri/Desktop/ann_implement/Utils.cpp
+ /home/tri/Desktop/ann_implement/main.cpp

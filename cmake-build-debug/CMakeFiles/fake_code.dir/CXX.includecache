@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/tri/Desktop/ann_implement/BatchTrainer.h
+NeuralNetwork.h
+/home/tri/Desktop/ann_implement/NeuralNetwork.h
+Trainer.h
+/home/tri/Desktop/ann_implement/Trainer.h
+
 /home/tri/Desktop/ann_implement/DataEntry.h
 iostream
 -
@@ -81,6 +87,8 @@ Layer.h
 /home/tri/Desktop/ann_implement/Trainer.cpp
 Trainer.h
 /home/tri/Desktop/ann_implement/Trainer.h
+time.h
+-
 
 /home/tri/Desktop/ann_implement/Trainer.h
 fstream
@@ -93,4 +101,20 @@ NeuralNetwork.h
 /home/tri/Desktop/ann_implement/Utils.cpp
 armadillo
 /home/tri/Desktop/ann_implement/armadillo
+
+/home/tri/Desktop/ann_implement/main.cpp
+iostream
+-
+NeuralNetwork.h
+/home/tri/Desktop/ann_implement/NeuralNetwork.h
+Trainer.h
+/home/tri/Desktop/ann_implement/Trainer.h
+BatchTrainer.h
+/home/tri/Desktop/ann_implement/BatchTrainer.h
+DataGenerator.h
+/home/tri/Desktop/ann_implement/DataGenerator.h
+Layer.h
+/home/tri/Desktop/ann_implement/Layer.h
+GL/glut.h
+-
 
