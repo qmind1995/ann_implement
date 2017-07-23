@@ -9,7 +9,7 @@
 #include "Layer.h"
 
 using namespace arma;
-using namespace constant;
+using namespace parameters;
 
 class Trainer;
 class BatchTrainer;
@@ -33,6 +33,7 @@ public:
     void updateWeights(vector<mat> deltaWeights, vector<mat> deltaBiass, double learningRate);
     mat getOutput();
     void printNetwokInfo();
+    mat getVisualizeOutput(mat input);
 private:
 
     int nLayer;

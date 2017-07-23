@@ -97,7 +97,7 @@ void Trainer::runTrainingEpoch( vector<DataEntry*> trainingSet ) {
                 if (!patternCorrect) incorrectPatterns++;
                 break;
             }
-            case constant::REGRESSTION: {
+            case parameters::REGRESSTION: {
                 //increase mean square error
                 mse += (NN->getOutput()(0,0) - trainingSet[tp]->target(0, 0)) *
                        (NN->getOutput()(0,0) - trainingSet[tp]->target(0, 0));
@@ -166,3 +166,4 @@ void Trainer::trainNetwork( trainingDataSet* tSet ) {
     cout << endl << "Training Complete!!! - > Elapsed Epochs: " << epoch << endl;
     cout << " Validation Set Accuracy: " << validationSetAccuracy << endl;
 }
+

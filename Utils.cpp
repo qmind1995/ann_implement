@@ -3,9 +3,55 @@
 //
 
 #include "armadillo"
+class NeuralNetwork;
+
+namespace parameters{
+    static const int NONE = 0;
+    static const int SIGMOID = 1;
+    static const int TANH = 2;
+    static const int RELU = 3;
+    static const int CLASSIFICATION = 10;
+    static const int REGRESSTION = 11;
+    static const double PI = 3.141592654;
+    struct paramHolder {
+        int argc;
+        char ** argv;
+        NeuralNetwork* net;
+    };
+
+}
 
 using namespace std;
 using namespace arma;
+using namespace parameters;
+
+inline static mat activationFunction(mat neurals, int activeFunc){
+
+    int nNeurals = neurals.n_rows;
+
+    for(int i=0 ;i< nNeurals; i++) {
+
+        double x = neurals(i, 0);
+
+        switch (activeFunc){
+            case SIGMOID: {
+                neurals(i, 0) = 1 / (1 + exp(-x));
+                break;
+            }
+            case TANH: {
+                neurals(i, 0) = (exp(x) - exp(-x)) / (exp(x) + exp(-x));
+                break;
+            }
+            case RELU: {
+
+                break;
+            }
+            default:
+                break;
+        }
+    }
+    return neurals;
+}
 
 inline static mat dotProduct(mat A, mat B){
 

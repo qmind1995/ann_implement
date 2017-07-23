@@ -70,6 +70,7 @@ mat NeuralNetwork::feedForwardPattern(mat input){
     return layers[nLayer - 1]->neurals;
 }
 
+
 mat NeuralNetwork::clampOutput(){ // this function is applied to classification
 
     mat res = layers[nLayer - 1]->neurals; // output layer
@@ -134,6 +135,23 @@ mat NeuralNetwork::getOutput() {
     return layers[nLayer -1]->neurals;
 }
 
+mat NeuralNetwork::getVisualizeOutput(mat input) {
+
+    mat tmpNeurals = input;
+
+    for(int i=1; i < nLayer; i++){
+        mat tmp = weights[i-1] * tmpNeurals;
+        if(biass[i - 1].n_cols != 0){
+            tmp = tmp+ biass[i -1];
+        }
+
+        tmpNeurals = activationFunction(tmp, layers[i]->activeFunc);
+    }
+
+    return tmpNeurals;
+
+}
+
 void NeuralNetwork::printNetwokInfo() {
     cout <<"Network infomation: "<<endl;
     for(int i =0; i < nLayer; i++){
@@ -151,7 +169,7 @@ void NeuralNetwork::printNetwokInfo() {
                 cout << "Relu" << endl;
                 break;
             }
-            case constant::NONE: {
+            case parameters::NONE: {
                 cout << "None" << endl;
                 break;
             }
@@ -159,48 +177,3 @@ void NeuralNetwork::printNetwokInfo() {
     }
     cout<<"=========================================================================="<<endl<<endl;
 }
-
-/*
-
-bool NeuralNetwork::saveWeights(string filename) {
-
-    fstream outputFile;
-    outputFile.open(filename, ios::out);
-
-    if ( outputFile.is_open() ) {
-
-        outputFile<<nInput<<"\n";
-        outputFile<<nHidden<<"\n";
-        outputFile<<nOutput<<"\n";
-
-        // save Input-> Hidden weights:
-        for(int i=0; i< nHidden; i++){
-            for(int j=0; j< nInput+1; j++){
-                outputFile<<wInputHidden(i,j) <<"\t";
-            }
-            outputFile<<"\n";
-        }
-
-        // save Hidden -> Output weights:
-        for(int i=0; i< nOutput; i++){
-            for(int j=0; j< nHidden+1; j++){
-                outputFile<<wHiddenOutput(i,j)<<"\t";
-            }
-            outputFile<<"\n";
-        }
-
-        //print success
-        cout << endl << "Neuron weights saved to '" << filename << "'" << endl;
-
-        //close file
-        outputFile.close();
-
-        return true;
-    }
-    else {
-        cout << endl << "Error - Weight output file '" << filename << "' could not be created: " << endl;
-        return false;
-    }
-}*/
-
-//implement new version:

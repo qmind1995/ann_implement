@@ -20,7 +20,7 @@
 #define DESIRED_MSE 0.001
 
 using namespace arma;
-using namespace constant;
+using namespace parameters;
 
 class Trainer {
 

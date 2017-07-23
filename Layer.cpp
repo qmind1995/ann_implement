@@ -13,28 +13,7 @@ Layer::Layer(int nNeurals, bool isBias, int activeFunc):nNeurals(nNeurals), isBi
 
 void Layer::activation() {
 
-    for(int i=0 ;i< nNeurals; i++) {
-
-        double x = neurals(i, 0);
-
-        switch (activeFunc){
-            case SIGMOID: {
-                neurals(i, 0) = 1 / (1 + exp(-x));
-                break;
-            }
-            case TANH: {
-                neurals(i, 0) = (exp(x) - exp(-x)) / (exp(x) + exp(-x));
-                break;
-            }
-            case RELU: {
-
-                break;
-            }
-            default:
-                break;
-        }
-    }
-
+    neurals = activationFunction(neurals, activeFunc);
 }
 
 mat Layer::getErrGradient(mat error) {

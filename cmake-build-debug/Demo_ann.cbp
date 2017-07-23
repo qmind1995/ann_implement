@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="fake_code"/>
+		<Option title="Demo_ann"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tri/Desktop/ann_implement/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="fake_code">
-				<Option output="/home/tri/Desktop/ann_implement/cmake-build-debug/fake_code" prefix_auto="0" extension_auto="0"/>
+			<Target title="Demo_ann">
+				<Option output="/home/tri/Desktop/ann_implement/cmake-build-debug/Demo_ann" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/tri/Desktop/ann_implement/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -54,14 +54,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tri/Desktop/ann_implement/cmake-build-debug/Makefile&quot;  VERBOSE=1 fake_code"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tri/Desktop/ann_implement/cmake-build-debug/Makefile&quot;  VERBOSE=1 Demo_ann"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tri/Desktop/ann_implement/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/tri/Desktop/ann_implement/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tri/Desktop/ann_implement/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="fake_code/fast">
-				<Option output="/home/tri/Desktop/ann_implement/cmake-build-debug/fake_code" prefix_auto="0" extension_auto="0"/>
+			<Target title="Demo_ann/fast">
+				<Option output="/home/tri/Desktop/ann_implement/cmake-build-debug/Demo_ann" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/tri/Desktop/ann_implement/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -77,7 +77,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tri/Desktop/ann_implement/cmake-build-debug/Makefile&quot;  VERBOSE=1 fake_code/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tri/Desktop/ann_implement/cmake-build-debug/Makefile&quot;  VERBOSE=1 Demo_ann/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tri/Desktop/ann_implement/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/tri/Desktop/ann_implement/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tri/Desktop/ann_implement/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -85,49 +85,49 @@
 			</Target>
 		</Build>
 		<Unit filename="/home/tri/Desktop/ann_implement/DataGenerator.cpp">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/DataGenerator.h">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/DataReader.cpp">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/DataReader.h">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/HOGFeature.cpp">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/HOGFeature.h">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/Layer.cpp">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/Layer.h">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/NeuralNetwork.cpp">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/NeuralNetwork.h">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/Trainer.cpp">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/Trainer.h">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/Utils.cpp">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/Visualize.cpp">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/main.cpp">
-			<Option target="fake_code"/>
+			<Option target="Demo_ann"/>
 		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

@@ -35,10 +35,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/tri/Downloads/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/Platform/Linux.cmake"
   "/home/tri/Downloads/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/Platform/UnixPaths.cmake"
   "/home/tri/Downloads/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/ProcessorCount.cmake"
-  "/usr/local/share/OpenCV/OpenCVConfig-version.cmake"
-  "/usr/local/share/OpenCV/OpenCVConfig.cmake"
-  "/usr/local/share/OpenCV/OpenCVModules-release.cmake"
-  "/usr/local/share/OpenCV/OpenCVModules.cmake"
   )
 
 # The corresponding makefile is:
@@ -54,5 +50,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/fake_code.dir/DependInfo.cmake"
+  "CMakeFiles/Demo_ann.dir/DependInfo.cmake"
   )
