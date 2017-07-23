@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/fake_code.dir/HOGFeature.cpp.o"
   "CMakeFiles/fake_code.dir/Layer.cpp.o"
   "CMakeFiles/fake_code.dir/Utils.cpp.o"
+  "CMakeFiles/fake_code.dir/Visualize.cpp.o"
   "fake_code.pdb"
   "fake_code"
 )

@@ -3,7 +3,6 @@
 //
 
 #include "Trainer.h"
-#include <time.h>
 
 Trainer::Trainer( NeuralNetwork *nn )	:	NN(nn),
                                             epoch(0),
@@ -57,23 +56,20 @@ void Trainer::backpropagate( mat desiredOutputs ){
 
         mat errorGradient = NN->layers[i]->getErrGradient(err);
         mat deltaW = errorGradient * NN->layers[i-1]->neurals.t();
-        deltaWeights.push_back(deltaW);
-
+        deltaWeights[i-1] = deltaW;
         mat deltaB;
 
         if( NN->biass[i-1].n_rows != 0 ){
             deltaB = errorGradient;
         }
-        deltaBiass.push_back(deltaB);
+        deltaBiass[i-1] = deltaB;
         err = NN->weights[i-1] .t() * errorGradient;
     }
-    reverse(deltaWeights.begin(), deltaWeights.end());
-    reverse(deltaBiass.begin(), deltaBiass.end());
 
     updateWeights();
 }
 
-void Trainer::updateWeights() {
+inline void Trainer::updateWeights() {
     NN->updateWeights(deltaWeights, deltaBiass, learningRate);
 }
 
@@ -152,10 +148,8 @@ void Trainer::trainNetwork( trainingDataSet* tSet ) {
         double previousGAccuracy = generalizationSetAccuracy;
 
         //use training set to train network
-        clock_t tStart = clock();
 
         runTrainingEpoch( tSet->trainingSet );
-        printf("runTrainingEpoch taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
         //print out change in training /generalization accuracy (only if a change is greater than a percent)
         if ( ceil(previousTAccuracy) < ceil(trainingSetAccuracy)  || (epoch%10 ==0)) {
             cout << "Epoch : " << epoch <<" trainingSetAccuracy: "<<trainingSetAccuracy<<endl;

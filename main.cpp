@@ -7,11 +7,15 @@
 #include "BatchTrainer.h"
 #include "DataGenerator.h"
 #include "Layer.h"
-#include <GL/glut.h>
+
+#define N_THREAD   2
+
 
 using namespace std;
 using namespace arma;
 using namespace constant;
+
+
 
 /*
 // test openGL
@@ -133,8 +137,7 @@ int main(){
 
 */
 
-int main(int argc, char **argv) {
-
+int main(){
     Layer* inputLayer = new Layer(1, true, constant::NONE);
     Layer* hiddenLayer = new Layer(20, true, constant::TANH);
     Layer* outputLayer = new Layer(1, false, constant::TANH);
@@ -151,7 +154,7 @@ int main(int argc, char **argv) {
     string inputtestFileName = "/home/tri/Desktop/ann_implement/data/sinInput_test.txt";
 
     DataReader *dR = new DataReader();
-    dR->read_RegressionData(inputDataFileName, outputDataFileName, 1000);
+    dR->read_RegressionData(inputDataFileName, outputDataFileName, 60000);
 
     Trainer nT( nNet );
 
@@ -164,5 +167,4 @@ int main(int argc, char **argv) {
 
     nT.trainNetwork(trSet);
 
-    return 0;
 }

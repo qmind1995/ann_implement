@@ -87,8 +87,6 @@ Layer.h
 /home/tri/Desktop/ann_implement/Trainer.cpp
 Trainer.h
 /home/tri/Desktop/ann_implement/Trainer.h
-time.h
--
 
 /home/tri/Desktop/ann_implement/Trainer.h
 fstream
@@ -101,6 +99,10 @@ NeuralNetwork.h
 /home/tri/Desktop/ann_implement/Utils.cpp
 armadillo
 /home/tri/Desktop/ann_implement/armadillo
+
+/home/tri/Desktop/ann_implement/Visualize.cpp
+GL/glut.h
+-
 
 /home/tri/Desktop/ann_implement/main.cpp
 iostream
@@ -115,6 +117,4 @@ DataGenerator.h
 /home/tri/Desktop/ann_implement/DataGenerator.h
 Layer.h
 /home/tri/Desktop/ann_implement/Layer.h
-GL/glut.h
--
 

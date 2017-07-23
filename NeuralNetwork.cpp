@@ -122,10 +122,10 @@ double NeuralNetwork::getSetAccuracy( std::vector<DataEntry*>& set ) {
 void NeuralNetwork::updateWeights(vector<mat> deltaWeights, vector<mat> deltaBiass, double learningRate) {
 
     for(int i= 0; i < nLayer -1; i++){
-        weights[i]  = weights[i] + learningRate * deltaWeights[i];
+        weights[i]  += learningRate * deltaWeights[i];
 
         if(deltaBiass[i].n_rows != 0){
-            biass[i] = biass[i] + learningRate * deltaBiass[i];
+            biass[i] += learningRate * deltaBiass[i];
         }
     }
 }

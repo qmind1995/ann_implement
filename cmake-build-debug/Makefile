@@ -312,6 +312,33 @@ Utils.cpp.s:
 	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Utils.cpp.s
 .PHONY : Utils.cpp.s
 
+Visualize.o: Visualize.cpp.o
+
+.PHONY : Visualize.o
+
+# target to build an object file
+Visualize.cpp.o:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Visualize.cpp.o
+.PHONY : Visualize.cpp.o
+
+Visualize.i: Visualize.cpp.i
+
+.PHONY : Visualize.i
+
+# target to preprocess a source file
+Visualize.cpp.i:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Visualize.cpp.i
+.PHONY : Visualize.cpp.i
+
+Visualize.s: Visualize.cpp.s
+
+.PHONY : Visualize.s
+
+# target to generate assembly for a file
+Visualize.cpp.s:
+	$(MAKE) -f CMakeFiles/fake_code.dir/build.make CMakeFiles/fake_code.dir/Visualize.cpp.s
+.PHONY : Visualize.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -369,6 +396,9 @@ help:
 	@echo "... Utils.o"
 	@echo "... Utils.i"
 	@echo "... Utils.s"
+	@echo "... Visualize.o"
+	@echo "... Visualize.i"
+	@echo "... Visualize.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

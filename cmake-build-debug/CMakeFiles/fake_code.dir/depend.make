@@ -35,6 +35,8 @@ CMakeFiles/fake_code.dir/Trainer.cpp.o: ../Utils.cpp
 
 CMakeFiles/fake_code.dir/Utils.cpp.o: ../Utils.cpp
 
+CMakeFiles/fake_code.dir/Visualize.cpp.o: ../Visualize.cpp
+
 CMakeFiles/fake_code.dir/main.cpp.o: ../BatchTrainer.h
 CMakeFiles/fake_code.dir/main.cpp.o: ../DataEntry.h
 CMakeFiles/fake_code.dir/main.cpp.o: ../DataGenerator.h

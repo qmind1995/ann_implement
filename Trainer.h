@@ -67,15 +67,12 @@ public:
     Trainer( NeuralNetwork* untrainedNetwork );
     void trainNetwork( trainingDataSet* tSet );
 
-
-    inline mat getOutputErrorGradient( mat desiredValue, mat outputValue );
-    inline mat getHiddenErrorGradient(mat outErrGradients);
     bool checkOutput(mat output, mat target);
 private:
 
     void runTrainingEpoch( std::vector<DataEntry*> trainingSet );
     void backpropagate(mat desiredOutputs);
-    void updateWeights();
+    inline void updateWeights();
 
 };
 
