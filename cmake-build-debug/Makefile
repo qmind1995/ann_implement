@@ -123,168 +123,6 @@ Demo_ann/fast:
 	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/build
 .PHONY : Demo_ann/fast
 
-DataGenerator.o: DataGenerator.cpp.o
-
-.PHONY : DataGenerator.o
-
-# target to build an object file
-DataGenerator.cpp.o:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o
-.PHONY : DataGenerator.cpp.o
-
-DataGenerator.i: DataGenerator.cpp.i
-
-.PHONY : DataGenerator.i
-
-# target to preprocess a source file
-DataGenerator.cpp.i:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/DataGenerator.cpp.i
-.PHONY : DataGenerator.cpp.i
-
-DataGenerator.s: DataGenerator.cpp.s
-
-.PHONY : DataGenerator.s
-
-# target to generate assembly for a file
-DataGenerator.cpp.s:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/DataGenerator.cpp.s
-.PHONY : DataGenerator.cpp.s
-
-DataReader.o: DataReader.cpp.o
-
-.PHONY : DataReader.o
-
-# target to build an object file
-DataReader.cpp.o:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/DataReader.cpp.o
-.PHONY : DataReader.cpp.o
-
-DataReader.i: DataReader.cpp.i
-
-.PHONY : DataReader.i
-
-# target to preprocess a source file
-DataReader.cpp.i:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/DataReader.cpp.i
-.PHONY : DataReader.cpp.i
-
-DataReader.s: DataReader.cpp.s
-
-.PHONY : DataReader.s
-
-# target to generate assembly for a file
-DataReader.cpp.s:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/DataReader.cpp.s
-.PHONY : DataReader.cpp.s
-
-HOGFeature.o: HOGFeature.cpp.o
-
-.PHONY : HOGFeature.o
-
-# target to build an object file
-HOGFeature.cpp.o:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o
-.PHONY : HOGFeature.cpp.o
-
-HOGFeature.i: HOGFeature.cpp.i
-
-.PHONY : HOGFeature.i
-
-# target to preprocess a source file
-HOGFeature.cpp.i:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/HOGFeature.cpp.i
-.PHONY : HOGFeature.cpp.i
-
-HOGFeature.s: HOGFeature.cpp.s
-
-.PHONY : HOGFeature.s
-
-# target to generate assembly for a file
-HOGFeature.cpp.s:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/HOGFeature.cpp.s
-.PHONY : HOGFeature.cpp.s
-
-Layer.o: Layer.cpp.o
-
-.PHONY : Layer.o
-
-# target to build an object file
-Layer.cpp.o:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Layer.cpp.o
-.PHONY : Layer.cpp.o
-
-Layer.i: Layer.cpp.i
-
-.PHONY : Layer.i
-
-# target to preprocess a source file
-Layer.cpp.i:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Layer.cpp.i
-.PHONY : Layer.cpp.i
-
-Layer.s: Layer.cpp.s
-
-.PHONY : Layer.s
-
-# target to generate assembly for a file
-Layer.cpp.s:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Layer.cpp.s
-.PHONY : Layer.cpp.s
-
-NeuralNetwork.o: NeuralNetwork.cpp.o
-
-.PHONY : NeuralNetwork.o
-
-# target to build an object file
-NeuralNetwork.cpp.o:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o
-.PHONY : NeuralNetwork.cpp.o
-
-NeuralNetwork.i: NeuralNetwork.cpp.i
-
-.PHONY : NeuralNetwork.i
-
-# target to preprocess a source file
-NeuralNetwork.cpp.i:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.i
-.PHONY : NeuralNetwork.cpp.i
-
-NeuralNetwork.s: NeuralNetwork.cpp.s
-
-.PHONY : NeuralNetwork.s
-
-# target to generate assembly for a file
-NeuralNetwork.cpp.s:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.s
-.PHONY : NeuralNetwork.cpp.s
-
-Trainer.o: Trainer.cpp.o
-
-.PHONY : Trainer.o
-
-# target to build an object file
-Trainer.cpp.o:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Trainer.cpp.o
-.PHONY : Trainer.cpp.o
-
-Trainer.i: Trainer.cpp.i
-
-.PHONY : Trainer.i
-
-# target to preprocess a source file
-Trainer.cpp.i:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Trainer.cpp.i
-.PHONY : Trainer.cpp.i
-
-Trainer.s: Trainer.cpp.s
-
-.PHONY : Trainer.s
-
-# target to generate assembly for a file
-Trainer.cpp.s:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Trainer.cpp.s
-.PHONY : Trainer.cpp.s
-
 Utils.o: Utils.cpp.o
 
 .PHONY : Utils.o
@@ -312,32 +150,167 @@ Utils.cpp.s:
 	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Utils.cpp.s
 .PHONY : Utils.cpp.s
 
-Visualize.o: Visualize.cpp.o
+ann/Layer.o: ann/Layer.cpp.o
 
-.PHONY : Visualize.o
+.PHONY : ann/Layer.o
 
 # target to build an object file
-Visualize.cpp.o:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Visualize.cpp.o
-.PHONY : Visualize.cpp.o
+ann/Layer.cpp.o:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o
+.PHONY : ann/Layer.cpp.o
 
-Visualize.i: Visualize.cpp.i
+ann/Layer.i: ann/Layer.cpp.i
 
-.PHONY : Visualize.i
+.PHONY : ann/Layer.i
 
 # target to preprocess a source file
-Visualize.cpp.i:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Visualize.cpp.i
-.PHONY : Visualize.cpp.i
+ann/Layer.cpp.i:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/Layer.cpp.i
+.PHONY : ann/Layer.cpp.i
 
-Visualize.s: Visualize.cpp.s
+ann/Layer.s: ann/Layer.cpp.s
 
-.PHONY : Visualize.s
+.PHONY : ann/Layer.s
 
 # target to generate assembly for a file
-Visualize.cpp.s:
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Visualize.cpp.s
-.PHONY : Visualize.cpp.s
+ann/Layer.cpp.s:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/Layer.cpp.s
+.PHONY : ann/Layer.cpp.s
+
+ann/NeuralNetwork.o: ann/NeuralNetwork.cpp.o
+
+.PHONY : ann/NeuralNetwork.o
+
+# target to build an object file
+ann/NeuralNetwork.cpp.o:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o
+.PHONY : ann/NeuralNetwork.cpp.o
+
+ann/NeuralNetwork.i: ann/NeuralNetwork.cpp.i
+
+.PHONY : ann/NeuralNetwork.i
+
+# target to preprocess a source file
+ann/NeuralNetwork.cpp.i:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.i
+.PHONY : ann/NeuralNetwork.cpp.i
+
+ann/NeuralNetwork.s: ann/NeuralNetwork.cpp.s
+
+.PHONY : ann/NeuralNetwork.s
+
+# target to generate assembly for a file
+ann/NeuralNetwork.cpp.s:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.s
+.PHONY : ann/NeuralNetwork.cpp.s
+
+ann/Trainer.o: ann/Trainer.cpp.o
+
+.PHONY : ann/Trainer.o
+
+# target to build an object file
+ann/Trainer.cpp.o:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o
+.PHONY : ann/Trainer.cpp.o
+
+ann/Trainer.i: ann/Trainer.cpp.i
+
+.PHONY : ann/Trainer.i
+
+# target to preprocess a source file
+ann/Trainer.cpp.i:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.i
+.PHONY : ann/Trainer.cpp.i
+
+ann/Trainer.s: ann/Trainer.cpp.s
+
+.PHONY : ann/Trainer.s
+
+# target to generate assembly for a file
+ann/Trainer.cpp.s:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.s
+.PHONY : ann/Trainer.cpp.s
+
+dataReader/DataGenerator.o: dataReader/DataGenerator.cpp.o
+
+.PHONY : dataReader/DataGenerator.o
+
+# target to build an object file
+dataReader/DataGenerator.cpp.o:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o
+.PHONY : dataReader/DataGenerator.cpp.o
+
+dataReader/DataGenerator.i: dataReader/DataGenerator.cpp.i
+
+.PHONY : dataReader/DataGenerator.i
+
+# target to preprocess a source file
+dataReader/DataGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.i
+.PHONY : dataReader/DataGenerator.cpp.i
+
+dataReader/DataGenerator.s: dataReader/DataGenerator.cpp.s
+
+.PHONY : dataReader/DataGenerator.s
+
+# target to generate assembly for a file
+dataReader/DataGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.s
+.PHONY : dataReader/DataGenerator.cpp.s
+
+dataReader/DataReader.o: dataReader/DataReader.cpp.o
+
+.PHONY : dataReader/DataReader.o
+
+# target to build an object file
+dataReader/DataReader.cpp.o:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o
+.PHONY : dataReader/DataReader.cpp.o
+
+dataReader/DataReader.i: dataReader/DataReader.cpp.i
+
+.PHONY : dataReader/DataReader.i
+
+# target to preprocess a source file
+dataReader/DataReader.cpp.i:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.i
+.PHONY : dataReader/DataReader.cpp.i
+
+dataReader/DataReader.s: dataReader/DataReader.cpp.s
+
+.PHONY : dataReader/DataReader.s
+
+# target to generate assembly for a file
+dataReader/DataReader.cpp.s:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.s
+.PHONY : dataReader/DataReader.cpp.s
+
+dataReader/HOGFeature.o: dataReader/HOGFeature.cpp.o
+
+.PHONY : dataReader/HOGFeature.o
+
+# target to build an object file
+dataReader/HOGFeature.cpp.o:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o
+.PHONY : dataReader/HOGFeature.cpp.o
+
+dataReader/HOGFeature.i: dataReader/HOGFeature.cpp.i
+
+.PHONY : dataReader/HOGFeature.i
+
+# target to preprocess a source file
+dataReader/HOGFeature.cpp.i:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.i
+.PHONY : dataReader/HOGFeature.cpp.i
+
+dataReader/HOGFeature.s: dataReader/HOGFeature.cpp.s
+
+.PHONY : dataReader/HOGFeature.s
+
+# target to generate assembly for a file
+dataReader/HOGFeature.cpp.s:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.s
+.PHONY : dataReader/HOGFeature.cpp.s
 
 main.o: main.cpp.o
 
@@ -366,6 +339,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+visualize/Visualize.o: visualize/Visualize.cpp.o
+
+.PHONY : visualize/Visualize.o
+
+# target to build an object file
+visualize/Visualize.cpp.o:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o
+.PHONY : visualize/Visualize.cpp.o
+
+visualize/Visualize.i: visualize/Visualize.cpp.i
+
+.PHONY : visualize/Visualize.i
+
+# target to preprocess a source file
+visualize/Visualize.cpp.i:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.i
+.PHONY : visualize/Visualize.cpp.i
+
+visualize/Visualize.s: visualize/Visualize.cpp.s
+
+.PHONY : visualize/Visualize.s
+
+# target to generate assembly for a file
+visualize/Visualize.cpp.s:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.s
+.PHONY : visualize/Visualize.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -375,33 +375,33 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Demo_ann"
-	@echo "... DataGenerator.o"
-	@echo "... DataGenerator.i"
-	@echo "... DataGenerator.s"
-	@echo "... DataReader.o"
-	@echo "... DataReader.i"
-	@echo "... DataReader.s"
-	@echo "... HOGFeature.o"
-	@echo "... HOGFeature.i"
-	@echo "... HOGFeature.s"
-	@echo "... Layer.o"
-	@echo "... Layer.i"
-	@echo "... Layer.s"
-	@echo "... NeuralNetwork.o"
-	@echo "... NeuralNetwork.i"
-	@echo "... NeuralNetwork.s"
-	@echo "... Trainer.o"
-	@echo "... Trainer.i"
-	@echo "... Trainer.s"
 	@echo "... Utils.o"
 	@echo "... Utils.i"
 	@echo "... Utils.s"
-	@echo "... Visualize.o"
-	@echo "... Visualize.i"
-	@echo "... Visualize.s"
+	@echo "... ann/Layer.o"
+	@echo "... ann/Layer.i"
+	@echo "... ann/Layer.s"
+	@echo "... ann/NeuralNetwork.o"
+	@echo "... ann/NeuralNetwork.i"
+	@echo "... ann/NeuralNetwork.s"
+	@echo "... ann/Trainer.o"
+	@echo "... ann/Trainer.i"
+	@echo "... ann/Trainer.s"
+	@echo "... dataReader/DataGenerator.o"
+	@echo "... dataReader/DataGenerator.i"
+	@echo "... dataReader/DataGenerator.s"
+	@echo "... dataReader/DataReader.o"
+	@echo "... dataReader/DataReader.i"
+	@echo "... dataReader/DataReader.s"
+	@echo "... dataReader/HOGFeature.o"
+	@echo "... dataReader/HOGFeature.i"
+	@echo "... dataReader/HOGFeature.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... visualize/Visualize.o"
+	@echo "... visualize/Visualize.i"
+	@echo "... visualize/Visualize.s"
 .PHONY : help
 
 

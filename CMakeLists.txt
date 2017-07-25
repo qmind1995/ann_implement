@@ -22,7 +22,16 @@ if(NOT OPENGL_FOUND)
     message(ERROR " OPENGL not found!")
 endif(NOT OPENGL_FOUND)
 #set(SOURCE_FILES main.cpp NeuralNetwork.cpp DataReader.cpp Trainer.cpp BatchTrainer.cpp DataGenerator.cpp HOGFeature.cpp Layer.cpp)
-set(SOURCE_FILES main.cpp Trainer.cpp NeuralNetwork.cpp DataReader.cpp DataGenerator.cpp HOGFeature.cpp Layer.cpp Utils.cpp Visualize.cpp)
+set(SOURCE_FILES
+        main.cpp
+        ann/Trainer.cpp
+        ann/NeuralNetwork.cpp
+        dataReader/DataReader.cpp
+        dataReader/DataGenerator.cpp
+        dataReader/HOGFeature.cpp
+        ann/Layer.cpp
+        Utils.cpp
+        visualize/Visualize.cpp)
 add_executable(Demo_ann ${SOURCE_FILES})
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 target_link_libraries( Demo_ann ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${ARMADILLO_LIBRARIES} pthread)

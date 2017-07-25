@@ -2,12 +2,12 @@
 // Created by tri on 16/06/2017.
 //
 #include<iostream>
-#include "NeuralNetwork.h"
-#include "Trainer.h"
-#include "BatchTrainer.h"
-#include "DataGenerator.h"
-#include "Layer.h"
-#include "Visualize.cpp"
+#include "ann/NeuralNetwork.h"
+#include "ann/Trainer.h"
+#include "ann/BatchTrainer.h"
+#include "dataReader/DataGenerator.h"
+#include "ann/Layer.h"
+#include "visualize/Visualize.cpp"
 
 #define N_THREAD   2
 
@@ -68,7 +68,6 @@ int main(int argc, char** argv){
     params->argc = argc;
     params->argv = argv;
     params->net = nNet;
-//    Visualize * v = new Visualize(nNet);
 
     int rc2 = pthread_create(&threads[1], NULL,runVisualizeThread,(void*) params);
     if (rc2){

@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/tri/Desktop/ann_implement/DataGenerator.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o"
-  "/home/tri/Desktop/ann_implement/DataReader.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/DataReader.cpp.o"
-  "/home/tri/Desktop/ann_implement/HOGFeature.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o"
-  "/home/tri/Desktop/ann_implement/Layer.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/Layer.cpp.o"
-  "/home/tri/Desktop/ann_implement/NeuralNetwork.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o"
-  "/home/tri/Desktop/ann_implement/Trainer.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/Trainer.cpp.o"
   "/home/tri/Desktop/ann_implement/Utils.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/Utils.cpp.o"
-  "/home/tri/Desktop/ann_implement/Visualize.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/Visualize.cpp.o"
+  "/home/tri/Desktop/ann_implement/ann/Layer.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o"
+  "/home/tri/Desktop/ann_implement/ann/NeuralNetwork.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o"
+  "/home/tri/Desktop/ann_implement/ann/Trainer.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o"
+  "/home/tri/Desktop/ann_implement/dataReader/DataGenerator.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o"
+  "/home/tri/Desktop/ann_implement/dataReader/DataReader.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o"
+  "/home/tri/Desktop/ann_implement/dataReader/HOGFeature.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o"
   "/home/tri/Desktop/ann_implement/main.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/main.cpp.o"
+  "/home/tri/Desktop/ann_implement/visualize/Visualize.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

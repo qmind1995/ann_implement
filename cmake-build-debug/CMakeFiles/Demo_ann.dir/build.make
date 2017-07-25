@@ -81,148 +81,148 @@ CMakeFiles/Demo_ann.dir/main.cpp.o.provides: CMakeFiles/Demo_ann.dir/main.cpp.o.
 CMakeFiles/Demo_ann.dir/main.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/main.cpp.o
 
 
-CMakeFiles/Demo_ann.dir/Trainer.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
-CMakeFiles/Demo_ann.dir/Trainer.cpp.o: ../Trainer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Demo_ann.dir/Trainer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/Trainer.cpp.o -c /home/tri/Desktop/ann_implement/Trainer.cpp
+CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
+CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o: ../ann/Trainer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o -c /home/tri/Desktop/ann_implement/ann/Trainer.cpp
 
-CMakeFiles/Demo_ann.dir/Trainer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/Trainer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/Trainer.cpp > CMakeFiles/Demo_ann.dir/Trainer.cpp.i
+CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/ann/Trainer.cpp > CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.i
 
-CMakeFiles/Demo_ann.dir/Trainer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/Trainer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/Trainer.cpp -o CMakeFiles/Demo_ann.dir/Trainer.cpp.s
+CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/ann/Trainer.cpp -o CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.s
 
-CMakeFiles/Demo_ann.dir/Trainer.cpp.o.requires:
+CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o.requires:
 
-.PHONY : CMakeFiles/Demo_ann.dir/Trainer.cpp.o.requires
+.PHONY : CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o.requires
 
-CMakeFiles/Demo_ann.dir/Trainer.cpp.o.provides: CMakeFiles/Demo_ann.dir/Trainer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Trainer.cpp.o.provides.build
-.PHONY : CMakeFiles/Demo_ann.dir/Trainer.cpp.o.provides
+CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o.provides: CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o.provides.build
+.PHONY : CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o.provides
 
-CMakeFiles/Demo_ann.dir/Trainer.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/Trainer.cpp.o
-
-
-CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
-CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o: ../NeuralNetwork.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o -c /home/tri/Desktop/ann_implement/NeuralNetwork.cpp
-
-CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/NeuralNetwork.cpp > CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.i
-
-CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/NeuralNetwork.cpp -o CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.s
-
-CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o.requires:
-
-.PHONY : CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o.requires
-
-CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o.provides: CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o.provides.build
-.PHONY : CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o.provides
-
-CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o
+CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o
 
 
-CMakeFiles/Demo_ann.dir/DataReader.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
-CMakeFiles/Demo_ann.dir/DataReader.cpp.o: ../DataReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Demo_ann.dir/DataReader.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/DataReader.cpp.o -c /home/tri/Desktop/ann_implement/DataReader.cpp
+CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
+CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o: ../ann/NeuralNetwork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o -c /home/tri/Desktop/ann_implement/ann/NeuralNetwork.cpp
 
-CMakeFiles/Demo_ann.dir/DataReader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/DataReader.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/DataReader.cpp > CMakeFiles/Demo_ann.dir/DataReader.cpp.i
+CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/ann/NeuralNetwork.cpp > CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.i
 
-CMakeFiles/Demo_ann.dir/DataReader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/DataReader.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/DataReader.cpp -o CMakeFiles/Demo_ann.dir/DataReader.cpp.s
+CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/ann/NeuralNetwork.cpp -o CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.s
 
-CMakeFiles/Demo_ann.dir/DataReader.cpp.o.requires:
+CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o.requires:
 
-.PHONY : CMakeFiles/Demo_ann.dir/DataReader.cpp.o.requires
+.PHONY : CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o.requires
 
-CMakeFiles/Demo_ann.dir/DataReader.cpp.o.provides: CMakeFiles/Demo_ann.dir/DataReader.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/DataReader.cpp.o.provides.build
-.PHONY : CMakeFiles/Demo_ann.dir/DataReader.cpp.o.provides
+CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o.provides: CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o.provides.build
+.PHONY : CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o.provides
 
-CMakeFiles/Demo_ann.dir/DataReader.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/DataReader.cpp.o
-
-
-CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
-CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o: ../DataGenerator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o -c /home/tri/Desktop/ann_implement/DataGenerator.cpp
-
-CMakeFiles/Demo_ann.dir/DataGenerator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/DataGenerator.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/DataGenerator.cpp > CMakeFiles/Demo_ann.dir/DataGenerator.cpp.i
-
-CMakeFiles/Demo_ann.dir/DataGenerator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/DataGenerator.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/DataGenerator.cpp -o CMakeFiles/Demo_ann.dir/DataGenerator.cpp.s
-
-CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o.requires:
-
-.PHONY : CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o.requires
-
-CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o.provides: CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o.provides.build
-.PHONY : CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o.provides
-
-CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o
+CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o
 
 
-CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
-CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o: ../HOGFeature.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o -c /home/tri/Desktop/ann_implement/HOGFeature.cpp
+CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
+CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o: ../dataReader/DataReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o -c /home/tri/Desktop/ann_implement/dataReader/DataReader.cpp
 
-CMakeFiles/Demo_ann.dir/HOGFeature.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/HOGFeature.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/HOGFeature.cpp > CMakeFiles/Demo_ann.dir/HOGFeature.cpp.i
+CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/dataReader/DataReader.cpp > CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.i
 
-CMakeFiles/Demo_ann.dir/HOGFeature.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/HOGFeature.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/HOGFeature.cpp -o CMakeFiles/Demo_ann.dir/HOGFeature.cpp.s
+CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/dataReader/DataReader.cpp -o CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.s
 
-CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o.requires:
+CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o.requires:
 
-.PHONY : CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o.requires
+.PHONY : CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o.requires
 
-CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o.provides: CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o.provides.build
-.PHONY : CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o.provides
+CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o.provides: CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o.provides.build
+.PHONY : CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o.provides
 
-CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o
+CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o
 
 
-CMakeFiles/Demo_ann.dir/Layer.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
-CMakeFiles/Demo_ann.dir/Layer.cpp.o: ../Layer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Demo_ann.dir/Layer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/Layer.cpp.o -c /home/tri/Desktop/ann_implement/Layer.cpp
+CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
+CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o: ../dataReader/DataGenerator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o -c /home/tri/Desktop/ann_implement/dataReader/DataGenerator.cpp
 
-CMakeFiles/Demo_ann.dir/Layer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/Layer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/Layer.cpp > CMakeFiles/Demo_ann.dir/Layer.cpp.i
+CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/dataReader/DataGenerator.cpp > CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.i
 
-CMakeFiles/Demo_ann.dir/Layer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/Layer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/Layer.cpp -o CMakeFiles/Demo_ann.dir/Layer.cpp.s
+CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/dataReader/DataGenerator.cpp -o CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.s
 
-CMakeFiles/Demo_ann.dir/Layer.cpp.o.requires:
+CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o.requires:
 
-.PHONY : CMakeFiles/Demo_ann.dir/Layer.cpp.o.requires
+.PHONY : CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o.requires
 
-CMakeFiles/Demo_ann.dir/Layer.cpp.o.provides: CMakeFiles/Demo_ann.dir/Layer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Layer.cpp.o.provides.build
-.PHONY : CMakeFiles/Demo_ann.dir/Layer.cpp.o.provides
+CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o.provides: CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o.provides.build
+.PHONY : CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o.provides
 
-CMakeFiles/Demo_ann.dir/Layer.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/Layer.cpp.o
+CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o
+
+
+CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
+CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o: ../dataReader/HOGFeature.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o -c /home/tri/Desktop/ann_implement/dataReader/HOGFeature.cpp
+
+CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/dataReader/HOGFeature.cpp > CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.i
+
+CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/dataReader/HOGFeature.cpp -o CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.s
+
+CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o.requires:
+
+.PHONY : CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o.requires
+
+CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o.provides: CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o.provides.build
+.PHONY : CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o.provides
+
+CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o
+
+
+CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
+CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o: ../ann/Layer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o -c /home/tri/Desktop/ann_implement/ann/Layer.cpp
+
+CMakeFiles/Demo_ann.dir/ann/Layer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/ann/Layer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/ann/Layer.cpp > CMakeFiles/Demo_ann.dir/ann/Layer.cpp.i
+
+CMakeFiles/Demo_ann.dir/ann/Layer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/ann/Layer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/ann/Layer.cpp -o CMakeFiles/Demo_ann.dir/ann/Layer.cpp.s
+
+CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o.requires:
+
+.PHONY : CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o.requires
+
+CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o.provides: CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o.provides.build
+.PHONY : CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o.provides
+
+CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o
 
 
 CMakeFiles/Demo_ann.dir/Utils.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
@@ -249,54 +249,54 @@ CMakeFiles/Demo_ann.dir/Utils.cpp.o.provides: CMakeFiles/Demo_ann.dir/Utils.cpp.
 CMakeFiles/Demo_ann.dir/Utils.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/Utils.cpp.o
 
 
-CMakeFiles/Demo_ann.dir/Visualize.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
-CMakeFiles/Demo_ann.dir/Visualize.cpp.o: ../Visualize.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Demo_ann.dir/Visualize.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/Visualize.cpp.o -c /home/tri/Desktop/ann_implement/Visualize.cpp
+CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o: CMakeFiles/Demo_ann.dir/flags.make
+CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o: ../visualize/Visualize.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o -c /home/tri/Desktop/ann_implement/visualize/Visualize.cpp
 
-CMakeFiles/Demo_ann.dir/Visualize.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/Visualize.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/Visualize.cpp > CMakeFiles/Demo_ann.dir/Visualize.cpp.i
+CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tri/Desktop/ann_implement/visualize/Visualize.cpp > CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.i
 
-CMakeFiles/Demo_ann.dir/Visualize.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/Visualize.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/Visualize.cpp -o CMakeFiles/Demo_ann.dir/Visualize.cpp.s
+CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tri/Desktop/ann_implement/visualize/Visualize.cpp -o CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.s
 
-CMakeFiles/Demo_ann.dir/Visualize.cpp.o.requires:
+CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o.requires:
 
-.PHONY : CMakeFiles/Demo_ann.dir/Visualize.cpp.o.requires
+.PHONY : CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o.requires
 
-CMakeFiles/Demo_ann.dir/Visualize.cpp.o.provides: CMakeFiles/Demo_ann.dir/Visualize.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Visualize.cpp.o.provides.build
-.PHONY : CMakeFiles/Demo_ann.dir/Visualize.cpp.o.provides
+CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o.provides: CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o.provides.build
+.PHONY : CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o.provides
 
-CMakeFiles/Demo_ann.dir/Visualize.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/Visualize.cpp.o
+CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o.provides.build: CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o
 
 
 # Object files for target Demo_ann
 Demo_ann_OBJECTS = \
 "CMakeFiles/Demo_ann.dir/main.cpp.o" \
-"CMakeFiles/Demo_ann.dir/Trainer.cpp.o" \
-"CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o" \
-"CMakeFiles/Demo_ann.dir/DataReader.cpp.o" \
-"CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o" \
-"CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o" \
-"CMakeFiles/Demo_ann.dir/Layer.cpp.o" \
+"CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o" \
+"CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o" \
+"CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o" \
+"CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o" \
+"CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o" \
+"CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o" \
 "CMakeFiles/Demo_ann.dir/Utils.cpp.o" \
-"CMakeFiles/Demo_ann.dir/Visualize.cpp.o"
+"CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o"
 
 # External object files for target Demo_ann
 Demo_ann_EXTERNAL_OBJECTS =
 
 Demo_ann: CMakeFiles/Demo_ann.dir/main.cpp.o
-Demo_ann: CMakeFiles/Demo_ann.dir/Trainer.cpp.o
-Demo_ann: CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o
-Demo_ann: CMakeFiles/Demo_ann.dir/DataReader.cpp.o
-Demo_ann: CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o
-Demo_ann: CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o
-Demo_ann: CMakeFiles/Demo_ann.dir/Layer.cpp.o
+Demo_ann: CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o
+Demo_ann: CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o
+Demo_ann: CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o
+Demo_ann: CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o
+Demo_ann: CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o
+Demo_ann: CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o
 Demo_ann: CMakeFiles/Demo_ann.dir/Utils.cpp.o
-Demo_ann: CMakeFiles/Demo_ann.dir/Visualize.cpp.o
+Demo_ann: CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o
 Demo_ann: CMakeFiles/Demo_ann.dir/build.make
 Demo_ann: /usr/lib/x86_64-linux-gnu/libGLU.so
 Demo_ann: /usr/lib/x86_64-linux-gnu/libGL.so
@@ -314,14 +314,14 @@ CMakeFiles/Demo_ann.dir/build: Demo_ann
 .PHONY : CMakeFiles/Demo_ann.dir/build
 
 CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/main.cpp.o.requires
-CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/Trainer.cpp.o.requires
-CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/NeuralNetwork.cpp.o.requires
-CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/DataReader.cpp.o.requires
-CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/DataGenerator.cpp.o.requires
-CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/HOGFeature.cpp.o.requires
-CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/Layer.cpp.o.requires
+CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o.requires
+CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o.requires
+CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o.requires
+CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o.requires
+CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/dataReader/HOGFeature.cpp.o.requires
+CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o.requires
 CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/Utils.cpp.o.requires
-CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/Visualize.cpp.o.requires
+CMakeFiles/Demo_ann.dir/requires: CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o.requires
 
 .PHONY : CMakeFiles/Demo_ann.dir/requires
 
