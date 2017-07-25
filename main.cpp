@@ -11,7 +11,6 @@
 
 #define N_THREAD   2
 
-
 using namespace std;
 using namespace arma;
 using namespace parameters;
@@ -25,7 +24,8 @@ void * runtrainingThread(void * nNet){
     DataReader *dR = new DataReader();
     dR->read_RegressionData(inputDataFileName, outputDataFileName, 60000);
     NeuralNetwork* net = reinterpret_cast<NeuralNetwork*>(nNet);
-    Trainer nT( net );
+    Trainer * nT = new BatchTrainer( net,100);
+//    Trainer * nT = new Trainer( net);
 
     trainingDataSet* trSet = new trainingDataSet();
     trSet->trainingSet = dR->data;
@@ -34,7 +34,7 @@ void * runtrainingThread(void * nNet){
     dR_test->read_RegressionData(inputtestFileName, outputTestFileName, 3000);
     trSet->validationSet = dR_test->data;
 
-    nT.trainNetwork(trSet);
+    nT->trainNetwork(trSet);
     pthread_exit(NULL);
 }
 

@@ -150,6 +150,33 @@ Utils.cpp.s:
 	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/Utils.cpp.s
 .PHONY : Utils.cpp.s
 
+ann/BatchTrainer.o: ann/BatchTrainer.cpp.o
+
+.PHONY : ann/BatchTrainer.o
+
+# target to build an object file
+ann/BatchTrainer.cpp.o:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o
+.PHONY : ann/BatchTrainer.cpp.o
+
+ann/BatchTrainer.i: ann/BatchTrainer.cpp.i
+
+.PHONY : ann/BatchTrainer.i
+
+# target to preprocess a source file
+ann/BatchTrainer.cpp.i:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.i
+.PHONY : ann/BatchTrainer.cpp.i
+
+ann/BatchTrainer.s: ann/BatchTrainer.cpp.s
+
+.PHONY : ann/BatchTrainer.s
+
+# target to generate assembly for a file
+ann/BatchTrainer.cpp.s:
+	$(MAKE) -f CMakeFiles/Demo_ann.dir/build.make CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.s
+.PHONY : ann/BatchTrainer.cpp.s
+
 ann/Layer.o: ann/Layer.cpp.o
 
 .PHONY : ann/Layer.o
@@ -378,6 +405,9 @@ help:
 	@echo "... Utils.o"
 	@echo "... Utils.i"
 	@echo "... Utils.s"
+	@echo "... ann/BatchTrainer.o"
+	@echo "... ann/BatchTrainer.i"
+	@echo "... ann/BatchTrainer.s"
 	@echo "... ann/Layer.o"
 	@echo "... ann/Layer.i"
 	@echo "... ann/Layer.s"

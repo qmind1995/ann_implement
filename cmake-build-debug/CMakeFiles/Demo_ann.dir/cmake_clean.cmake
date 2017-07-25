@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Demo_ann.dir/main.cpp.o"
   "CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o"
+  "CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o"
   "CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o"
   "CMakeFiles/Demo_ann.dir/dataReader/DataReader.cpp.o"
   "CMakeFiles/Demo_ann.dir/dataReader/DataGenerator.cpp.o"

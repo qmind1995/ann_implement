@@ -87,6 +87,12 @@
 		<Unit filename="/home/tri/Desktop/ann_implement/Utils.cpp">
 			<Option target="Demo_ann"/>
 		</Unit>
+		<Unit filename="/home/tri/Desktop/ann_implement/ann/BatchTrainer.cpp">
+			<Option target="Demo_ann"/>
+		</Unit>
+		<Unit filename="/home/tri/Desktop/ann_implement/ann/BatchTrainer.h">
+			<Option target="Demo_ann"/>
+		</Unit>
 		<Unit filename="/home/tri/Desktop/ann_implement/ann/Layer.cpp">
 			<Option target="Demo_ann"/>
 		</Unit>

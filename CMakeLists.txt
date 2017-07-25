@@ -25,6 +25,7 @@ endif(NOT OPENGL_FOUND)
 set(SOURCE_FILES
         main.cpp
         ann/Trainer.cpp
+        ann/BatchTrainer.cpp
         ann/NeuralNetwork.cpp
         dataReader/DataReader.cpp
         dataReader/DataGenerator.cpp

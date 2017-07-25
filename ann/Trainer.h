@@ -54,7 +54,7 @@ private:
     double trainingSetAccuracy;
     double validationSetAccuracy;
     double generalizationSetAccuracy;
-    double trainingSetMSE;
+
     double validationSetMSE;
     double generalizationSetMSE;
 
@@ -63,14 +63,14 @@ private:
     //log file handle
 
 public:
+    double trainingSetMSE;
+
     Trainer();
     Trainer( NeuralNetwork* untrainedNetwork );
-    void trainNetwork( trainingDataSet* tSet );
-
+    void trainNetwork(trainingDataSet* tSet );
     bool checkOutput(mat output, mat target);
 private:
-
-    void runTrainingEpoch( std::vector<DataEntry*> trainingSet );
+    virtual void runTrainingEpoch( std::vector<DataEntry*> trainingSet );
     void backpropagate(mat desiredOutputs);
     inline void updateWeights();
 

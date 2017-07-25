@@ -38,6 +38,7 @@ Trainer::Trainer( NeuralNetwork *nn )	:	NN(nn),
 
     //create error gradient storage
     //------------------------------------------
+    // maybe no need
     for(int i=1; i< nLayers; i++){
         mat eG = mat(nn->layers[i]->nNeurals, 1);
         eG.zeros();
@@ -149,12 +150,12 @@ void Trainer::trainNetwork( trainingDataSet* tSet ) {
 
         //use training set to train network
 
-        runTrainingEpoch( tSet->trainingSet );
+        this->runTrainingEpoch( tSet->trainingSet );
         //print out change in training /generalization accuracy (only if a change is greater than a percent)
         if ( ceil(previousTAccuracy) < ceil(trainingSetAccuracy)  || (epoch%10 ==0)) {
             cout << "Epoch : " << epoch <<" trainingSetAccuracy: "<<trainingSetAccuracy<<endl;
         }
-        cout << "Epoch : " << epoch <<" trainingSetMSE: "<<trainingSetMSE<<endl;
+        cout << "Epoch : " << epoch <<" trainingSetMSE: "<<this->trainingSetMSE<<endl;
         //once training set is complete increment epoch
         epoch++;
 

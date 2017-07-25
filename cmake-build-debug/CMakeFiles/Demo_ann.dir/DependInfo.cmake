@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tri/Desktop/ann_implement/Utils.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/Utils.cpp.o"
+  "/home/tri/Desktop/ann_implement/ann/BatchTrainer.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o"
   "/home/tri/Desktop/ann_implement/ann/Layer.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o"
   "/home/tri/Desktop/ann_implement/ann/NeuralNetwork.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/ann/NeuralNetwork.cpp.o"
   "/home/tri/Desktop/ann_implement/ann/Trainer.cpp" "/home/tri/Desktop/ann_implement/cmake-build-debug/CMakeFiles/Demo_ann.dir/ann/Trainer.cpp.o"

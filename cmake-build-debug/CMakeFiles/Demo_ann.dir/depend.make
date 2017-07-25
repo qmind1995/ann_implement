@@ -3,6 +3,16 @@
 
 CMakeFiles/Demo_ann.dir/Utils.cpp.o: ../Utils.cpp
 
+CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o: ../Utils.cpp
+CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o: ../ann/./NeuralNetwork.h
+CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o: ../ann/BatchTrainer.cpp
+CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o: ../ann/BatchTrainer.h
+CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o: ../ann/Layer.h
+CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o: ../ann/NeuralNetwork.h
+CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o: ../ann/Trainer.h
+CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o: ../dataReader/DataEntry.h
+CMakeFiles/Demo_ann.dir/ann/BatchTrainer.cpp.o: ../dataReader/DataReader.h
+
 CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o: ../Utils.cpp
 CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o: ../ann/Layer.cpp
 CMakeFiles/Demo_ann.dir/ann/Layer.cpp.o: ../ann/Layer.h

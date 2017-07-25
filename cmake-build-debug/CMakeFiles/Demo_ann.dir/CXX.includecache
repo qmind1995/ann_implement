@@ -20,6 +20,10 @@ armadillo
 Layer.h
 /home/tri/Desktop/ann_implement/ann/./Layer.h
 
+/home/tri/Desktop/ann_implement/ann/BatchTrainer.cpp
+BatchTrainer.h
+/home/tri/Desktop/ann_implement/ann/BatchTrainer.h
+
 /home/tri/Desktop/ann_implement/ann/BatchTrainer.h
 NeuralNetwork.h
 /home/tri/Desktop/ann_implement/ann/NeuralNetwork.h

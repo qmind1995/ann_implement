@@ -27,34 +27,24 @@ private:
     double desiredAccuracy;
 
     //change to weights
-    mat deltaW_InputHidden;
-    mat deltaW_HiddenOutput;
-    mat deltaB_InputHidden;
-    mat deltaB_HiddenOutput;
 
-    //error gradients
-    mat hiddenErrorGradients;
-    mat outputErrorGradients;
     NeuralNetwork* NN;
 
-    mat sumDeltaW_InputHidden;
-    mat sumDeltaW_HiddenOutput;
-    mat sumDeltaB_InputHidden;
-    mat sumDeltaB_HiddenOutput;
-
+    vector<mat> sumDeltaWeights;
+    vector<mat> sumDeltaBiass;
     double trainingSetAccuracy;
     double validationSetAccuracy;
     double generalizationSetAccuracy;
-    double trainingSetMSE;
+//    double trainingSetMSE;
     double validationSetMSE;
     double generalizationSetMSE;
 public:
     BatchTrainer( NeuralNetwork* untrainedNetwork, int batchSize );
-    void trainNetwork( trainingDataSet* tSet );
 private:
-    void updateWeights();
     void backpropagate( mat desiredOutputs,int index );
+    void resetSumDelta();
     void runTrainingEpoch( std::vector<DataEntry*> trainingSet );
+    inline void updateWeights();
 };
 
 #endif //FAKE_CODE_BATCHTRAINER_H

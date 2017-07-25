@@ -9,6 +9,7 @@
 
 class Trainer;
 class NeuralNetwork;
+class BatchTrainer;
 
 using namespace arma;
 using namespace parameters;
@@ -24,6 +25,7 @@ public:
     void activation();
     friend NeuralNetwork;
     friend Trainer;
+    friend BatchTrainer;
 private:
     int activeFunc;
 
