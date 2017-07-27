@@ -60,7 +60,7 @@ int main(int argc, char** argv){
 
     int rc1 = pthread_create(&threads[0], NULL,runtrainingThread,(void*) nNet);
     if (rc1){
-        cout << "\nError: Khong the tao training thread! " << rc1 << endl;
+        cout << "\nError: cannot create training thread! " << rc1 << endl;
         exit(-1);
     }
 
@@ -71,7 +71,7 @@ int main(int argc, char** argv){
 
     int rc2 = pthread_create(&threads[1], NULL,runVisualizeThread,(void*) params);
     if (rc2){
-        cout << "\nError: Khong the tao drawing thread! " << rc2 << endl;
+        cout << "\nError: cannot create drawing thread! " << rc2 << endl;
         exit(-1);
     }
 
