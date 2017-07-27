@@ -24,8 +24,8 @@ void * runtrainingThread(void * nNet){
     DataReader *dR = new DataReader();
     dR->read_RegressionData(inputDataFileName, outputDataFileName, 60000);
     NeuralNetwork* net = reinterpret_cast<NeuralNetwork*>(nNet);
-    Trainer * nT = new BatchTrainer( net,100);
-//    Trainer * nT = new Trainer( net);
+//    Trainer * nT = new BatchTrainer( net,100);
+    Trainer * nT = new Trainer( net);
 
     trainingDataSet* trSet = new trainingDataSet();
     trSet->trainingSet = dR->data;
@@ -76,5 +76,4 @@ int main(int argc, char** argv){
     }
 
     pthread_exit(NULL);
-    return 0;
 }
