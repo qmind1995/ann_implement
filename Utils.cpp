@@ -86,3 +86,22 @@ inline static double gaussianRamdom(double mean, double neighbour){
     std::normal_distribution<> d(mean, neighbour);
     return d(gen);
 }
+
+inline static string activeFuncNameToString(int function){
+    switch(function){
+        case TANH: {
+            return "Tanh";
+        }
+        case SIGMOID: {
+            return "Sigmoid";
+        }
+        case RELU: {
+            return "Relu";
+        }
+        case parameters::NONE: {
+            return "None";
+        }
+        default:
+            return "Unknown";
+    }
+}

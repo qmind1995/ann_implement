@@ -152,6 +152,24 @@ mat NeuralNetwork::getVisualizeOutput(mat input) {
 
 }
 
+vector<string> NeuralNetwork::getNeuralInfoForVisualize() {
+    vector<string> output;
+    output.push_back("Network infomation: ");
+    if(netType == CLASSIFICATION){
+        output.push_back("Network type: classification");
+    }
+    else{
+        output.push_back("Network type: regression");
+    }
+    output.push_back("nlayer: " +to_string(nLayer) );
+    for(int i =0; i < nLayer; i++){
+        string layerInfo = "Layer " + to_string(i+1) + " has " + to_string(layers[i]->nNeurals) + " neurals; ";
+        layerInfo += "activation function: " + activeFuncNameToString(layers[i]->activeFunc);
+        output.push_back(layerInfo);
+    }
+    return output;
+}
+
 void NeuralNetwork::printNetwokInfo() {
     cout <<"Network infomation: "<<endl;
     for(int i =0; i < nLayer; i++){

@@ -34,6 +34,7 @@ public:
     mat getOutput();
     void printNetwokInfo();
     mat getVisualizeOutput(mat input);
+    vector<string> getNeuralInfoForVisualize();
 private:
 
     int nLayer;
