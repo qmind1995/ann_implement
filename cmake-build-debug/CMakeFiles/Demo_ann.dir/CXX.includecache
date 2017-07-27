@@ -135,4 +135,6 @@ visualize/Visualize.cpp
 /home/tri/Desktop/ann_implement/ann/NeuralNetwork.h
 GL/glut.h
 -
+../Utils.cpp
+/home/tri/Desktop/ann_implement/Utils.cpp
 

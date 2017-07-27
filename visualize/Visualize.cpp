@@ -4,6 +4,7 @@
 
 #include "../ann/NeuralNetwork.h"
 #include <GL/glut.h>
+#include "../Utils.cpp"
 
 using namespace parameters;
 using namespace std;
@@ -51,18 +52,19 @@ static void renderSineWave() {
     glEnd();
 }
 
-static void renderRegression(){
+static void renderRegression(int nPoints){
     glColor3f(1.0,1.0,0.0);
-
+//    double x = uniformRandom(0, 2*PI);
     glBegin(GL_POINTS);
-    for(GLdouble i= 0; i < PI*2; i +=0.01) {
-        GLdouble x = i* 180 / PI;
-        mat input = mat(1,1);
-        input(0,0) = i;
-
-        mat output = visualizeNet->getVisualizeOutput(input);
-        GLdouble y = output(0,0) * 100.0;
-        glVertex2d(x, y);
+    if(visualizeNet != NULL){
+        for(int i= 0; i < nPoints; i++) {
+            GLdouble x = uniformRandom(0, 2*PI);
+            mat input = mat(1,1);
+            input(0,0) = x;
+            mat output = visualizeNet->getVisualizeOutput(input);
+            GLdouble y = output(0,0);
+            glVertex2d(x*180/PI, y*100);
+        }
     }
     glEnd();
 }
@@ -83,13 +85,13 @@ static void display(){
 
     // call draw func:
     renderSineWave();
-    renderRegression();
+    renderRegression(1000);
 
     glutSwapBuffers();
 }
 
 static void renderNetworkInfo(){
-    glClearColor(100.0/255, 100.0/255, 100.0/255, 1.0);  // clear background
+    glClearColor((GLclampf) (100.0 / 255), (GLclampf) (100.0 / 255), (GLclampf) (100.0 / 255), 1.0);  // clear background
     glClear(GL_COLOR_BUFFER_BIT);
 
     glMatrixMode( GL_PROJECTION );
@@ -102,19 +104,20 @@ static void renderNetworkInfo(){
     glLoadIdentity();
 
     // call draw func:
-    auto info = visualizeNet->getNeuralInfoForVisualize();
-    int nline = (int) info.size();
-    for(int i=0; i < nline; i++){
-        text(info[i], i);
+    if(visualizeNet != NULL){
+        auto info = visualizeNet->getNeuralInfoForVisualize();
+        int nline = (int) info.size();
+        for(int i=0; i < nline; i++){
+            text(info[i], i);
+        }
     }
-
 
     glutSwapBuffers();
 }
 
 static void processTimer(int value){
 
-    glutTimerFunc(50, processTimer, value);
+    glutTimerFunc(100, processTimer, value);
     glutPostRedisplay();
 }
 

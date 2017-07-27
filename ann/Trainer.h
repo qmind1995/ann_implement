@@ -40,14 +40,10 @@ private:
     double desiredAccuracy;
 
     //change to weights
-    mat deltaInputHidden;
-    mat deltaHiddenOutput;
     vector<mat> deltaWeights;
     vector<mat> deltaBiass;
 
     //error gradients
-    mat hiddenErrorGradients;
-    mat outputErrorGradients;
     vector<mat> errorGradients;
 
     //accuracy stats per epoch

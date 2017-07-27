@@ -41,17 +41,18 @@ void * runtrainingThread(void * nNet){
 void* runVisualizeThread(void * params){
     struct paramHolder * ps = reinterpret_cast<struct paramHolder *>(params);
     visualize(ps->net, ps->argc, ps->argv);
-
     pthread_exit(NULL);
 }
 
 int main(int argc, char** argv){
     Layer* inputLayer = new Layer(1, true, parameters::NONE);
-    Layer* hiddenLayer = new Layer(20, true, parameters::TANH);
+    Layer* hiddenLayer1 = new Layer(20, true, parameters::TANH);
+    Layer* hiddenLayer2 = new Layer(10, true, parameters::TANH);
     Layer* outputLayer = new Layer(1, false, parameters::TANH);
     vector<Layer*> layers;
     layers.push_back(inputLayer);
-    layers.push_back(hiddenLayer);
+    layers.push_back(hiddenLayer1);
+    layers.push_back(hiddenLayer2);
     layers.push_back(outputLayer);
 
     NeuralNetwork * nNet = new NeuralNetwork(layers, REGRESSTION);

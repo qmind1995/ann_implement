@@ -1,8 +1,11 @@
 //
 // Created by tri on 22/07/2017.
 //
-
+#ifndef UTILS_CPP
+#define UTILS_CPP
 #include "armadillo"
+
+
 class NeuralNetwork;
 
 namespace parameters{
@@ -105,3 +108,5 @@ inline static string activeFuncNameToString(int function){
             return "Unknown";
     }
 }
+
+#endif
