@@ -35,7 +35,47 @@ NeuralNetwork::NeuralNetwork(string weightFileName){
     if(!weightFileStream.is_open()){
         cout<<"cannot open this file ! idiot !.\n";
     }
+    else{
+        weightFileStream>>nLayer;
+        weightFileStream>>netType;
 
+        for ( int i=0; i < nLayer; i++ ) {
+            int nrs = 0, activefunc;
+            bool isb;
+            weightFileStream>>nrs;
+            weightFileStream>>isb;
+            weightFileStream>>activefunc;
+            Layer *l = new Layer(nrs, isb, activefunc);
+            layers.push_back(l);
+        }
+
+        for(int i=0; i< nLayer -1; i++){
+
+            int nRows = layers[i+1]->nNeurals,
+                nCols = layers[i]->nNeurals;
+            mat weight = mat(nRows, nCols);
+            weight.zeros();
+
+            for(int r = 0; r< nRows; r++){
+                for(int c =0; c< nCols; c++){
+                    weightFileStream>>weight(r,c);
+                }
+            }
+            weights.push_back(weight);
+        }
+
+        for(int i=0; i< nLayer -1; i++){
+            mat bias;
+            if(layers[i]->isBias){
+                bias = initializeWeights(layers[i+1]->nNeurals, 1);
+            }
+            for(int b =0; b< layers[i+1]->nNeurals; b++){
+                weightFileStream>>bias(b,0);
+            }
+            biass.push_back(bias);
+        }
+
+    }
 }
 
 mat NeuralNetwork::initializeWeights(int nRows, int nCols){
@@ -195,3 +235,53 @@ void NeuralNetwork::printNetwokInfo() {
     }
     cout<<"=========================================================================="<<endl<<endl;
 }
+
+bool NeuralNetwork::saveWeights(string filename) {
+    fstream outputFile;
+    outputFile.open(filename, ios::out);
+
+    if ( outputFile.is_open() ) {
+
+        outputFile<<nLayer<<"\n";
+        outputFile<<netType<<"\n";
+
+        for(int i=0;i<nLayer; i++){
+            outputFile<<layers[i]->nNeurals<<"\t"<<layers[i]->isBias <<"\t"<<layers[i]->activeFunc <<"\n";
+        }
+
+        for(int i=0; i < nLayer -1; i++){
+            int currLayerNeural = layers[i]->nNeurals;
+            int nextLayerNeural = layers[i+1]->nNeurals;
+
+            for(int r=0; r < nextLayerNeural; r++){
+                for(int c = 0; c< currLayerNeural; c++){
+                    outputFile<<weights[i](r,c)<<"\t";
+                }
+                outputFile<<"\n";
+            }
+        }
+
+        for(int i=0; i < nLayer -1; i++){
+            if(layers[i]->isBias){
+                for(int b =0; b< layers[i+1]->nNeurals; b++){
+                    outputFile<<biass[i](b,0)<<"\t";
+                }
+                outputFile<<"\n";
+            }
+        }
+
+        //print success
+        cout << endl << "Neuron weights saved to '" << filename << "'" << endl;
+
+        //close file
+        outputFile.close();
+
+        return true;
+    }
+    else {
+        cout << endl << "Error - Weight output file '" << filename << "' could not be created: " << endl;
+        return false;
+    }
+
+}
+

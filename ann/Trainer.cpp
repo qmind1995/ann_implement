@@ -161,7 +161,7 @@ void Trainer::trainNetwork( trainingDataSet* tSet ) {
 
     }//end while
 
-//    NN->saveWeights("weights.txt");
+    NN->saveWeights("weights.txt");
     validationSetAccuracy = NN->getSetAccuracy(tSet->validationSet);
 
     cout << endl << "Training Complete!!! - > Elapsed Epochs: " << epoch << endl;

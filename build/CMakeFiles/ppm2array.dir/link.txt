@@ -1,0 +1,1 @@
+/usr/bin/c++   --std=c++11     CMakeFiles/ppm2array.dir/tools/ppm.cpp.o CMakeFiles/ppm2array.dir/tools/ppm2array.cpp.o  -o ppm2array -rdynamic 

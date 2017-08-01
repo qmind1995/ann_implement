@@ -5,11 +5,13 @@
 #include "../ann/NeuralNetwork.h"
 #include <GL/glut.h>
 #include "../Utils.cpp"
+#include "../ann/Trainer.h"
 
 using namespace parameters;
 using namespace std;
 
 static NeuralNetwork *visualizeNet ;
+static Trainer * trainer;
 
 static void text(string text, int line) {
 
@@ -110,6 +112,8 @@ static void renderNetworkInfo(){
         for(int i=0; i < nline; i++){
             text(info[i], i);
         }
+
+        text("training set accuracy: " + to_string(trainer->trainingSetMSE), nline + 1);
     }
 
     glutSwapBuffers();
@@ -126,8 +130,9 @@ static void resize(int width, int height) {
     glutReshapeWindow( width, height);
 }
 
-static void visualize(NeuralNetwork * nnet, int argc, char** argv) {
+static void visualize(Trainer * tn, NeuralNetwork * nnet, int argc, char** argv) {
     visualizeNet = nnet;
+    trainer = tn;
     glutInit( &argc, argv );
     glutInitDisplayMode( GLUT_RGBA | GLUT_DOUBLE );
     glutInitWindowSize( 1100, 480);

@@ -15,7 +15,7 @@
 #define LEARNING_RATE 0.1
 
 #define MOMENTUM 0.9
-#define MAX_EPOCHS 1000
+#define MAX_EPOCHS 2
 #define DESIRED_ACCURACY 95
 #define DESIRED_MSE 0.001
 

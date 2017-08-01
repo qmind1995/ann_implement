@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/GL/glui.h
+OpenGL/GL.h
+-
+OpenGL/GLU.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+cstdlib
+-
+cstdio
+-
+cstring
+-
+array
+-
+string
+-
+vector
+-
+
+/home/tri/glui/example/example1.cpp
+string.h
+-
+GL/glui.h
+-
+GLUT/glut.h
+-
+GL/glut.h
+-
+

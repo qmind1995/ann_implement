@@ -1,0 +1,1 @@
+/usr/bin/c++   --std=c++11     CMakeFiles/example4.dir/example/example4.cpp.o  -o example4 -rdynamic libglui_static.a -lglut -lXmu -lXi -lGLU -lGL -lSM -lICE -lX11 -lXext 

@@ -55,8 +55,10 @@ CMakeFiles/Demo_ann.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Demo_ann.dir/main.cpp.o: ../visualize/Visualize.cpp
 
 CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o: ../Utils.cpp
+CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o: ../ann/./NeuralNetwork.h
 CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o: ../ann/Layer.h
 CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o: ../ann/NeuralNetwork.h
+CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o: ../ann/Trainer.h
 CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o: ../dataReader/DataEntry.h
 CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o: ../dataReader/DataReader.h
 CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o: ../visualize/Visualize.cpp

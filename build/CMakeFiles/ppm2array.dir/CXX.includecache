@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tri/glui/tools/ppm.cpp
+string
+-
+cstdio
+-
+cassert
+-
+cstring
+-
+
+/home/tri/glui/tools/ppm.h
+string
+-
+
+/home/tri/glui/tools/ppm2array.cpp
+ppm.h
+/home/tri/glui/tools/ppm.h
+cstdio
+-
+cstring
+-
+

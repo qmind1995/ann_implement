@@ -1,0 +1,10 @@
+/home/tri/glui/build/CMakeFiles/example1.dir
+/home/tri/glui/build/CMakeFiles/example2.dir
+/home/tri/glui/build/CMakeFiles/example3.dir
+/home/tri/glui/build/CMakeFiles/example4.dir
+/home/tri/glui/build/CMakeFiles/example5.dir
+/home/tri/glui/build/CMakeFiles/example6.dir
+/home/tri/glui/build/CMakeFiles/glui.dir
+/home/tri/glui/build/CMakeFiles/glui_obj.dir
+/home/tri/glui/build/CMakeFiles/glui_static.dir
+/home/tri/glui/build/CMakeFiles/ppm2array.dir

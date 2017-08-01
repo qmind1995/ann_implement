@@ -1,0 +1,8 @@
+/usr/lib/gluilib/lib/libglui_static.a
+/usr/lib/gluilib/lib/libglui.so.2.37
+/usr/lib/gluilib/lib/libglui.so
+/usr/lib/gluilib/include/GL/glui.h
+/usr/lib/gluilib/lib/cmake/glui/gluiConfig.cmake
+/usr/lib/gluilib/lib/cmake/glui/gluiConfigVersion.cmake
+/usr/lib/gluilib/lib/cmake/glui/gluiTargets.cmake
+/usr/lib/gluilib/lib/cmake/glui/gluiTargets-noconfig.cmake

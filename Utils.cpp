@@ -7,6 +7,7 @@
 
 
 class NeuralNetwork;
+class Trainer;
 
 namespace parameters{
     static const int NONE = 0;
@@ -20,6 +21,7 @@ namespace parameters{
         int argc;
         char ** argv;
         NeuralNetwork* net;
+        Trainer * trainer;
     };
 
 }

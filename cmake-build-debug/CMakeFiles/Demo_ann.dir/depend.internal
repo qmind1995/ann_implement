@@ -56,8 +56,10 @@ CMakeFiles/Demo_ann.dir/main.cpp.o
  /home/tri/Desktop/ann_implement/visualize/Visualize.cpp
 CMakeFiles/Demo_ann.dir/visualize/Visualize.cpp.o
  /home/tri/Desktop/ann_implement/Utils.cpp
+ /home/tri/Desktop/ann_implement/ann/./NeuralNetwork.h
  /home/tri/Desktop/ann_implement/ann/Layer.h
  /home/tri/Desktop/ann_implement/ann/NeuralNetwork.h
+ /home/tri/Desktop/ann_implement/ann/Trainer.h
  /home/tri/Desktop/ann_implement/dataReader/DataEntry.h
  /home/tri/Desktop/ann_implement/dataReader/DataReader.h
  /home/tri/Desktop/ann_implement/visualize/Visualize.cpp

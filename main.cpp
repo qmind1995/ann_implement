@@ -15,7 +15,7 @@ using namespace std;
 using namespace arma;
 using namespace parameters;
 
-void * runtrainingThread(void * nNet){
+void * runtrainingThread(void * params){
     string outputDataFileName = "/home/tri/Desktop/ann_implement/data/sinData.txt";
     string outputTestFileName = "/home/tri/Desktop/ann_implement/data/sinData_test.txt";
     string inputDataFileName = "/home/tri/Desktop/ann_implement/data/sinInput.txt";
@@ -23,9 +23,9 @@ void * runtrainingThread(void * nNet){
 
     DataReader *dR = new DataReader();
     dR->read_RegressionData(inputDataFileName, outputDataFileName, 60000);
-    NeuralNetwork* net = reinterpret_cast<NeuralNetwork*>(nNet);
+    struct paramHolder * ps = reinterpret_cast<struct paramHolder *>(params);
 //    Trainer * nT = new BatchTrainer( net,100);
-    Trainer * nT = new Trainer( net);
+//    Trainer * nT = new Trainer( net);
 
     trainingDataSet* trSet = new trainingDataSet();
     trSet->trainingSet = dR->data;
@@ -34,13 +34,13 @@ void * runtrainingThread(void * nNet){
     dR_test->read_RegressionData(inputtestFileName, outputTestFileName, 3000);
     trSet->validationSet = dR_test->data;
 
-    nT->trainNetwork(trSet);
+    ps->trainer->trainNetwork(trSet);
     pthread_exit(NULL);
 }
 
 void* runVisualizeThread(void * params){
     struct paramHolder * ps = reinterpret_cast<struct paramHolder *>(params);
-    visualize(ps->net, ps->argc, ps->argv);
+    visualize(ps->trainer, ps->net, ps->argc, ps->argv);
     pthread_exit(NULL);
 }
 
@@ -55,20 +55,23 @@ int main(int argc, char** argv){
     layers.push_back(hiddenLayer2);
     layers.push_back(outputLayer);
 
-    NeuralNetwork * nNet = new NeuralNetwork(layers, REGRESSTION);
-
-    pthread_t threads[N_THREAD];
-
-    int rc1 = pthread_create(&threads[0], NULL,runtrainingThread,(void*) nNet);
-    if (rc1){
-        cout << "\nError: cannot create training thread! " << rc1 << endl;
-        exit(-1);
-    }
+//    NeuralNetwork * nNet = new NeuralNetwork(layers, REGRESSTION);
+    NeuralNetwork * nNet = new NeuralNetwork("weights.txt");
+    Trainer * nT = new Trainer( nNet);
 
     struct paramHolder * params = new paramHolder();
     params->argc = argc;
     params->argv = argv;
     params->net = nNet;
+    params->trainer = nT;
+
+    pthread_t threads[N_THREAD];
+
+    int rc1 = pthread_create(&threads[0], NULL,runtrainingThread,(void*) params);
+    if (rc1){
+        cout << "\nError: cannot create training thread! " << rc1 << endl;
+        exit(-1);
+    }
 
     int rc2 = pthread_create(&threads[1], NULL,runVisualizeThread,(void*) params);
     if (rc2){
